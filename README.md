@@ -275,4 +275,29 @@ Although both games hold exciting potential, there was definitely a clear favour
 
 
 ## Reflection
+<<<<<<< HEAD
+What we learned from the requirements:
+- talk about the process of going through it, collaborating and coming to a decision - there were very few hiccups due to our prior planning
+- clearly to understand the user's needs 
+- due to our planning, we were able to produce something that matched our initial game requirements. the user-story and user case specification reflects the requirements.
+- except we had some issues with the include and extends usecase diagram - we had to refactor lots - was difficult as some of our members were not able to meet in person - so it was quite difficult communicating what we wanted them to change on the diagram.
+    - initially we were confused in regard to whether something should have been an extend or an include.
 
+
+
+
+## Potential Challenges 
+Based on Flappy Bird, but the player can transport to different maps.
+
+- Challenge 1 - Entering transport pipes - 
+- Challenge 2 - Data structure for storing the map - and changing it when they exit the portal pipes
+- Challenge 3 - How to decide if the player enters a new map, or just a different location on the current map. (the control flow)
+- Challenge 4 - Deciding where you go on the current map.
+
+
+Extra notes:
+- Generating the code for randomised hazards
+- Implementing losing health when the player hits a hazards
+=======
+
+>>>>>>> 2ec76bda9c9c7e57e1d7a6902906f11254e02fd6
