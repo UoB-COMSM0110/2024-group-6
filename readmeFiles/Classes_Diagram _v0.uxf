@@ -1,0 +1,88 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>250</x><y>270</y><w>120</w><h>130</h></coordinates><panel_attributes>Character
+--
+- int xPosition
+- int yPosition 
+--
++ int getX()
++ int setX(int newX)
++ int getY()
++ int setY(int newY)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>600</x><y>480</y><w>150</w><h>60</h></coordinates><panel_attributes>HazardPipe
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>480</y><w>170</w><h>220</h></coordinates><panel_attributes>TransportPipe
+--
+- int newX
+- int newY
+- int presentX
+- int presentY
+--
++ int getNewX()
++ void setNewX()
++ int getNewY()
++ void setNewY()
++ int getPresentX()
++ void setPresentX()
++ int getPresentY()
++ void setPresentY()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>870</x><y>270</y><w>120</w><h>130</h></coordinates><panel_attributes>&lt;Enumiration&gt;
+Background/Map
+--
+Moon 
+Earth
+Astroid Belt 
+Mars
+UFO</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>390</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>410</y><w>150</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;130;20</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>420</y><w>30</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>780</x><y>410</y><w>90</w><h>90</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;70;20;70;70</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>190</y><w>40</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1
+</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>270</y><w>140</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Interface&gt;&gt;
+Hazard
+--
++ void setHealth()
++ int getHealth()
++ void incureDamage()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>390</y><w>30</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>190</y><w>50</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=0..*</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>190</y><w>50</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>60</y><w>990</w><h>140</h></coordinates><panel_attributes>SuperSpaceMan
+--
+- typeTBD time 
+- Boolean winOrLose
+- Boolean startGame
+--
++ void gameLoop()
++ Boolean getWinOrLose()
++ void startGame()
++ typeTBD getTime()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>910</x><y>190</y><w>40</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>270</y><w>160</w><h>130</h></coordinates><panel_attributes>&lt;&lt;Abstract&gt;&gt;
+Pipe
+--
+- int pipeSize 
+- String pipeType
+--
++ String getPipeType()
++ void setPipeSize(int size)
++ int getPipeSize()
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>190</y><w>40</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>Relation</id><coordinates><x>110</x><y>190</y><w>40</w><h>100</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2=1
+m1=1
+
+
+
+
+</panel_attributes><additional_attributes>10;10;10;80</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>270</y><w>240</w><h>130</h></coordinates><panel_attributes>User Inputs 
+--
+- Boolean spaceBar
+- Boolean rightClick
+--
++ int getSpaceBar()
++ int setSpaceBar(Boolean clicked)
++ Boolean getRightClick()
++ Boolean setRightClick(Boolean clicked)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>380</x><y>270</y><w>150</w><h>130</h></coordinates><panel_attributes>Screen
+--
+- int screenHeight
+- int screenWidth
+--
++ void setScreenWidth()
++ void setScreenHeight()
++ void printScreen()</panel_attributes><additional_attributes></additional_attributes></element></diagram>

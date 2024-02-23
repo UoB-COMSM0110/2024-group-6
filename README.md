@@ -139,7 +139,7 @@ Choosing Flappy Bird as our inspiration brings a delightful challenge to the tab
 [![Super SpaceMan](./readmeFiles/Thumbnails/supperSpaceManThumnail.png)](https://www.youtube.com/watch?v=6UDCoNbmHIw "Super SpaceMan")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
-We have ultimately chosen to base our game idea on Flappy Bird and transform it into "Super Spaceman" (the name may be subject to change). As demonstrated in the prototype above, we have primarily introduced three new features: the inclusion of game props, such as heart items to increase lives and a prop gun to destroy debuff effects; alongside these, the addition of negative buffs (such as signs that immediately return the player to the starting point upon collision and signs that alter gravity) constitutes another new feature; the final feature allows players to access another map through special new channels or to complete the game by traversing obstacles.
+We have ultimately chosen to base our game idea on Flappy Bird and transform it into "Super Spaceman" (the name may be subject to change). As demonstrated in the above prototype, we have introduced three new features: the inclusion of game props, such as heart items to increase lives and a prop gun to destroy debuff effects; alongside these, the addition of negative buffs (such as signs that immediately return the player to the starting point upon collision and signs that alter gravity) constitutes another new feature. The final feature allows players to either access another map through special new channels/portals, or to complete the game by traversing obstacles.
 
 ## Game Selection - Why we have chosen Super Spaceman
 
@@ -201,9 +201,9 @@ Although both games hold exciting potential, there was definitely a clear favour
 
 ## Usecase Specification - General Player
 
-**Description** - Super Spaceman is a game with inspiration taken from the game Flappy Birds. Within the following user specifiction we are going to take you through a step-by-step routine of which a general player would encounter when playing the game.
+**Description** - Super Spaceman is a game with inspiration taken from the game Flappy Bird. Within the following user specifiction, we are going to take you through a step-by-step routine of which a general player would encounter when playing the game.
 
-**Aim** - The Aim of the game is to prevent Super Spaceman from dying. Throughout the game he encounters many hazards of which he will have to avoid dying. As the user plays the game Super Spaceman picks up speed. 
+**Aim** - The Aim of the game is to prevent Super Spaceman from dying. Throughout the game he encounters many hazards, of which he will have to avoid in order to survive and continue playing. As the user plays the game, Super Spaceman picks up speed. 
 
 ## Usecase Specification
 <table>
@@ -218,11 +218,11 @@ Although both games hold exciting potential, there was definitely a clear favour
         </tr>
         <tr>
             <td>2.</td>
-            <td>Super Spaceman trys to advoid all hazards.</td>
+            <td>Super Spaceman trys to avoid all hazards.</td>
         </tr>
         <tr>
             <td>3.</td>
-            <td>Super Spaceman eventually hit a hazard. Scoure is then placed on the screen in terms of time.  </td>
+            <td>When Super Spaceman eventually hits a hazard, the score is placed on the screen in terms of time.  </td>
         </tr>
     </tbody>
 </table>
@@ -237,33 +237,33 @@ Although both games hold exciting potential, there was definitely a clear favour
             <td>Hazards (Nuclear Bombs)</td>
         </tr>
         <tr>
-            <td>Desctiption:</td>
-            <td>Going down pipes Transports Super Spaceman to a new map</td>
+            <td>Description:</td>
+            <td>Going down pipes transports Super Spaceman to a new map</td>
             <td>Power ups give Super Spaceman extra powers</td>
-            <td>When Super Spaceman comes into contact with a Hazard he dies</td>
+            <td>When Super Spaceman comes into contact with a Hazard, he dies</td>
         </tr>
         <tr>
             <td>1.</td>
+            <td>Player uses the the right key on the mouse to make Super Spaceman move up, defying gravity.</td>
             <td>Player uses the the right key on the mouse to make Super Spaceman move up defying gravity.</td>
-            <td>Player uses the the right key on the mouse to make Super Spaceman move up defy gravity.</td>
             <td>Player uses the the right key on the mouse to make Super Spaceman move up defying gravity.</td>
         </tr>
         <tr>
             <td>2.</td>
-            <td>Player guides Super Spaceman into the pipes. Super Spaceman is transported to a new map or new place on the current map.</td>
+            <td>Player guides Super Spaceman into the pipes. Super Spaceman is transported to a new map, or new place on the current map.</td>
             <td>Super Spaceman comes into contact with the Power Up</td>
             <td>Super Spaceman comes into contact with the Hazard</td>
         </tr>
         <tr>
             <td>3.</td>
-            <td>Super Spaceman eventually hit a hazard. Scoure is then placed on the screen in terms of time.</td>
+            <td>Super Spaceman eventually hits a hazard. The score is then placed on the screen in terms of time.</td>
             <td>The Space bar is used to activate the power up.</td>
-            <td>Super Spaceman dies the scoure is then placed on the screen in terms of time.</td>
+            <td>When Super Spaceman dies, the score is then placed on the screen in terms of time.</td>
         </tr>
         <tr>
             <td>4.</td>
             <td></td>
-            <td>Super Spaceman eventually hit a hazard. Scoure is then placed on the screen in terms of time.</td>
+            <td>Super Spaceman eventually hits a hazard. The score is then placed on the screen in terms of time.</td>
             <td></td>
         </tr>
     </tbody>
@@ -273,4 +273,57 @@ Although both games hold exciting potential, there was definitely a clear favour
 ## Usecase - Diagram 
 <img src="./readmeFiles/usecasediagram.png">
 
-## Refection
+
+## Reflection
+This week, our team gained valuable insights into the specific requirements of our game and we learnt lots about different player experiences. The task highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many. For example, including exciting and sophisticated features, whilst also being adaptable to those with disabilities. As a team, we enjoyed the process of collaborating and coming to these decisions, and due to our effective planning, we were able to produce a user story and use case that matched and reflected our initial game requirements. 
+
+However, when discussing our use case specification and creating our use case diagram, we realised that our initial plan was perhaps over complicated. We had some slight issues when defining whether something was an ‘include’ or ‘extend’. Some of our members were unable to meet in person, and so when we came together to discuss our use case diagram, it was difficult to explain over the phone, specific things that we wanted them to change and why. This meant that we had to refactor lots, which overall emphasised the importance of remaining flexible throughout the game design process. Ultimately, this task was an important learning journey that provided us with a solid game design that we think will be open to many.
+
+
+
+
+## Potential Challenges 
+Based on Flappy Bird, but the player can transport to different maps.
+
+- Challenge 1 - Entering transport pipes - 
+- Challenge 2 - Data structure for storing the map - and changing it when they exit the portal pipes
+- Challenge 3 - How to decide if the player enters a new map, or just a different location on the current map. (the control flow)
+- Challenge 4 - Deciding where you go on the current map.
+
+
+Extra notes:
+- Generating the code for randomised hazards
+- Implementing losing health when the player hits a hazards
+
+## Classes Diagram
+
+<img src="./readmeFiles/Classes_Diagram _v0.png">
+
+## Setting up processing in Inteliji 
+https://www.youtube.com/watch?v=_h2GZgnPcnM
+
+## Example code of Flappy Bird
+https://forum.processing.org/two/discussion/3580/flappy-code.html
+
+
+## Mark Scheem 
+
+Project Report
+
+Your group report will be written up on Github (formatted with Markdown) as the front page of your team’s repo, within the module’s Github organisation: https://github.com/UoB-COMSM0110. Please follow the report structure below. For each section we want to see that you’ve engaged with the taught material and reflected on your process. You can also demonstrate that you’ve gone beyond the taught component. We’ve given a rough indicator of how long each section could be, however we won’t be penalising you if you go under or over (within reason!). Include as many figures, tables, and references as you need.
+
+1. Team
+    
+    o Who’s in your team + team photo.
+
+2. Introduction (5% ~250 words)
+
+    o Describe your game, what is based on, what makes it novel?
+
+3. Requirements (15% ~750 words)
+
+    o Use case diagrams, user stories. Early stages design. Ideation process. How did you decide as a team what to develop?
+
+4. Design (15% ~750 words)
+
+    o System architecture. Class diagrams, behavioural diagrams.
