@@ -4,6 +4,7 @@ public class Game extends PApplet {
 
     public void settings() {
         size(800, 600); // Set the size of the window
+
     }
 
     public void setup() {
