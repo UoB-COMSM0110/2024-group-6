@@ -13,6 +13,7 @@ public class Game extends PApplet {
     public void draw() {
         background(0); // Set the background to black
         // Your drawing code here
+
     }
 
     // You can add more methods here, such as mousePressed(), keyPressed(), etc.
