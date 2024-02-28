@@ -37,7 +37,7 @@ https://processing.org/tutorials
     <tr>
         <td>Bohan Zhang</td>
         <td>xr23370@bristol.ac.uk</td>
-        <td>@bohanzhang</td>
+        <td>@zbhbarry</td>
     </tr>
     <tr>
         <td>Qiyue Cao</td>
