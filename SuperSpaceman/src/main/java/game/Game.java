@@ -1,17 +1,19 @@
+package game;
 import processing.core.PApplet;
 
 public class Game extends PApplet {
 
     public void settings() {
-        size(800, 600); // Set the size of the window
+        size(400, 600); // Set the size of the window
     }
 
     public void setup() {
         // Initialization code here
+        background(0); // Set the background to black
     }
 
     public void draw() {
-        background(0); // Set the background to black
+        Gamecharacter bird = new Gamecharacter();
         // Your drawing code here
 
     }
