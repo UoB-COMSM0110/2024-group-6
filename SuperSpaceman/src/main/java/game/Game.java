@@ -21,27 +21,27 @@ public class Game extends PApplet {
         bird = new Gamecharacter(this);
     }
 
+    boolean preKeyPressed = false;
     public void draw() {
         // Your drawing code here
         this.background(100,100,80);
+
         bird.getCharacter();
         jump();
         bird.setY(bird.getY()+5);
-
-
-
     }
 
     private void jump() {
-
-
         if(mouseButton == left){
             bird.setY(bird.getY()-100);
+            preKeyPressed = true;
+            System.out.println("click!!");
             mouseButton = 0;
         }
     }
 
     private void powerUp(){
+
         System.out.println(key);
     }
 
