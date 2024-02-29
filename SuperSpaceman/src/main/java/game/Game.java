@@ -1,5 +1,6 @@
 package game;
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class Game extends PApplet {
 
@@ -10,11 +11,10 @@ public class Game extends PApplet {
     public void setup() {
         // Initialization code here
         background(0); // Set the background to black
+        Gamecharacter bird = new Gamecharacter(this);
     }
 
     public void draw() {
-        Gamecharacter bird = new Gamecharacter(this);
-
         // Your drawing code here
 
     }

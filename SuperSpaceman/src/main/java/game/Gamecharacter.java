@@ -1,11 +1,14 @@
 package game;
 
 import processing.core.PApplet;
+import processing.core.PImage;
 
 class Gamecharacter {
 
     int xPosition;
     int yPosition;
+
+    PImage character;
 
     PApplet game;
 
@@ -19,7 +22,9 @@ class Gamecharacter {
         this.yPosition = 300;
         this.game = processingMethord;
         this.game.background(100,200,10);
-        this.game.loadImage("./assets/spaceman.png");
+
+        this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman.png");
+        this.game.image(this.character,0,0);
     }
 
     public int getX(){ return this.xPosition;}
