@@ -25,12 +25,11 @@ public class Game extends PApplet {
         // Your drawing code here
         System.out.println(keyCode);
 
-        userInputs();
+        jump();
 
     }
 
-    public void userInputs() {
-
+    private void jump() {
         if(mouseButton == left){
             bird.setY(bird.getY()-100);
             this.background(100,100,80);
@@ -38,5 +37,10 @@ public class Game extends PApplet {
             mouseButton = 0;
         }
     }
+
+    private void powerUp(){
+        System.out.println(key);
+    }
+
     // You can add more methods here, such as mousePressed(), keyPressed(), etc.
 }
