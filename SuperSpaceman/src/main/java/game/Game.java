@@ -23,17 +23,20 @@ public class Game extends PApplet {
 
     public void draw() {
         // Your drawing code here
-        System.out.println(keyCode);
-
+        this.background(100,100,80);
+        bird.getCharacter();
         jump();
+        bird.setY(bird.getY()+5);
+
+
 
     }
 
     private void jump() {
+
+
         if(mouseButton == left){
             bird.setY(bird.getY()-100);
-            this.background(100,100,80);
-            bird.getCharacter();
             mouseButton = 0;
         }
     }

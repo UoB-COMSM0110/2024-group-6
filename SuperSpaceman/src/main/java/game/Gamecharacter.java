@@ -12,15 +12,12 @@ class Gamecharacter {
 
     PApplet game;
 
-    public Gamecharacter(int xPosition, int yPosition ){
-        this.xPosition = xPosition;
-        this.yPosition = yPosition;
-    }
-
     public Gamecharacter(PApplet processingMethord){
-        this.xPosition = 200;
-        this.yPosition = 300;
         this.game = processingMethord;
+        this.xPosition = 80;
+//        System.out.println(game.width/2);
+        this.yPosition = 0;
+//        System.out.println(game.height/2);
         this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman1.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
 //        this.game.
