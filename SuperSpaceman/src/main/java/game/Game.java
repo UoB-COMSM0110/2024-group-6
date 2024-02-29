@@ -13,7 +13,8 @@ public class Game extends PApplet {
     }
 
     public void draw() {
-        Gamecharacter bird = new Gamecharacter();
+        Gamecharacter bird = new Gamecharacter(this);
+
         // Your drawing code here
 
     }
