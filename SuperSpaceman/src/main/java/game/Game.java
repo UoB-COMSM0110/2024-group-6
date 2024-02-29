@@ -1,13 +1,9 @@
 package game;
 import processing.core.PApplet;
-import processing.core.PImage;
-
-import java.awt.event.MouseEvent;
 
 public class Game extends PApplet {
 
     Gamecharacter bird;
-
     int left = 37;
     int right = 39;
 
@@ -21,7 +17,6 @@ public class Game extends PApplet {
         bird = new Gamecharacter(this);
     }
 
-//    boolean preKeyPressed = false;
     public void draw() {
         // Your drawing code here
         this.background(100,100,80);
