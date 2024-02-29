@@ -7,14 +7,19 @@ class Gamecharacter {
     int xPosition;
     int yPosition;
 
+    PApplet game;
+
     public Gamecharacter(int xPosition, int yPosition ){
         this.xPosition = xPosition;
         this.yPosition = yPosition;
     }
 
-    public Gamecharacter(PApplet game){
+    public Gamecharacter(PApplet processingMethord){
         this.xPosition = 200;
         this.yPosition = 300;
+        this.game = processingMethord;
+        this.game.background(100,200,10);
+        this.game.loadImage("./assets/spaceman.png");
     }
 
     public int getX(){ return this.xPosition;}
