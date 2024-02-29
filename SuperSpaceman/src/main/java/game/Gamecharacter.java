@@ -5,8 +5,8 @@ import processing.core.PImage;
 
 class Gamecharacter {
 
-    int xPosition;
-    int yPosition;
+    private int xPosition;
+    private int yPosition;
 
     PImage character;
 
@@ -21,19 +21,31 @@ class Gamecharacter {
         this.xPosition = 200;
         this.yPosition = 300;
         this.game = processingMethord;
-        this.game.background(100,200,10);
-
-        this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman.png");
-        this.game.image(this.character,0,0);
+        this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman1.png");
+        this.game.image(this.character,this.xPosition,this.yPosition);
+//        this.game.
     }
 
-    public int getX(){ return this.xPosition;}
+    public int getX(){
+        return this.xPosition;
+    }
 
-    public void setX(){}
+    public void setX(int x){
+        this.xPosition = x;
+    }
 
-    public int getY(){ return this.yPosition;}
+    public int getY(){
+        return this.yPosition;
+    }
 
-    public void setY(){}
+    public void setY(int y){
+        this.yPosition = y;
+    }
+
+    public void getCharacter(){
+        this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman1.png");
+        this.game.image(this.character,this.xPosition,this.yPosition);
+    }
 
 
     //    @Override
