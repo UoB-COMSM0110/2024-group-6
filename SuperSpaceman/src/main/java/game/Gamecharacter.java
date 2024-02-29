@@ -15,7 +15,6 @@ class Gamecharacter {
     public Gamecharacter(PApplet game){
         this.xPosition = 200;
         this.yPosition = 300;
-        game.background(0,0,100);
     }
 
     public int getX(){ return this.xPosition;}
