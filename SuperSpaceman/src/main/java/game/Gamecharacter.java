@@ -57,8 +57,4 @@ class Gamecharacter {
         this.deltaY += 1;
     }
 
-    //    @Override
-//    public String toString() {
-//        return super.toString();
-//    }
 }
