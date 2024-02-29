@@ -23,7 +23,7 @@ public class Game extends PApplet {
 
     public void draw() {
         // Your drawing code here
-        System.out.println(key());
+        System.out.println(keyCode);
 
         userInputs();
 
