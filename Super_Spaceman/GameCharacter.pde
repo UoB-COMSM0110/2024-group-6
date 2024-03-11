@@ -52,8 +52,8 @@ class GameCharacter {
     }
 
     //bird collison logic
-    public boolean hasCollided(){
+    // public boolean hasCollided(){
 
-    }
+    // }
 
 }

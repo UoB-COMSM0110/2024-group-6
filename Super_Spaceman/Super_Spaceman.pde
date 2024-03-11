@@ -1,6 +1,9 @@
 import processing.pdf.*;
     
 GameCharacter bird;
+HazardPipe pipeOne = new HazardPipe();
+HazardPipe pipeTwo = new HazardPipe();
+HazardPipe pipeThree = new HazardPipe();
 int left = 37;
 int right = 39;
 
@@ -10,11 +13,15 @@ void setup() {
   // Initialization code here
   background(100,100,80); // Set the background to black
   bird = new GameCharacter(this); //
+  // pipeOne.generatePipe();
 }
 
 void draw() {
-    this.background(100,100,80); //change background based on background class
+    // this.background(100,100,80); //change background based on background class
     
+    pipeOne.generatePipe();
+
+
     //remove pipe logic 
     
     //add pipe logic 
