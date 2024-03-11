@@ -9,9 +9,6 @@ class GameCharacter {
 
     public GameCharacter(PApplet processingMethord){
         this.game = processingMethord;
-
-        System.out.println(width); 
-
         this.xPosition = game.width/2;
         this.yPosition = game.height/2;
         this.character = this.game.loadImage("assets/spaceman1.png");
@@ -46,7 +43,7 @@ class GameCharacter {
     }
 
     public void getCharacter(){
-        this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman1.png");
+        this.character = this.game.loadImage("assets/spaceman1.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
     }
 
