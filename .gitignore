@@ -1,4 +1,3 @@
-SuperSpaceman/target
-.vscode
-.idea*
+.vscode/
+.idea/
 
