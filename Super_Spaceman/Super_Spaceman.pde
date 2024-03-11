@@ -13,10 +13,17 @@ void setup() {
 }
 
 void draw() {
-    // Your drawing code here
-    this.background(100,100,80);
+    this.background(100,100,80); //change background based on background class
+    
+    //remove pipe logic 
+    
+    //add pipe logic 
+
+
     bird.getCharacter();
     bird.gravity();
+    //has Collided - implement 
+
 }
 
 void mousePressed() {

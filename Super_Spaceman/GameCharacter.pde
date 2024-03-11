@@ -51,4 +51,9 @@ class GameCharacter {
         this.deltaY += 1;
     }
 
+    //bird collison logic
+    public boolean hasCollided(){
+
+    }
+
 }
