@@ -11,7 +11,7 @@ class HazardPipe{
 
     public HazardPipe(){
         this.pipeInterval = 100;
-        this.minGapSize = 100;
+        this.minGapSize = 150;
         this.pipeWidth = 50;
         this.xPosition = width;
     }
@@ -29,8 +29,8 @@ class HazardPipe{
 
     public void updateX (){
         this.xPosition -= 1;
-        if(this.xPosition == 0){
-            this.xPosition = width;
+        if(this.xPosition == -this.pipeWidth){
+            this.xPosition = width + this.pipeWidth + this.pipeInterval;
         }
         generatePipe();
     }
@@ -77,9 +77,10 @@ class HazardPipe{
 
     public boolean collison(int x, int y){
         //top pipe 
-        if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth)) ){
-            //bottom pipe 
-            if( y < this.bottomPipeYPosition || y > this.topPipeYPosition){
+        if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth))){
+                return false;
+        }else if(((x >= this.xPosition) && (x <= this.xPosition + this.pipeWidth))){
+            if( y < this.bottomPipeYPosition && y > this.topPipeYPosition){
                 return false;
             }
         }
