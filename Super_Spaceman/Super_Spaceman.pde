@@ -1,9 +1,8 @@
 import processing.pdf.*;
     
 GameCharacter bird;
-  int left = 37;
-  int right = 39;
-
+int left = 37;
+int right = 39;
 
 void setup() { 
 
@@ -13,16 +12,16 @@ void setup() {
   bird = new GameCharacter(this); //
 }
 
-    void draw() {
-        // Your drawing code here
-        this.background(100,100,80);
-        bird.getCharacter();
-        bird.gravity();
-    }
+void draw() {
+    // Your drawing code here
+    this.background(100,100,80);
+    bird.getCharacter();
+    bird.gravity();
+}
 
-    void mousePressed() {
-        bird.jump();
-    }
+void mousePressed() {
+    bird.jump();
+}
 
 //    public void keyPressed(){
 //

@@ -1,7 +1,6 @@
-//package game;
+class HazardPipe{
 
-//class HazardPipe{
-//    public HazardPipe(){
-
-//    }
-//}
+   public HazardPipe(){
+    
+   }
+}
