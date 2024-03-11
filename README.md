@@ -324,7 +324,7 @@ feedback of  a participant:
             <td>4</td>
             <td>1</td>
             <td>4</td>
-            <td>6.3</td>
+            <td>3</td>
         </tr>
         <tr>
             <td>Character</td>
