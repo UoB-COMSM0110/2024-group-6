@@ -9,6 +9,9 @@ GameCharacter bird;
 HazardPipe pipeOne;
 HazardPipe pipeTwo;
 HazardPipe pipeThree;
+boolean collisonTest1;
+boolean collisonTest2;
+boolean collisonTest3;
 
 void setup() { 
   pipeOne = new HazardPipe();
@@ -25,21 +28,25 @@ void setup() {
 }
 
 void draw() {
-    this.background(100,100,80); //change background based on background class
-    
-    pipeOne.updateX();
-    pipeTwo.updateX();
 
+    if(collisonTest1 || collisonTest2 || collisonTest3){
+        background(0);
+        textSize(40);
 
+        text("Died",(width/2)-40,height/2);
+    } else {
+        this.background(100,100,80); //change background based on background class
+        pipeOne.updateX();
+        pipeTwo.updateX();
+        pipeThree.updateX();  
+        bird.getCharacter();
+        bird.gravity();
+    }
 
-    //remove pipe logic 
-    
-    //add pipe logic 
+    collisonTest1 = pipeOne.collison(bird.getX(), bird.getY());
+    collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
+    collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
-
-    bird.getCharacter();
-    bird.gravity();
-    //has Collided - implement 
 
 }
 

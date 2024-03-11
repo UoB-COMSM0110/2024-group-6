@@ -75,4 +75,15 @@ class HazardPipe{
         return this.pipeInterval;
     }
 
+    public boolean collison(int x, int y){
+        //top pipe 
+        if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth)) ){
+            //bottom pipe 
+            if( y < this.bottomPipeYPosition || y > this.topPipeYPosition){
+                return false;
+            }
+        }
+        return true;
+    }
+
 }
