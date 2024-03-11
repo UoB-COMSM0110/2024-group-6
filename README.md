@@ -306,7 +306,64 @@ task 2 - pipes creation, need to create pipes.
 feedback of  a participant: 
 
 ## Heuristic Evaluation
-
+<table>
+    <tbody>
+        <tr>
+            <td><b>Interface</b></td>
+            <td><b>Issue</b></td>
+            <td><b>Heuristic(s)</b></td>
+            <td><b>Frequency</b> 0 (rare) to 4 (common)</td>
+            <td><b>Impact</b> 0 (easy) to difficult (4)</td>
+            <td><b>Persistence</b> 0 (once) to 4 (repeated)</td>
+            <td><b>Severity</b> = Sum Total of F+I+P/3</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+    </tbody>
+</table>
 
 ## Setting up processing in Inteliji 
 https://www.youtube.com/watch?v=_h2GZgnPcnM
