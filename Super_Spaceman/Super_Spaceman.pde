@@ -1,7 +1,4 @@
-// import Gamecharacter;
 import processing.pdf.*;
-
-
     
 GameCharacter bird;
   int left = 37;

@@ -1,0 +1,6 @@
+
+class HazardPipe{
+    public HazardPipe(){
+
+    }
+}

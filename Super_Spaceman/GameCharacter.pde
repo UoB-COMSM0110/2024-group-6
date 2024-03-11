@@ -9,6 +9,9 @@ class GameCharacter {
 
     public GameCharacter(PApplet processingMethord){
         this.game = processingMethord;
+
+        System.out.println(width); 
+
         this.xPosition = game.width/2;
         this.yPosition = game.height/2;
         this.character = this.game.loadImage("assets/spaceman1.png");
