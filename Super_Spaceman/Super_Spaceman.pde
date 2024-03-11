@@ -1,25 +1,31 @@
 import processing.pdf.*;
     
+
+void settings() {
+    size(400, 600); // Set the size of the window
+}
+
 GameCharacter bird;
-HazardPipe pipeOne = new HazardPipe();
-HazardPipe pipeTwo = new HazardPipe();
-HazardPipe pipeThree = new HazardPipe();
+HazardPipe pipeOne;
+HazardPipe pipeTwo;
+HazardPipe pipeThree;
 int left = 37;
 int right = 39;
 
 void setup() { 
-
-  size(400, 600); // Set the size of the window  
+  pipeOne = new HazardPipe();
+  pipeTwo = new HazardPipe();
+  pipeThree = new HazardPipe();
   // Initialization code here
-  background(100,100,80); // Set the background to black
-  bird = new GameCharacter(this); //
-  // pipeOne.generatePipe();
+  background(100,100,80); 
+  bird = new GameCharacter(this); 
+  pipeOne.generatePipe();
 }
 
 void draw() {
-    // this.background(100,100,80); //change background based on background class
+    this.background(100,100,80); //change background based on background class
     
-    pipeOne.generatePipe();
+    pipeOne.updateX();
 
 
     //remove pipe logic 

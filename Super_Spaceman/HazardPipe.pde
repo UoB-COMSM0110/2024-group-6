@@ -5,25 +5,41 @@ class HazardPipe{
     private int pipeInterval;
     private int pipeWidth; 
     private int minGapSize;
+    private int xPosition;
+    private int topPipeYPosition;
+    private int bottomPipeYPosition;
 
     public HazardPipe(){
         this.pipeInterval = 100;
         this.minGapSize = 100;
         this.pipeWidth = 50;
+        this.xPosition = width;
     }
 
-    public void generatePipe(){
+    public void generateInitalPipe(){
+        this.topPipeYPosition = (int)random(height-minGapSize);
+        this.bottomPipeYPosition = (int)random(topPipeYPosition + minGapSize,height);
+        generatePipe();
+    }
+
+    public void updateX (){
+        this.xPosition -= 1;
+        generatePipe();
+    }
+
+    private void generatePipe(){
+
+        // System.out.println(this.xPosition);
 
         //Top Pipe
         fill(333,345,198);
         noStroke();
-        int topPipeYPosition = (int)random(height-minGapSize);
-        rect(100, 0, this.pipeWidth, topPipeYPosition);
+        rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
 
         //bottom pipe
         fill(333,345,198);
         noStroke();
-        rect(100, (int)random(topPipeYPosition + minGapSize,height) , this.pipeWidth, height);
+        rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
     }
 
 
@@ -45,22 +61,13 @@ class HazardPipe{
         return this.pipeSizeTop;
     }
 
-
-
-
-    // public int setPipeInterval(int pipeIntaval){
-    //     this.pipeIntaval = pipeIntaval;
+    // public int setPipeInterval(int intaval){
+    //     this.pipeIntaval = intaval;
     // }
 
     // public int getPipeInterval(){
     //     return this.pipeInterval;
     // }
-
-   
-    // public void pipeUpdate (){
-
-    // }
-
 
 
 }
