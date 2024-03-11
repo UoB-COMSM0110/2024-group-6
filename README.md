@@ -299,6 +299,15 @@ Extra notes:
 
 <img src="./readmeFiles/Classes_Diagram _v0.png">
 
+## Think Aloud
+
+task 1 - game character movments, found issues in the sense that the character dies and also goes off the screen.
+task 2 - pipes creation, need to create pipes. 
+feedback of  a participant: 
+
+## Heuristic Evaluation
+
+
 ## Setting up processing in Inteliji 
 https://www.youtube.com/watch?v=_h2GZgnPcnM
 
