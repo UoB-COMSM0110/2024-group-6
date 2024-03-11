@@ -13,7 +13,7 @@ void setup() {
   size(400, 600); // Set the size of the window  
   // Initialization code here
   background(100,100,80); // Set the background to black
-//   bird = new GameCharacter();
+  bird = new GameCharacter(this);
 }
 
     void draw() {
