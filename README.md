@@ -318,31 +318,31 @@ feedback of  a participant:
             <td><b>Severity</b> = Sum Total of F+I+P/3</td>
         </tr>
         <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
+            <td>Pipes</td>
+            <td>too narrow</td>
+            <td>pay attention to the spacing between the pipes(at least could be able to see the next pipe when passing through this pipe)</td>
+            <td>4</td>
+            <td>1</td>
+            <td>4</td>
+            <td>6.3</td>
         </tr>
         <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
+            <td>Character</td>
+            <td>need big jump(need to click many times to jump higher)</td>
+            <td></td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>4</td>
         </tr>
         <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
+            <td>Gravity</td>
+            <td>fall too slow</td>
+            <td>need acceleration</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
         </tr>
         <tr>
             <td> </td>
