@@ -9,8 +9,6 @@ GameCharacter bird;
 HazardPipe pipeOne;
 HazardPipe pipeTwo;
 HazardPipe pipeThree;
-int left = 37;
-int right = 39;
 
 void setup() { 
   pipeOne = new HazardPipe();
@@ -20,12 +18,18 @@ void setup() {
   background(100,100,80); 
   bird = new GameCharacter(this); 
   pipeOne.generateInitalPipe();
+  pipeTwo.setXPosition(width+200);
+  pipeTwo.generateInitalPipe();
+  pipeThree.setXPosition(width+400);
+  pipeThree.generateInitalPipe();
 }
 
 void draw() {
     this.background(100,100,80); //change background based on background class
     
     pipeOne.updateX();
+    pipeTwo.updateX();
+
 
 
     //remove pipe logic 

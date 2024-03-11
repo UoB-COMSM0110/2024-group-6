@@ -22,14 +22,20 @@ class HazardPipe{
         generatePipe();
     }
 
+
+    public void setXPosition(int xPosition){
+        this.xPosition = xPosition;
+    }
+
     public void updateX (){
         this.xPosition -= 1;
+        if(this.xPosition == 0){
+            this.xPosition = width;
+        }
         generatePipe();
     }
 
     private void generatePipe(){
-
-        // System.out.println(this.xPosition);
 
         //Top Pipe
         fill(333,345,198);
@@ -52,7 +58,6 @@ class HazardPipe{
     }
 
 
-
     public void setPipeSizeTop(int pipeSizeTop){
         this.pipeSizeTop = pipeSizeTop;
     }
@@ -61,13 +66,13 @@ class HazardPipe{
         return this.pipeSizeTop;
     }
 
-    // public int setPipeInterval(int intaval){
-    //     this.pipeIntaval = intaval;
-    // }
 
-    // public int getPipeInterval(){
-    //     return this.pipeInterval;
-    // }
+    public void setPipeInterval(int intaval){
+        this.pipeInterval = intaval;
+    }
 
+    public int getPipeInterval(){
+        return this.pipeInterval;
+    }
 
 }
