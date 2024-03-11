@@ -319,7 +319,7 @@ feedback of  a participant:
         </tr>
         <tr>
             <td>Pipes</td>
-            <td>too narrow</td>
+            <td>can't too narrow</td>
             <td>pay attention to the spacing between the pipes(at least could be able to see the next pipe when passing through this pipe)</td>
             <td>4</td>
             <td>1</td>
