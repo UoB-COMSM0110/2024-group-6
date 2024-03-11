@@ -301,7 +301,7 @@ Extra notes:
 
 ## Think Aloud
 
-task 1 - game character movments, found issues in the sense that the character dies and also goes off the screen.
+task 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.
 task 2 - pipes creation, need to create pipes. 
 feedback of  a participant: 
 
