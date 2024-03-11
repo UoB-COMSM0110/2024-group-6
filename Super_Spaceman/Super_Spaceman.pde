@@ -19,7 +19,7 @@ void setup() {
   // Initialization code here
   background(100,100,80); 
   bird = new GameCharacter(this); 
-  pipeOne.generatePipe();
+  pipeOne.generateInitalPipe();
 }
 
 void draw() {
