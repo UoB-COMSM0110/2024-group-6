@@ -301,9 +301,9 @@ Extra notes:
 
 ## Think Aloud
 
-task 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.
-task 2 - pipes creation, need to create pipes. 
-feedback of  a participant: 
+task 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
+task 2 - pipes creation, need to create pipes.  
+feedback of  a participant: The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
 
 ## Heuristic Evaluation
 <table>
