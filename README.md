@@ -345,13 +345,13 @@ feedback of  a participant: The pipes only generates randomly within the first t
             <td>0</td>
         </tr>
         <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
+            <td>Movements</td>
+            <td>Gameplay judgments are a bit sketchy, the distances of pipes are a bit large</td>
+            <td>Reset the judgments of collision, narrowing the distances of pipes</td>
+            <td>4</td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
         </tr>
         <tr>
             <td> </td>
