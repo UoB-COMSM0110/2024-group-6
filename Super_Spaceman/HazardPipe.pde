@@ -31,7 +31,9 @@ class HazardPipe{
         this.xPosition -= 1;
         if(this.xPosition == -this.pipeWidth){
             this.xPosition = width + this.pipeWidth + this.pipeInterval;
+            generateInitalPipe();
         }
+        
         generatePipe();
     }
 
