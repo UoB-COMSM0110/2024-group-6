@@ -54,9 +54,9 @@ void mousePressed() {
     bird.jump();
 }
 
-//    public void keyPressed(){
-//
-//    }
+public void keyPressed(){
+     bird.jump();
+}
 
 //
 //    private void powerUp(){
