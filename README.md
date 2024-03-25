@@ -310,6 +310,8 @@ Extra notes:
 
 # Qualitative Evaluation
 
+Too collect Qualitative data for our game we will use two methords namly the Think Aloud and Heuristic Evaluation methords. This should provide us with the relevant with and depth of data to gain meaningful insights.  
+
 ## Think Aloud
 
 Feedback 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
@@ -381,11 +383,171 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
 
 # Quantitavie Evaluation
 
-"Intro"
+In this section we will analysie and showcase collected data from participants who have played our game. We selected the NASA TLXs and System Unability Survey(SUS) to do this.
 
 ## NASA TLXs Questionair
 
-"Add collected data from spreadsheet"
+<table>
+    <thead>
+        <th>Participant(Names Hidden for Privacy)</th>
+        <th>Mental Demand</th>
+        <th>Physical Demand</th>
+        <th>Temporal Demand</th>
+        <th>Performance</th>
+        <th>Effort</th>
+        <th>Frustration</th>
+        <th>RAW Nasa TLX Scour</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>5</td>
+            <td>3</td>
+            <td>3</td>
+            <td>0</td>
+            <td>5</td>
+            <td>5</td>
+            <td>3.5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>16</td>
+            <td>20</td>
+            <td>1</td>
+            <td>2</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>5</td>
+            <td>6</td>
+            <td>3</td>
+            <td>7</td>
+            <td>4.5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>0</td>
+            <td>3</td>
+            <td>2</td>
+            <td>3.33</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.83</td>
+        </tr>
+    </tbody>
+</table>
+
+## System Unability Survey(SUS)
+
+<table>
+    <thead>
+        <td>Participant(Names Hidden for Privacy)</td>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>I think that I would like to use this system frequently</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>I found the system unnecessarily complex</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I thought the system was easy to use</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>I think that I would need the support of a technical person to be able to use this system.</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I found the various functions in the system were well integrated</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>5</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I though there was too much inconsistency in this system</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I would imagine that most people would learn to use this system very quickly</td>
+            <td>5</td>
+            <td>5</td>
+            <td>4</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>I found the system very cumbersome to use</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+            <td>I felt very confident using the system</td>
+            <td>5</td>
+            <td>5</td>
+            <td>3</td>
+            <td>3</td>
+            <td>5</td>
+        <tr>
+        </tr>
+            <td>I needed to learn a lot of things before I could get going with this system</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+## Summary - Quantitative Evaluation
+
 
 
 # Group notes
