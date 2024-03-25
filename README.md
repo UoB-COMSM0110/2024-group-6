@@ -322,6 +322,9 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
 
 
 ## Heuristic Evaluation
+
+"Edit to suggest which horistic it is relevant too" 
+
 <table>
     <tbody>
         <tr>
@@ -374,10 +377,15 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
 
 ## Summary - Qualative Evaluation
 
+"Summary of data" 
+
 # Quantitavie Evaluation
+
+"Intro"
 
 ## NASA TLXs Questionair
 
+"Add collected data from spreadsheet"
 
 
 # Group notes
