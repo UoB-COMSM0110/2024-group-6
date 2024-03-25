@@ -1,5 +1,7 @@
 # 2024-group-6
+
 ## Table of Contents  
+
 - [Team Photo](#team-photo)
 - [Group Members](#group-members)
 - [Game Ideas](#game-ideas)
@@ -19,9 +21,11 @@
 
 
 ## Team Photo
+
 ![Group Photo](./readmeFiles/groupphoto.JPG)
 
 ## Group Members
+
 <table>
     <thead>
         <th>Name</th>
