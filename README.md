@@ -310,9 +310,14 @@ Extra notes:
 
 ## Think Aloud
 
-task 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
-task 2 - pipes creation, need to create pipes.  
-feedback of  a participant: The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
+Feedback 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
+
+Feedback 2 - pipes creation, need to create pipes.  
+
+Feedback 3 - The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
+
+Feedback 4 - It would be easier to use the spacebar to control the character.
+
 
 ## Heuristic Evaluation
 <table>
@@ -328,7 +333,7 @@ feedback of  a participant: The pipes only generates randomly within the first t
         </tr>
         <tr>
             <td>Pipes</td>
-            <td>can't too narrow</td>
+            <td>Too narrow</td>
             <td>pay attention to the spacing between the pipes(at least could be able to see the next pipe when passing through this pipe)</td>
             <td>4</td>
             <td>1</td>
@@ -337,7 +342,7 @@ feedback of  a participant: The pipes only generates randomly within the first t
         </tr>
         <tr>
             <td>Character</td>
-            <td>need big jump(need to click many times to jump higher)</td>
+            <td>Need bigger jumps(need to click many times to jump higher)</td>
             <td></td>
             <td>4</td>
             <td>0</td>
@@ -346,8 +351,8 @@ feedback of  a participant: The pipes only generates randomly within the first t
         </tr>
         <tr>
             <td>Gravity</td>
-            <td>fall too slow</td>
-            <td>need acceleration</td>
+            <td>Fall too slowly</td>
+            <td>Need acceleration</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
