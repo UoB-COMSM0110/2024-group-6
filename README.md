@@ -8,6 +8,16 @@ https://processing.org/tutorials
 - [Snake](#snake)
 - [Flappy Bird](#flappy-bird)
 - [Game Selection](#game-selection---why-we-have-chosen-super-spaceman)
+- [Stake Holders](#stake-holders)
+- [User Stories](#user-stories)
+- [Usecase Specification - General Player](#usecase-specification---general-player)
+- [Usecase Specification](#usecase-specification)
+- [Usecase - Diagram](#usecase---diagram)
+- [Potential Challenges](#potential-challenges)
+- [Classes Diagram](#classes-diagram)
+- [Think Aloud](#think-aloud)
+- [Heuristic Evaluation](#heuristic-evaluation)
+
 
 ## Team Photo
 ![Group Photo](./readmeFiles/groupphoto.JPG)
@@ -365,11 +375,11 @@ feedback of  a participant: The pipes only generates randomly within the first t
     </tbody>
 </table>
 
-## Setting up processing in Inteliji 
-https://www.youtube.com/watch?v=_h2GZgnPcnM
 
-## Example code of Flappy Bird
-https://forum.processing.org/two/discussion/3580/flappy-code.html
+
+
+
+# Group notes
 
 
 ## Mark Scheem 
