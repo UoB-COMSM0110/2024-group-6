@@ -1,4 +1,4 @@
-SuperSpaceman/target
-.vscode
-.idea*
+.vscode/
+.idea/
+Super_Spaceman/*.autosave
 

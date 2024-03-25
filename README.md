@@ -299,6 +299,72 @@ Extra notes:
 
 <img src="./readmeFiles/Classes_Diagram _v0.png">
 
+## Think Aloud
+
+task 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
+task 2 - pipes creation, need to create pipes.  
+feedback of  a participant: The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
+
+## Heuristic Evaluation
+<table>
+    <tbody>
+        <tr>
+            <td><b>Interface</b></td>
+            <td><b>Issue</b></td>
+            <td><b>Heuristic(s)</b></td>
+            <td><b>Frequency</b> 0 (rare) to 4 (common)</td>
+            <td><b>Impact</b> 0 (easy) to difficult (4)</td>
+            <td><b>Persistence</b> 0 (once) to 4 (repeated)</td>
+            <td><b>Severity</b> = Sum Total of F+I+P/3</td>
+        </tr>
+        <tr>
+            <td>Pipes</td>
+            <td>can't too narrow</td>
+            <td>pay attention to the spacing between the pipes(at least could be able to see the next pipe when passing through this pipe)</td>
+            <td>4</td>
+            <td>1</td>
+            <td>4</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>Character</td>
+            <td>need big jump(need to click many times to jump higher)</td>
+            <td></td>
+            <td>4</td>
+            <td>0</td>
+            <td>0</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Gravity</td>
+            <td>fall too slow</td>
+            <td>need acceleration</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>Movements</td>
+            <td>Gameplay judgments are a bit sketchy, the distances of pipes are a bit large</td>
+            <td>Reset the judgments of collision, narrowing the distances of pipes</td>
+            <td>4</td>
+            <td>2</td>
+            <td>4</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+            <td> </td>
+        </tr>
+    </tbody>
+</table>
+
 ## Setting up processing in Inteliji 
 https://www.youtube.com/watch?v=_h2GZgnPcnM
 

@@ -1,10 +1,4 @@
-package game;
-
-import processing.core.PApplet;
-import processing.core.PConstants;
-import processing.core.PImage;
-
-class Gamecharacter {
+class GameCharacter {
 
     private int xPosition;
     private int yPosition;
@@ -13,11 +7,11 @@ class Gamecharacter {
     PImage character;
     PApplet game;
 
-    public Gamecharacter(PApplet processingMethord){
+    public GameCharacter(PApplet processingMethord){
         this.game = processingMethord;
         this.xPosition = game.width/2;
         this.yPosition = game.height/2;
-        this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman1.png");
+        this.character = this.game.loadImage("assets/spaceman1.png");
         this.game.imageMode(PConstants.CENTER);
         this.game.image(this.character,this.xPosition,this.yPosition);
         this.deltaY = 50;
@@ -49,12 +43,13 @@ class Gamecharacter {
     }
 
     public void getCharacter(){
-        this.character = this.game.loadImage("SuperSpaceman/src/main/java/assets/spaceman1.png");
+        this.character = this.game.loadImage("assets/spaceman1.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
     }
 
     public void setIncreaseDeltaY(){
         this.deltaY += 1;
     }
+
 
 }
