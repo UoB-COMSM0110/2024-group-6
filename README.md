@@ -19,7 +19,6 @@
 - [Think Aloud](#think-aloud)
 - [Heuristic Evaluation](#heuristic-evaluation)
 
-
 ## Team Photo
 
 ![Group Photo](./readmeFiles/groupphoto.JPG)
@@ -60,6 +59,7 @@
 </table>
 
 ## Game Ideas
+
 Key:
 1-9 : Top Options
 M: Maybe
@@ -67,19 +67,18 @@ N: Removed From List
 
 | Name | URL | Sutibility / Intrest / Ranking|
 | -------- | -------- | -------- |
- Snake| https://en.wikipedia.org/wiki/Snake_(video_game_genre)   | 1|
-| Flappy Bird| https://en.wikipedia.org/wiki/Flappy_Bird  | 2a|
-| Tetris| https://en.wikipedia.org/wiki/Tetris  | 2b |
-| Angry Birds| https://en.wikipedia.org/wiki/Angry_Birds_(video_game)  | 3 |
-| Kingdom Rush| https://en.wikipedia.org/wiki/Kingdom_Rush  | M |
-| Super Mario| https://en.wikipedia.org/wiki/Super_Mario_Bros.  | M |
-| Brick Breaker| https://en.wikipedia.org/wiki/Brick_Breaker   | M |
-| Bejeweled| https://en.wikipedia.org/wiki/Bejeweled  | N |
-| Zuma| https://en.wikipedia.org/wiki/Zuma_(video_game)  | N |
-| Deemo| https://en.wikipedia.org/wiki/Deemo  | N |
+ Snake| <https://en.wikipedia.org/wiki/Snake_(video_game_genre)>   | 1|
+| Flappy Bird| <https://en.wikipedia.org/wiki/Flappy_Bird>  | 2a|
+| Tetris| <https://en.wikipedia.org/wiki/Tetris>  | 2b |
+| Angry Birds| <https://en.wikipedia.org/wiki/Angry_Birds_(video_game)>  | 3 |
+| Kingdom Rush| <https://en.wikipedia.org/wiki/Kingdom_Rush>  | M |
+| Super Mario| <https://en.wikipedia.org/wiki/Super_Mario_Bros>.  | M |
+| Brick Breaker| <https://en.wikipedia.org/wiki/Brick_Breaker>   | M |
+| Bejeweled| <https://en.wikipedia.org/wiki/Bejeweled>  | N |
+| Zuma| <https://en.wikipedia.org/wiki/Zuma_(video_game)>  | N |
+| Deemo| <https://en.wikipedia.org/wiki/Deemo>  | N |
 
-
-## Game Features 
+## Game Features
 
 <table>
     <thead>
@@ -93,7 +92,7 @@ N: Removed From List
             <td>Snake</td>
             <td>2 Player</td>
             <td>walls</td>
-            <td>crash into smaller snakes</td>        
+            <td>crash into smaller snakes</td>
         </tr>
         <tr>
             <td>brick braker</td>
@@ -136,15 +135,18 @@ N: Removed From List
 </table>
 
 ## Snake
+
 For snake we have short listed this classic game for many reasons. The top reasons that we picked this game were for its multitude of options and possibilities to be extended with new exciting inovative software devlopment features. As a group, we have highlighted the opportunity to extend Snake with features such as 2 player game play, added walls and eating smaller snakes. Each one of these features will give us, as a group, plenty to work on. The Two Player feature will enable two users on the same machine to play the same game. While adding walls will make it much harder for the snake to move around and access the much needed nutrients need for game play. To offset this we will include smaller snakes to increase the ability for the snake to increase in size.
 
-### Prototype 
+### Prototype
+
 [![Snake Wars](./readmeFiles/Thumbnails/snakeWarsThumnail.png)](https://www.youtube.com/watch?v=iB4qEvqEI_E "Snake Wars")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
 Following creating a prototype for Snake, we quickly found many positives and negative associated though carrying out our development process. This included a change of name, good demonstration and not much in the way of a need to change the core elements of our design. Feedback quickly prompted us to change the name of the game to Snake Wars as the original was too similar to other games out there.  
 
 ## Flappy Bird
+
 Choosing Flappy Bird as our inspiration brings a delightful challenge to the table. Our concept introduces several innovative features: Firstly, we can incorporate new patterns that allow players to navigate through pipes to reach new locations or maps. Secondly, we aim to enhance the bird's abilities through unique means, e.g. the ability to shoot lasers. Lastly, we propose adding new gates that redirect players to the starting point, elevating the difficulty level of the game.
 
 ### Prototype
@@ -156,7 +158,7 @@ We have ultimately chosen to base our game idea on Flappy Bird and transform it 
 
 ## Game Selection - Why we have chosen Super Spaceman
 
-Although both games hold exciting potential, there was definitely a clear favourite throughout the research process, and the group has collectively agreed to pursue Super Spaceman. Ultimately, Super Spaceman has a greater scope for game features and creative opportunities. For Snake, we could not think of many challenges other than implementing walls, where as, for SSM, we were able to think of multiple categories, including various different hazards and power ups. So much, that we have had to spend time narrowing down which of our ideas to use. When researching these features, we concluded that SSM will also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we feel more excited about the interface for SSM, and have already thought of different game maps. Our thoughts were confirmed in Monday’s lab, where we received positive feedback for SSM, and there was a general consensus that this was a more innovative idea and would be the most popular game. 
+Although both games hold exciting potential, there was definitely a clear favourite throughout the research process, and the group has collectively agreed to pursue Super Spaceman. Ultimately, Super Spaceman has a greater scope for game features and creative opportunities. For Snake, we could not think of many challenges other than implementing walls, where as, for SSM, we were able to think of multiple categories, including various different hazards and power ups. So much, that we have had to spend time narrowing down which of our ideas to use. When researching these features, we concluded that SSM will also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we feel more excited about the interface for SSM, and have already thought of different game maps. Our thoughts were confirmed in Monday’s lab, where we received positive feedback for SSM, and there was a general consensus that this was a more innovative idea and would be the most popular game.
 
 ## Stake Holders
 
@@ -196,7 +198,8 @@ Although both games hold exciting potential, there was definitely a clear favour
 </table>
 
 ## User-Stories
->"As a Player from General Public I want to play a game based on flappy birds with new innovative features so that it grabs my intrigue and attention." 
+>
+>"As a Player from General Public I want to play a game based on flappy birds with new innovative features so that it grabs my intrigue and attention."
 
 >"As a member of the Development Team I want to implement a first in class app/game that push me to learn new skills."
 
@@ -216,9 +219,10 @@ Although both games hold exciting potential, there was definitely a clear favour
 
 **Description** - Super Spaceman is a game with inspiration taken from the game Flappy Bird. Within the following user specifiction, we are going to take you through a step-by-step routine of which a general player would encounter when playing the game.
 
-**Aim** - The Aim of the game is to prevent Super Spaceman from dying. Throughout the game he encounters many hazards, of which he will have to avoid in order to survive and continue playing. As the user plays the game, Super Spaceman picks up speed. 
+**Aim** - The Aim of the game is to prevent Super Spaceman from dying. Throughout the game he encounters many hazards, of which he will have to avoid in order to survive and continue playing. As the user plays the game, Super Spaceman picks up speed.
 
 ## Usecase Specification
+
 <table>
     <tbody>
         <tr>
@@ -282,29 +286,27 @@ Although both games hold exciting potential, there was definitely a clear favour
     </tbody>
 </table>
 
+## Usecase - Diagram
 
-## Usecase - Diagram 
 <img src="./readmeFiles/usecasediagram.png">
 
-
 ## Reflection
-This week, our team gained valuable insights into the specific requirements of our game and we learnt lots about different player experiences. The task highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many. For example, including exciting and sophisticated features, whilst also being adaptable to those with disabilities. As a team, we enjoyed the process of collaborating and coming to these decisions, and due to our effective planning, we were able to produce a user story and use case that matched and reflected our initial game requirements. 
+
+This week, our team gained valuable insights into the specific requirements of our game and we learnt lots about different player experiences. The task highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many. For example, including exciting and sophisticated features, whilst also being adaptable to those with disabilities. As a team, we enjoyed the process of collaborating and coming to these decisions, and due to our effective planning, we were able to produce a user story and use case that matched and reflected our initial game requirements.
 
 However, when discussing our use case specification and creating our use case diagram, we realised that our initial plan was perhaps over complicated. We had some slight issues when defining whether something was an ‘include’ or ‘extend’. Some of our members were unable to meet in person, and so when we came together to discuss our use case diagram, it was difficult to explain over the phone, specific things that we wanted them to change and why. This meant that we had to refactor lots, which overall emphasised the importance of remaining flexible throughout the game design process. Ultimately, this task was an important learning journey that provided us with a solid game design that we think will be open to many.
 
+## Potential Challenges
 
-
-
-## Potential Challenges 
 Based on Flappy Bird, but the player can transport to different maps.
 
-- Challenge 1 - Entering transport pipes - 
+- Challenge 1 - Entering transport pipes -
 - Challenge 2 - Data structure for storing the map - and changing it when they exit the portal pipes
 - Challenge 3 - How to decide if the player enters a new map, or just a different location on the current map. (the control flow)
 - Challenge 4 - Deciding where you go on the current map.
 
-
 Extra notes:
+
 - Generating the code for randomised hazards
 - Implementing losing health when the player hits a hazards
 
@@ -325,7 +327,6 @@ Feedback 2 - pipes creation, need to create pipes.
 Feedback 3 - The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
 
 Feedback 4 - It would be easier to use the spacebar to control the character.
-
 
 ## Heuristic Evaluation
 
@@ -381,7 +382,7 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
 
 ## Summary - Qualative Evaluation
 
-"Summary of data - Cecily??" 
+"Summary of data - Cecily??"
 
 # Quantitavie Evaluation
 
@@ -549,14 +550,14 @@ In this section we will analysie and showcase collected data from participants w
 </table>
 
 ## Summary - Quantitative Evaluation
-"Summary of data - Cecily??" 
 
+"Summary of data - Cecily??"
 
 # Group notes
 
-https://processing.org/tutorials
+<https://processing.org/tutorials>
 
-## Mark Scheem 
+## Mark Scheem
 
 Project Report
 
