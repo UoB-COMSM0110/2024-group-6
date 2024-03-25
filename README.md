@@ -1,5 +1,4 @@
-# 2024-group-6
-https://processing.org/tutorials
+
 ## Table of Contents  
 - [Team Photo](#team-photo)
 - [Group Members](#group-members)
@@ -381,6 +380,8 @@ feedback of  a participant: The pipes only generates randomly within the first t
 
 # Group notes
 
+# 2024-group-6
+https://processing.org/tutorials
 
 ## Mark Scheem 
 
