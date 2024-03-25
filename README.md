@@ -325,8 +325,6 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
 
 ## Heuristic Evaluation
 
-"Edit to suggest which horistic it is relevant too" 
-
 <table>
     <tbody>
         <tr>
@@ -379,7 +377,7 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
 
 ## Summary - Qualative Evaluation
 
-"Summary of data" 
+"Summary of data - Cecily??" 
 
 # Quantitavie Evaluation
 
@@ -547,7 +545,7 @@ In this section we will analysie and showcase collected data from participants w
 </table>
 
 ## Summary - Quantitative Evaluation
-"add summary" 
+"Summary of data - Cecily??" 
 
 
 # Group notes
