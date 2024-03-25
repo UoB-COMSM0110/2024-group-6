@@ -308,6 +308,8 @@ Extra notes:
 
 <img src="./readmeFiles/Classes_Diagram _v0.png">
 
+# Qualitative Evaluation
+
 ## Think Aloud
 
 Feedback 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
@@ -367,19 +369,14 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
             <td>4</td>
             <td>3</td>
         </tr>
-        <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-        </tr>
     </tbody>
 </table>
 
+## Summary - Qualative Evaluation
 
+# Quantitavie Evaluation
+
+## NASA TLXs Questionair
 
 
 
