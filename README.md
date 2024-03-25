@@ -340,8 +340,8 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
         </tr>
         <tr>
             <td>Pipes</td>
-            <td>Too narrow</td>
             <td>pay attention to the spacing between the pipes(at least could be able to see the next pipe when passing through this pipe)</td>
+            <td>Aesthetic and Minimalist Design</td>
             <td>4</td>
             <td>1</td>
             <td>4</td>
@@ -350,7 +350,7 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
         <tr>
             <td>Character</td>
             <td>Need bigger jumps(need to click many times to jump higher)</td>
-            <td></td>
+            <td>Consistency and Standards</td>
             <td>4</td>
             <td>0</td>
             <td>0</td>
@@ -358,8 +358,8 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
         </tr>
         <tr>
             <td>Gravity</td>
-            <td>Fall too slowly</td>
-            <td>Need acceleration</td>
+            <td>Fall too slowly. Character need more Gravity</td>
+            <td>Consistency and Standards</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
@@ -367,8 +367,8 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
         </tr>
         <tr>
             <td>Movements</td>
-            <td>Gameplay judgments are a bit sketchy, the distances of pipes are a bit large</td>
-            <td>Reset the judgments of collision, narrowing the distances of pipes</td>
+            <td>Gameplay judgments are a bit sketchy, the distances of pipes are a bit large. Reset the judgments of collision, narrowing the distances of pipes</td>
+            <td>Consistency and Standards</td>
             <td>4</td>
             <td>2</td>
             <td>4</td>
