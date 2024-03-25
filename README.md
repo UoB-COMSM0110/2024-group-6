@@ -1,4 +1,4 @@
-
+# 2024-group-6
 ## Table of Contents  
 - [Team Photo](#team-photo)
 - [Group Members](#group-members)
@@ -550,7 +550,6 @@ In this section we will analysie and showcase collected data from participants w
 
 # Group notes
 
-# 2024-group-6
 https://processing.org/tutorials
 
 ## Mark Scheem 
