@@ -15,6 +15,8 @@ HazardPipe pipeThree;
 boolean collisonTest1;
 boolean collisonTest2;
 boolean collisonTest3;
+boolean collisonTop;
+boolean collisonBottom;
 
 void setup() { 
   pipeOne = new HazardPipe();
@@ -46,7 +48,7 @@ void draw() {
 
     } else {
 
-        if(collisonTest1 || collisonTest2 || collisonTest3){
+        if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
             hasDied = true; 
 
             background(0);
@@ -54,7 +56,7 @@ void draw() {
             text("Died",(width/2),height/2);
 
             textSize(30);
-            text("Press Spacebar to Exit",width/2,height/1.2);
+            text("Click to Exit",width/2,height/1.2);
         } else {
             this.background(100,100,80); 
             pipeOne.updateX();
@@ -66,7 +68,9 @@ void draw() {
         collisonTest1 = pipeOne.collison(bird.getX(), bird.getY());
         collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
         collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
-    
+        if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
+        if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
+        System.out.println(bird.getY());
     }
 
 }
@@ -85,6 +89,8 @@ void mousePressed() {
         collisonTest1 = false;
         collisonTest2 = false;
         collisonTest3 = false;
+        collisonBottom = false;
+        collisonTop = false;
         setup();
     }
 
@@ -97,15 +103,6 @@ public void keyPressed(){
         // hasDied = false;
     } else {
         bird.jump();
-    }
-
-    if(hasDied){
-        splashScreen = true;
-        hasDied = false;
-        collisonTest1 = false;
-        collisonTest2 = false;
-        collisonTest3 = false;
-        setup();
     }
 
 }

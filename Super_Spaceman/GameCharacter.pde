@@ -14,8 +14,8 @@ class GameCharacter {
         this.character = this.game.loadImage("assets/spaceman1.png");
         this.game.imageMode(PConstants.CENTER);
         this.game.image(this.character,this.xPosition,this.yPosition);
-        this.deltaY = 50;
-        this.gforce = 1;
+        this.deltaY = 63;
+        this.gforce = 4;
     }
 
     public int getX(){
