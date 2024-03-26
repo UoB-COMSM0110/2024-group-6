@@ -457,6 +457,10 @@ In this section we will analysie and showcase collected data from participants w
 
 ## System Unability Survey(SUS)
 
+Scale: <br>
+1 == Strongly Disagree, <br> 
+5 == Strongly Agree     <br>
+
 <table>
     <thead>
         <td>Participant(Names Hidden for Privacy)</td>
@@ -554,10 +558,11 @@ In this section we will analysie and showcase collected data from participants w
 "Summary of data - Cecily??"
 
 # Sprint 1
-Improvments:
+## Improvments:
 
 > SUS I found the system unnecessarily complex resulted in ones. Improvment == create spashscreen to prevent the software from being complex. result of work == created splashscreen && game rest screen
 
+>test
 
 # Group notes
 
