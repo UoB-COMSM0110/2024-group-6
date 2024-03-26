@@ -561,9 +561,13 @@ Scale: <br>
 
 ## Improvments:
 
-> SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen.
+> SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen. We have designed it as such that the user much click the screen to go back to the start screen as prior to this we allowed it to be done with keys though the user would hold down the keys and would end up in a sudo infinate loop senario untill the key was lifter. 
 
->test
+> Make improvments to the collisions. The character before we made the changes would not die if it hit the top or bottom of the screen. We added collision to detect this and now the character does indeed die upone such impact with the top and bottom of the screen. 
+
+> Increased the amount of "G-force" applyed to the character so that it falls quicker. At present the character falls too slowley. This means that by no falt of the user the character colides into obsticals(mainly pipes) as the character does not fall quicker enough. We changed this so that now the character does fall much quicker. To ofset this we have also had to increase the deltaY which is used to move the character up upone jumping. 
+
+
 
 # Group notes
 
