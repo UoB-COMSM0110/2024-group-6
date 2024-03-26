@@ -18,6 +18,9 @@ boolean collisonTest3;
 boolean collisonTop;
 boolean collisonBottom;
 
+int startTime;
+int endTime;
+
 void setup() { 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
@@ -44,20 +47,25 @@ void draw() {
 
         textSize(30);
         text("press Spacebar to Start",width/2,height/1.2);
+        startTime = millis();
 
     } else {
 
         if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
+            if(!hasDied){endTime = millis();} 
             hasDied = true; 
-
             background(0);
             textSize(40);
             text("Died",(width/2),height/2);
 
+            textSize(20);
+            int duration = (endTime - startTime) / 1000;
+            text("Game Duration: "+duration,width/2,height/1.4);
+
             textSize(30);
             text("Click to Exit",width/2,height/1.2);
         } else {
-            this.background(100,100,80); 
+            background(100,100,80); 
             pipeOne.updateX();
             pipeTwo.updateX();
             pipeThree.updateX();  
@@ -69,15 +77,14 @@ void draw() {
         collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
         if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
         if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
-        System.out.println(bird.getY());
     }
 
 }
 
 void mousePressed() { 
-    System.out.println(hasDied);
     if(splashScreen){
         splashScreen = false;
+        // startTime = millis();
     } else {
         bird.jump();
     }
