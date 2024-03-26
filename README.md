@@ -560,7 +560,7 @@ Scale: <br>
 # Sprint 1
 ## Improvments:
 
-> SUS I found the system unnecessarily complex resulted in ones. Improvment == create spashscreen to prevent the software from being complex. result of work == created splashscreen && game rest screen
+> SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen.
 
 >test
 
