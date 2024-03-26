@@ -558,6 +558,7 @@ Scale: <br>
 "Summary of data - Cecily??"
 
 # Sprint 1
+
 ## Improvments:
 
 > SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen.
