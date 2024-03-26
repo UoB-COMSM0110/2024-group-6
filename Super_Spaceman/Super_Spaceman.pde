@@ -84,7 +84,6 @@ void draw() {
 void mousePressed() { 
     if(splashScreen){
         splashScreen = false;
-        // startTime = millis();
     } else {
         bird.jump();
     }
