@@ -6,6 +6,7 @@ void settings() {
 }
 
 boolean splashScreen = true; 
+boolean hasDied = false;
 
 GameCharacter bird;
 HazardPipe pipeOne;
@@ -46,11 +47,16 @@ void draw() {
     } else {
 
         if(collisonTest1 || collisonTest2 || collisonTest3){
+            hasDied = true; 
+
             background(0);
             textSize(40);
-            text("Died",(width/2)-40,height/2);
+            text("Died",(width/2),height/2);
+
+            textSize(30);
+            text("Press Spacebar to Exit",width/2,height/1.2);
         } else {
-            this.background(100,100,80); //change background based on background class
+            this.background(100,100,80); 
             pipeOne.updateX();
             pipeTwo.updateX();
             pipeThree.updateX();  
@@ -63,32 +69,46 @@ void draw() {
     
     }
 
-
-
 }
 
-void mousePressed() {
+void mousePressed() { 
+    System.out.println(hasDied);
     if(splashScreen){
-        this.splashScreen = false;
+        splashScreen = false;
     } else {
         bird.jump();
     }
+
+    if(hasDied){
+        splashScreen = true;
+        hasDied = false;
+        collisonTest1 = false;
+        collisonTest2 = false;
+        collisonTest3 = false;
+        setup();
+    }
+
 }
 
 public void keyPressed(){
     
     if(splashScreen){
-        this.splashScreen = false;
+        splashScreen = false;
+        // hasDied = false;
     } else {
         bird.jump();
     }
 
+    if(hasDied){
+        splashScreen = true;
+        hasDied = false;
+        collisonTest1 = false;
+        collisonTest2 = false;
+        collisonTest3 = false;
+        setup();
+    }
+
 }
 
-//
-//    private void powerUp(){
-//
-//        System.out.println(key);
-//    }
 
-    // You can add more methods here, such as mousePressed(), keyPressed(), etc.
+
