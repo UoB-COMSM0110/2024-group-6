@@ -553,6 +553,12 @@ In this section we will analysie and showcase collected data from participants w
 
 "Summary of data - Cecily??"
 
+# Sprint 1
+Improvments:
+
+> SUS I found the system unnecessarily complex resulted in ones. Improvment == create spashscreen to prevent the software from being complex. 
+
+
 # Group notes
 
 <https://processing.org/tutorials>
