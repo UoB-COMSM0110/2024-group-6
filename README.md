@@ -556,7 +556,7 @@ In this section we will analysie and showcase collected data from participants w
 # Sprint 1
 Improvments:
 
-> SUS I found the system unnecessarily complex resulted in ones. Improvment == create spashscreen to prevent the software from being complex. 
+> SUS I found the system unnecessarily complex resulted in ones. Improvment == create spashscreen to prevent the software from being complex. result of work == created splashscreen && game rest screen
 
 
 # Group notes
