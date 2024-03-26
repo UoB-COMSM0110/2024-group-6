@@ -22,7 +22,6 @@ void setup() {
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
   pipeThree = new HazardPipe();
-  // Initialization code here
   background(100,100,80); 
   bird = new GameCharacter(this); 
   pipeOne.generateInitalPipe();
@@ -100,7 +99,6 @@ public void keyPressed(){
     
     if(splashScreen){
         splashScreen = false;
-        // hasDied = false;
     } else {
         bird.jump();
     }
