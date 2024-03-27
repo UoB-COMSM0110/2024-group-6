@@ -40,7 +40,7 @@ void draw() {
         splashScreenLogic();
     } else {
         if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
-            hasDiedScreen();
+            diedScreen();
         } else {
             updateData();
         }
@@ -67,7 +67,6 @@ void checkForCollison(){
 }
 
 void splashScreenLogic(){
-
     background(0);
     textSize(40);
     textAlign(CENTER, BASELINE);
@@ -78,10 +77,9 @@ void splashScreenLogic(){
     textSize(30);
     text("press Spacebar to Start",width/2,height/1.2);
     startTime = millis();
-
 }
 
-void hasDiedScreen(){
+void diedScreen(){
     if(!hasDied){endTime = millis();} 
     hasDied = true; 
     background(0);
@@ -95,9 +93,6 @@ void hasDiedScreen(){
     textSize(30);
     text("Click to Exit",width/2,height/1.2);
 }
-
-
-
 
 void mousePressed() { 
     if(splashScreen){
@@ -116,17 +111,14 @@ void mousePressed() {
         collisonTop = false;
         setup();
     }
-
 }
 
-public void keyPressed(){
-    
+public void keyPressed(){  
     if(splashScreen){
         splashScreen = false;
     } else {
         bird.jump();
     }
-
 }
 
 

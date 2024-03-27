@@ -90,8 +90,16 @@ class HazardPipe{
 
     public boolean collison(int x, int y){
 
-        // two diffrent types of collisons based on hazardPipe ??
+        // two diffrent types of collisons based on hazardPipe
 
+        // check colision with correct serface if so transportCollion = true and return false
+        
+        // implement getter methord for transportCollion
+
+        // if transportCollion == true do the below
+        // generate new background within updateData() ,
+        // generate new pipes && move bird to center of screen from within updateData()
+        
         //top pipe 
         if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth))){
                 return false;
