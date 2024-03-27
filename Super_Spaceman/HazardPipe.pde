@@ -9,13 +9,16 @@ class HazardPipe{
     private int topPipeYPosition;
     private int bottomPipeYPosition;
     
-    boolean hazardPipe = true; //trial this idea
+    private boolean hazardPipe;
+    private boolean transportPipeTop;  
 
     public HazardPipe(){
         this.pipeInterval = 100;
         this.minGapSize = 150;
         this.pipeWidth = 50;
         this.xPosition = width;
+        this.hazardPipe = true;
+        this.transportPipeTop = true;
     }
 
 
@@ -26,7 +29,23 @@ class HazardPipe{
         this.bottomPipeYPosition = (int)random(topPipeYPosition + minGapSize,height);
         
         //random number that switch hazardPipe on or off??
-        
+        int randNum = (int)random(0,3); // 10
+        int transportPipUpOrDown = (int)random(0,1);
+        System.out.println(randNum);
+        if( 1 == randNum){
+
+            this.hazardPipe = false;
+
+            if(transportPipUpOrDown == 0){
+                this.transportPipeTop = true;
+            } else {
+                this.transportPipeTop = false; 
+            }
+
+        } else {
+            this.hazardPipe = true;
+        }
+
         generatePipe();
     }
 
@@ -46,17 +65,43 @@ class HazardPipe{
 
     private void generatePipe(){
 
-        //diffrent type of pipe based on hazardType ??
+        if(this.hazardPipe){
+            //Top Pipe
+            fill(333,345,198);
+            noStroke();
+            rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
 
-        //Top Pipe
-        fill(333,345,198);
-        noStroke();
-        rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
+            //bottom pipe
+            fill(333,345,198);
+            noStroke();
+            rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
 
-        //bottom pipe
-        fill(333,345,198);
-        noStroke();
-        rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
+        } else {
+            //diffrent type of pipe based on hazardType ??
+            if(this.transportPipeTop){
+                //Top Pipe
+                fill(255,0,0);
+                noStroke();
+                rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
+
+                //bottom pipe
+                fill(333,345,198);
+                noStroke();
+                rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
+            }
+
+            if(!this.transportPipeTop){
+                //Top Pipe
+                fill(333,345,198);
+                noStroke();
+                rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
+
+                //bottom pipe
+                fill(255,0,0);
+                noStroke();
+                rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
+            }
+        }
     }
 
     public void setPipeSizeBottom(int pipeSizeBottom){

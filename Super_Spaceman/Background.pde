@@ -1,7 +1,6 @@
-public enum Background {
+public enum background {
+    Milkway,
     Moon,
     Earth,
-    AstroidBelt,
-    Mars,
-    Ufo
+    Mars
 }
