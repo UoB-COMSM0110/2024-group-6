@@ -37,49 +37,67 @@ void setup() {
 void draw() {
 
     if(splashScreen){
-
-        background(0);
-        textSize(40);
-        textAlign(CENTER, BASELINE);
-        text("SuperSpaceMan",(width/2),height/4);
-
-        bird.getCharacter();
-
-        textSize(30);
-        text("press Spacebar to Start",width/2,height/1.2);
-        startTime = millis();
-
+        splashScreenLogic();
     } else {
-
         if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
-            if(!hasDied){endTime = millis();} 
-            hasDied = true; 
-            background(0);
-            textSize(40);
-            text("Died",(width/2),height/2);
-
-            textSize(20);
-            int duration = (endTime - startTime) / 1000;
-            text("Game Duration: "+duration,width/2,height/1.4);
-
-            textSize(30);
-            text("Click to Exit",width/2,height/1.2);
+            hasDiedScreen();
         } else {
-            background(100,100,80); 
-            pipeOne.updateX();
-            pipeTwo.updateX();
-            pipeThree.updateX();  
-            bird.getCharacter();
-            bird.gravity();
+            updateData();
         }
-        collisonTest1 = pipeOne.collison(bird.getX(), bird.getY());
-        collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
-        collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
-        if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
-        if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
+        checkForCollison();
     }
 
 }
+
+void updateData(){
+    background(100,100,80); 
+    pipeOne.updateX();
+    pipeTwo.updateX();
+    pipeThree.updateX();  
+    bird.getCharacter();
+    bird.gravity();
+}
+
+void checkForCollison(){
+    collisonTest1 = pipeOne.collison(bird.getX(), bird.getY());
+    collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
+    collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
+    if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
+    if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
+}
+
+void splashScreenLogic(){
+
+    background(0);
+    textSize(40);
+    textAlign(CENTER, BASELINE);
+    text("SuperSpaceMan",(width/2),height/4);
+
+    bird.getCharacter();
+
+    textSize(30);
+    text("press Spacebar to Start",width/2,height/1.2);
+    startTime = millis();
+
+}
+
+void hasDiedScreen(){
+    if(!hasDied){endTime = millis();} 
+    hasDied = true; 
+    background(0);
+    textSize(40);
+    text("Died",(width/2),height/2);
+
+    textSize(20);
+    int duration = (endTime - startTime) / 1000;
+    text("Game Duration: "+duration,width/2,height/1.4);
+
+    textSize(30);
+    text("Click to Exit",width/2,height/1.2);
+}
+
+
+
 
 void mousePressed() { 
     if(splashScreen){
