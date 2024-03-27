@@ -62,6 +62,9 @@ void checkForCollison(){
     collisonTest1 = pipeOne.collison(bird.getX(), bird.getY());
     collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
+    if(pipeOne.getTransportCollison()){} //Cecily add in change of background here + reset bird and pipes
+    if(pipeTwo.getTransportCollison()){} //Cecily add in change of background here + reset bird and pipes
+    if(pipeThree.getTransportCollison()){} //Cecily add in change of background here + reset bird and pipes
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
 }
