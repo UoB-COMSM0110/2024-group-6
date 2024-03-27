@@ -382,7 +382,11 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
 
 ## Summary - Qualative Evaluation
 
-"Summary of data - Cecily??"
+
+The Heuristic Evaluation bought important issues about our game, to our attention. The issues primarily related to Consistency and Standards, but also the Aesthetic and Design of our game. The most severe issue related to our character interface. We found that the user needs to click many times to make the character jump higher, leading to a frustrating gameplay. This was a common issue, scoring 4/4 and led to a sum total of 4/4. We have decided to modify the character slightly, and increase the height of the jump per click. We have also decided to increase the gravity rate. This is because we found that the character fell too slowly, making it difficult to progress further through the game.
+
+We noted issues relating to the Movements and Pipes interfaces of our game. This included the distances between pipes being too large, the pipes not generating randomly and the character falling off the screen. Although the issues individually are relatively minor, accumulated together they are noticeably persistent and severe (3/4), and overall leads to a rather ‘sketchy’ gameplay. Therefore, we have decided to reset the judgements of collision, narrow the distance between pipes and ensure that the pipes pattern does not continuously repeat. This not only improves the Consistency and Standards usability, but also the Aesthetic and Minimalist Design usability.
+
 
 # Quantitavie Evaluation
 
