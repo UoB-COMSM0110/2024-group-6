@@ -46,9 +46,7 @@ class HazardPipe{
 
     private void generatePipe(){
 
-        
         //diffrent type of pipe based on hazardType ??
-
 
         //Top Pipe
         fill(333,345,198);
@@ -61,7 +59,6 @@ class HazardPipe{
         rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
     }
 
-
     public void setPipeSizeBottom(int pipeSizeBottom){
         this.pipeSizeBottom = pipeSizeBottom;
     }
@@ -69,7 +66,6 @@ class HazardPipe{
     public int getPipeSizeBottom(){
         return this.pipeSizeBottom;
     }
-
 
     public void setPipeSizeTop(int pipeSizeTop){
         this.pipeSizeTop = pipeSizeTop;
