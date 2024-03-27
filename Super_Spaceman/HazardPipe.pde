@@ -11,6 +11,7 @@ class HazardPipe{
     
     private boolean hazardPipe;
     private boolean transportPipeTop;  
+    private boolean transportCollison;
 
     public HazardPipe(){
         this.pipeInterval = 100;
@@ -30,9 +31,9 @@ class HazardPipe{
         
         //random number that switch hazardPipe on or off??
         int randNum = (int)random(0,3); // 10
-        int transportPipUpOrDown = (int)random(0,1);
-        System.out.println(randNum);
-        if( 1 == randNum){
+        int transportPipUpOrDown = (int)random(0,2);
+        System.out.println(transportPipUpOrDown);
+        if( 0 == randNum){
 
             this.hazardPipe = false;
 
@@ -129,25 +130,44 @@ class HazardPipe{
         return this.pipeInterval;
     }
 
+    public boolean getTransportCollison(){
+        return transportCollison;
+    }
+
+    public void setTransportCollison(boolean newValue){
+        transportCollison = newValue;
+    }
+
+    // two diffrent types of collisons based on hazardPipe
+    // check colision with correct serface if so transportCollion = true and return false
+    // implement getter methord for transportCollion
+    // if transportCollion == true do the below
+    // generate new background within updateData() ,
+    // generate new pipes && move bird to center of screen from within updateData()
+    
     public boolean collison(int x, int y){
-
-        // two diffrent types of collisons based on hazardPipe
-
-        // check colision with correct serface if so transportCollion = true and return false
         
-        // implement getter methord for transportCollion
-
-        // if transportCollion == true do the below
-        // generate new background within updateData() ,
-        // generate new pipes && move bird to center of screen from within updateData()
-        
-        //top pipe 
+        //Pipe L || R 
         if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth))){
                 return false;
-        }else if(((x >= this.xPosition) && (x <= this.xPosition + this.pipeWidth))){
+        
+        //Pipe UP || DOWN
+        }else if(( (x <= this.xPosition + this.pipeWidth) && (x >= this.xPosition) )){
+            
             if( y < this.bottomPipeYPosition && y > this.topPipeYPosition){
                 return false;
+            } else if(!hazardPipe){
+                if(transportPipeTop && y < this.bottomPipeYPosition){
+                    transportCollison = true;
+                    System.out.println("Top"+transportCollison);
+                    return false;
+                } else if(!transportPipeTop && y > this.topPipeYPosition){
+                    transportCollison = true;
+                    System.out.println("Bottom"+transportCollison);
+                    return false;
+                }
             }
+
         }
         return true;
     }

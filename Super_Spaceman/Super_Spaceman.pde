@@ -80,6 +80,7 @@ void splashScreenLogic(){
 }
 
 void diedScreen(){
+    fill(333,345,198);
     if(!hasDied){endTime = millis();} 
     hasDied = true; 
     background(0);
