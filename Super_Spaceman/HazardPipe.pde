@@ -8,6 +8,8 @@ class HazardPipe{
     private int xPosition;
     private int topPipeYPosition;
     private int bottomPipeYPosition;
+    
+    boolean hazardPipe = true; //trial this idea
 
     public HazardPipe(){
         this.pipeInterval = 100;
@@ -16,12 +18,17 @@ class HazardPipe{
         this.xPosition = width;
     }
 
+
+    // Maybe logic goes here for transport pipe
     public void generateInitalPipe(){
+
         this.topPipeYPosition = (int)random(height-minGapSize);
         this.bottomPipeYPosition = (int)random(topPipeYPosition + minGapSize,height);
+        
+        //random number that switch hazardPipe on or off??
+        
         generatePipe();
     }
-
 
     public void setXPosition(int xPosition){
         this.xPosition = xPosition;
@@ -38,6 +45,10 @@ class HazardPipe{
     }
 
     private void generatePipe(){
+
+        
+        //diffrent type of pipe based on hazardType ??
+
 
         //Top Pipe
         fill(333,345,198);
@@ -78,6 +89,9 @@ class HazardPipe{
     }
 
     public boolean collison(int x, int y){
+
+        // two diffrent types of collisons based on hazardPipe ??
+
         //top pipe 
         if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth))){
                 return false;
