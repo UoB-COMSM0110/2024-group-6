@@ -1,12 +1,13 @@
 import processing.pdf.*;
     
-
 void settings() {
     size(400, 600);
 }
 
 boolean splashScreen = true; 
 boolean hasDied = false;
+
+GameCharacter forceFeildOrTNT;
 
 GameCharacter bird;
 HazardPipe pipeOne;
@@ -24,12 +25,14 @@ int endTime;
 void setup() { 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
+  // Add - ForceFeild / TNT / nothing 
   pipeThree = new HazardPipe();
   background(100,100,80); 
   bird = new GameCharacter(this); 
   pipeOne.generateInitalPipe();
   pipeTwo.setXPosition(width+200);
   pipeTwo.generateInitalPipe();
+  // Generate - ForceFeild / TNT / nothing
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
 }
@@ -53,6 +56,7 @@ void updateData(){
     background(100,100,80); 
     pipeOne.updateX();
     pipeTwo.updateX();
+    // UpdateX - ForceFeild / TNT / nothing 
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
