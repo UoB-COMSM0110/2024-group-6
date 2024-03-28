@@ -6,7 +6,6 @@ public class TNT extends GameCharacter {
         this.game = processingMethord;
         this.xPosition = (game.width/2)+325;
         this.yPosition = (int)random(0,height); //(game.height/2);
-        // System.out.println(this.yPosition);
         this.characterWidth = 64; 
     }
 
