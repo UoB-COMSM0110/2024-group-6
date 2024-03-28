@@ -8,6 +8,7 @@ boolean splashScreen = true;
 boolean hasDied = false;
 
 TNT tnt;
+ForceFeild forceFeild;
 GameCharacter bird;
 HazardPipe pipeOne;
 HazardPipe pipeTwo;
@@ -27,6 +28,7 @@ void setup() {
   
   // Add - ForceFeild / TNT / nothing 
   tnt = new TNT(this);
+  forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
   background(100,100,80); 
@@ -37,6 +39,7 @@ void setup() {
   
   // Generate - ForceFeild / TNT / nothing
   tnt.getCharacter();
+  forceFeild.getCharacter();
 
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
@@ -65,6 +68,7 @@ void updateData(){
 
     // UpdateX - ForceFeild / TNT / nothing 
     tnt.getCharacter();
+    forceFeild.getCharacter();
 
     pipeThree.updateX();  
     bird.getCharacter();
@@ -81,6 +85,7 @@ void checkForCollison(){
 
     // Check for collison with TNT or ForceFeild 
     collisonTest2 = tnt.collison(bird.getX(), bird.getY());
+    System.out.println(forceFeild.collison(bird.getX(), bird.getY()));
 
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}

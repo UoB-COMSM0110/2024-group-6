@@ -1,8 +1,8 @@
 public class ForceFeild extends GameCharacter {
 
-        private int characterWidth;
+    private int characterWidth;
 
-    public TNT(PApplet processingMethord){
+    public ForceFeild(PApplet processingMethord){
         this.game = processingMethord;
         this.xPosition = (game.width/2)+325;
         this.yPosition = (int)random(0,height); //(game.height/2);
