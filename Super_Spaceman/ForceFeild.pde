@@ -1,6 +1,8 @@
 public class ForceFeild extends GameCharacter {
 
     private int characterWidth;
+    private int collisonStartTime;
+    private int collisonEndTime;
 
     public ForceFeild(PApplet processingMethord){
         this.game = processingMethord;
@@ -16,6 +18,11 @@ public class ForceFeild extends GameCharacter {
         this.xPosition -= 1;
     }
 
+    public void validForceFeild(int birdX, int birdY){
+        this.character = this.game.loadImage("assets/shield-Small.png");
+        this.game.image(this.character, birdX, birdY);
+    }
+
     public boolean collison(int x, int y){ 
         //Pipe L || R 
         if(((x < this.xPosition) || (x > this.xPosition + this.characterWidth))){
@@ -26,7 +33,17 @@ public class ForceFeild extends GameCharacter {
                 return false;
             } 
         }
+        collisonStartTime = millis();
+        collisonEndTime = collisonStartTime + 110; 
         return true;
+    }
+
+    public boolean getValidForceFeild(int time){
+        if(collisonEndTime >= time){
+            System.out.println("TRUE");
+            return true;
+        }
+        return false;
     }
 
 }

@@ -9,6 +9,7 @@ boolean hasDied = false;
 
 TNT tnt;
 ForceFeild forceFeild;
+
 GameCharacter bird;
 HazardPipe pipeOne;
 HazardPipe pipeTwo;
@@ -27,7 +28,7 @@ void setup() {
   pipeTwo = new HazardPipe();
   
   // Add - ForceFeild / TNT / nothing 
-  tnt = new TNT(this);
+//   tnt = new TNT(this);
   forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
@@ -38,7 +39,7 @@ void setup() {
   pipeTwo.generateInitalPipe();
   
   // Generate - ForceFeild / TNT / nothing
-  tnt.getCharacter();
+//   tnt.getCharacter();
   forceFeild.getCharacter();
 
   pipeThree.setXPosition(width+400);
@@ -67,12 +68,21 @@ void updateData(){
     pipeTwo.updateX();
 
     // UpdateX - ForceFeild / TNT / nothing 
-    tnt.getCharacter();
-    forceFeild.getCharacter();
+    // tnt.getCharacter();
 
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
+    
+
+    if(forceFeild.getValidForceFeild((int)millis())){
+        forceFeild.validForceFeild(bird.getX(), bird.getY());
+    } else {
+        forceFeild.getCharacter();
+    }
+
+
+
 }
 
 void checkForCollison(){
@@ -84,11 +94,19 @@ void checkForCollison(){
     if(pipeThree.getTransportCollison()){} //Cecily add in change of background here + reset bird and pipes
 
     // Check for collison with TNT or ForceFeild 
-    collisonTest2 = tnt.collison(bird.getX(), bird.getY());
-    System.out.println(forceFeild.collison(bird.getX(), bird.getY()));
-
+    // collisonTest2 = tnt.collison(bird.getX(), bird.getY());
+    
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
+
+    forceFeild.collison(bird.getX(), bird.getY());
+    if(forceFeild.getValidForceFeild((int)millis())){
+        collisonTest1 = false;
+        collisonTest2 = false;
+        collisonTest3 = false; 
+        collisonBottom = false;
+        collisonTop = false;
+    }
 }
 
 void splashScreenLogic(){
