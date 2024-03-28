@@ -559,7 +559,16 @@ Scale: <br>
 
 ## Summary - Quantitative Evaluation
 
-"Summary of data - Cecily??"
+To appropriately evaluate the user experience and system usability of SuperSpaceMan, we used the NASA (TLX) and System Usability Survey - two approaches that provide significant quantitative insight into a user’s interaction, and the overall performance of our game.
+
+The results of the NASA questionnaire strongly highlighted that our game is not particularly demanding. For each of the three categories that measured demand (mental, physical and temporal), results were very low, primarily between 1 - 5, with one participant (participant 5) even voting 1 for all three demand categories. 
+
+One result in particular stands out. Participant 2 scored the temporal demand of SuperSpaceMan, very high, at 16 out of 20. The reason for this is unclear and when compared with the rest of the data, is an anomaly. The participant potentially misunderstood the questionnaire’s scale, or there was a human error when collecting the data. This seems plausible considering the participant scored the mental and physical demand categories at 1 and 2. The game’s effort and frustration scores are also low, and consequently, so is our overall RAW NASA TLX score. Our highest score being Participant 2, at 8, and the lowest being Participant 5 and 0.83. The overall score for Participant’s 1, 3 and 4 were all similar, ranging from 3.33 - 4.5. These findings point to a low workload. The results of the System Usability Survey likewise corroborate this. Every participant scored our game a 5/5, strongly agreeing that “the system was easy to use”.
+
+Despite scoring an average of 3.8 on the SUS, when users were asked if they would “like to use our system frequently”, our game could potentially lack the challenge needed to engage users. 
+
+These results are surprising! Whilst collecting the data, we noticed that many participants struggled to get very far into the game, rarely making it past the third pipe. Nevertheless, our data highlights a key area of improvement and looking forward, we have decided to make the game slightly more demanding,  whilst keeping the system simple to use. This ensures that SuperSpaceMan achieves a suitable balance between demand and playability.
+
 
 # Sprint 1
 
