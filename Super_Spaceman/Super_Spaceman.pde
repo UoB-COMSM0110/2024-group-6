@@ -79,7 +79,7 @@ void checkForCollison(){
     if(pipeTwo.getTransportCollison()){} //Cecily add in change of background here + reset bird and pipes
     if(pipeThree.getTransportCollison()){} //Cecily add in change of background here + reset bird and pipes
 
-    // Check for collison with TNT or ForceFeild
+    // Check for collison with TNT or ForceFeild 
     collisonTest2 = tnt.collison(bird.getX(), bird.getY());
 
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
