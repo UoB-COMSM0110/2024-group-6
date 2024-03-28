@@ -1,11 +1,13 @@
 class GameCharacter {
 
-    private int xPosition;
-    private int yPosition;
+    protected int xPosition;
+    protected int yPosition;
     private int deltaY;
     private int gforce;
-    PImage character;
-    PApplet game;
+    protected PImage character;
+    protected PApplet game;
+
+    public GameCharacter(){}
 
     public GameCharacter(PApplet processingMethord){
         this.game = processingMethord;

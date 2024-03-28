@@ -32,7 +32,6 @@ class HazardPipe{
         //random number that switch hazardPipe on or off??
         int randNum = (int)random(0,3); // 10
         int transportPipUpOrDown = (int)random(0,2);
-        System.out.println(transportPipUpOrDown);
         if( 0 == randNum){
 
             this.hazardPipe = false;
@@ -148,6 +147,8 @@ class HazardPipe{
     public boolean collison(int x, int y){
         
         //Pipe L || R 
+        // BUG !!! -- Fix at the moment mr SuperSpaceMan can hit the 
+        // right or left of the pipe and not die 
         if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth))){
                 return false;
         
@@ -159,11 +160,11 @@ class HazardPipe{
             } else if(!hazardPipe){
                 if(transportPipeTop && y < this.bottomPipeYPosition){
                     transportCollison = true;
-                    System.out.println("Top"+transportCollison);
+                    // System.out.println("Top"+transportCollison);
                     return false;
                 } else if(!transportPipeTop && y > this.topPipeYPosition){
                     transportCollison = true;
-                    System.out.println("Bottom"+transportCollison);
+                    // System.out.println("Bottom"+transportCollison);
                     return false;
                 }
             }
