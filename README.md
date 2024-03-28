@@ -581,10 +581,13 @@ These results are surprising! Whilst collecting the data, we noticed that many p
 > Increased the amount of "G-force" applyed to the character so that it falls quicker. At present the character falls too slowley. This means that by no falt of the user the character colides into obsticals(mainly pipes) as the character does not fall quicker enough. We changed this so that now the character does fall much quicker. To ofset this we have also had to increase the deltaY which is used to move the character up upone jumping. 
 
 
+## Sprint 2 TODO LIST 
 
-> Found bug with in trasport pipe needs to be fixed in sprint2
+> Found bug with in trasport pipe if touched from left super space man does not die. 
 
-> TNT and ForceFeild have both been implement sucesfully. However to finnish it off we need switching logic this will have to be done in sprint 2 
+> TNT and ForceFeild have both been implement sucesfully. However to finnish it off we need switching logic to generate them. 
+
+> changing background upone transport pipe being entered. 
 
 # Group notes
 
