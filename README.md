@@ -582,6 +582,10 @@ These results are surprising! Whilst collecting the data, we noticed that many p
 
 
 
+> Found bug with in trasport pipe needs to be fixed in sprint2
+
+> TNT and ForceFeild have both been implement sucesfully. However to finnish it off we need switching logic this will have to be done in sprint 2 
+
 # Group notes
 
 <https://processing.org/tutorials>
