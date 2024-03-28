@@ -23,6 +23,7 @@ class HazardPipe{
     }
 
 
+
     // Maybe logic goes here for transport pipe
     public void generateInitalPipe(){
 
@@ -67,12 +68,12 @@ class HazardPipe{
 
         if(this.hazardPipe){
             //Top Pipe
-            fill(333,345,198);
+            fill(255,255,0);
             noStroke();
             rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
 
             //bottom pipe
-            fill(333,345,198);
+            fill(255,255,0);
             noStroke();
             rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
 
@@ -174,3 +175,5 @@ class HazardPipe{
     }
 
 }
+
+

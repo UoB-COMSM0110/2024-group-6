@@ -33,7 +33,7 @@ void setup() {
   forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
-  background(100,100,80); 
+  background(0,0,50); 
   bird = new GameCharacter(this); 
   pipeOne.generateInitalPipe();
   pipeTwo.setXPosition(width+200);
@@ -67,7 +67,7 @@ void updateData(){
 
     forceFeildOrTNT = (int)random(0,3);
 
-    background(100,100,80); 
+    background(0,0,50); 
     pipeOne.updateX();
     pipeTwo.updateX();
 
