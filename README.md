@@ -1,6 +1,7 @@
 # 2024-group-6
-https://processing.org/tutorials
+
 ## Table of Contents  
+
 - [Team Photo](#team-photo)
 - [Group Members](#group-members)
 - [Game Ideas](#game-ideas)
@@ -8,11 +9,22 @@ https://processing.org/tutorials
 - [Snake](#snake)
 - [Flappy Bird](#flappy-bird)
 - [Game Selection](#game-selection---why-we-have-chosen-super-spaceman)
+- [Stake Holders](#stake-holders)
+- [User Stories](#user-stories)
+- [Usecase Specification - General Player](#usecase-specification---general-player)
+- [Usecase Specification](#usecase-specification)
+- [Usecase - Diagram](#usecase---diagram)
+- [Potential Challenges](#potential-challenges)
+- [Classes Diagram](#classes-diagram)
+- [Think Aloud](#think-aloud)
+- [Heuristic Evaluation](#heuristic-evaluation)
 
 ## Team Photo
+
 ![Group Photo](./readmeFiles/groupphoto.JPG)
 
 ## Group Members
+
 <table>
     <thead>
         <th>Name</th>
@@ -47,6 +59,7 @@ https://processing.org/tutorials
 </table>
 
 ## Game Ideas
+
 Key:
 1-9 : Top Options
 M: Maybe
@@ -54,19 +67,18 @@ N: Removed From List
 
 | Name | URL | Sutibility / Intrest / Ranking|
 | -------- | -------- | -------- |
- Snake| https://en.wikipedia.org/wiki/Snake_(video_game_genre)   | 1|
-| Flappy Bird| https://en.wikipedia.org/wiki/Flappy_Bird  | 2a|
-| Tetris| https://en.wikipedia.org/wiki/Tetris  | 2b |
-| Angry Birds| https://en.wikipedia.org/wiki/Angry_Birds_(video_game)  | 3 |
-| Kingdom Rush| https://en.wikipedia.org/wiki/Kingdom_Rush  | M |
-| Super Mario| https://en.wikipedia.org/wiki/Super_Mario_Bros.  | M |
-| Brick Breaker| https://en.wikipedia.org/wiki/Brick_Breaker   | M |
-| Bejeweled| https://en.wikipedia.org/wiki/Bejeweled  | N |
-| Zuma| https://en.wikipedia.org/wiki/Zuma_(video_game)  | N |
-| Deemo| https://en.wikipedia.org/wiki/Deemo  | N |
+ Snake| <https://en.wikipedia.org/wiki/Snake_(video_game_genre)>   | 1|
+| Flappy Bird| <https://en.wikipedia.org/wiki/Flappy_Bird>  | 2a|
+| Tetris| <https://en.wikipedia.org/wiki/Tetris>  | 2b |
+| Angry Birds| <https://en.wikipedia.org/wiki/Angry_Birds_(video_game)>  | 3 |
+| Kingdom Rush| <https://en.wikipedia.org/wiki/Kingdom_Rush>  | M |
+| Super Mario| <https://en.wikipedia.org/wiki/Super_Mario_Bros>.  | M |
+| Brick Breaker| <https://en.wikipedia.org/wiki/Brick_Breaker>   | M |
+| Bejeweled| <https://en.wikipedia.org/wiki/Bejeweled>  | N |
+| Zuma| <https://en.wikipedia.org/wiki/Zuma_(video_game)>  | N |
+| Deemo| <https://en.wikipedia.org/wiki/Deemo>  | N |
 
-
-## Game Features 
+## Game Features
 
 <table>
     <thead>
@@ -80,7 +92,7 @@ N: Removed From List
             <td>Snake</td>
             <td>2 Player</td>
             <td>walls</td>
-            <td>crash into smaller snakes</td>        
+            <td>crash into smaller snakes</td>
         </tr>
         <tr>
             <td>brick braker</td>
@@ -123,15 +135,18 @@ N: Removed From List
 </table>
 
 ## Snake
+
 For snake we have short listed this classic game for many reasons. The top reasons that we picked this game were for its multitude of options and possibilities to be extended with new exciting inovative software devlopment features. As a group, we have highlighted the opportunity to extend Snake with features such as 2 player game play, added walls and eating smaller snakes. Each one of these features will give us, as a group, plenty to work on. The Two Player feature will enable two users on the same machine to play the same game. While adding walls will make it much harder for the snake to move around and access the much needed nutrients need for game play. To offset this we will include smaller snakes to increase the ability for the snake to increase in size.
 
-### Prototype 
+### Prototype
+
 [![Snake Wars](./readmeFiles/Thumbnails/snakeWarsThumnail.png)](https://www.youtube.com/watch?v=iB4qEvqEI_E "Snake Wars")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
 Following creating a prototype for Snake, we quickly found many positives and negative associated though carrying out our development process. This included a change of name, good demonstration and not much in the way of a need to change the core elements of our design. Feedback quickly prompted us to change the name of the game to Snake Wars as the original was too similar to other games out there.  
 
 ## Flappy Bird
+
 Choosing Flappy Bird as our inspiration brings a delightful challenge to the table. Our concept introduces several innovative features: Firstly, we can incorporate new patterns that allow players to navigate through pipes to reach new locations or maps. Secondly, we aim to enhance the bird's abilities through unique means, e.g. the ability to shoot lasers. Lastly, we propose adding new gates that redirect players to the starting point, elevating the difficulty level of the game.
 
 ### Prototype
@@ -143,7 +158,7 @@ We have ultimately chosen to base our game idea on Flappy Bird and transform it 
 
 ## Game Selection - Why we have chosen Super Spaceman
 
-Although both games hold exciting potential, there was definitely a clear favourite throughout the research process, and the group has collectively agreed to pursue Super Spaceman. Ultimately, Super Spaceman has a greater scope for game features and creative opportunities. For Snake, we could not think of many challenges other than implementing walls, where as, for SSM, we were able to think of multiple categories, including various different hazards and power ups. So much, that we have had to spend time narrowing down which of our ideas to use. When researching these features, we concluded that SSM will also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we feel more excited about the interface for SSM, and have already thought of different game maps. Our thoughts were confirmed in Monday’s lab, where we received positive feedback for SSM, and there was a general consensus that this was a more innovative idea and would be the most popular game. 
+Although both games hold exciting potential, there was definitely a clear favourite throughout the research process, and the group has collectively agreed to pursue Super Spaceman. Ultimately, Super Spaceman has a greater scope for game features and creative opportunities. For Snake, we could not think of many challenges other than implementing walls, where as, for SSM, we were able to think of multiple categories, including various different hazards and power ups. So much, that we have had to spend time narrowing down which of our ideas to use. When researching these features, we concluded that SSM will also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we feel more excited about the interface for SSM, and have already thought of different game maps. Our thoughts were confirmed in Monday’s lab, where we received positive feedback for SSM, and there was a general consensus that this was a more innovative idea and would be the most popular game.
 
 ## Stake Holders
 
@@ -183,7 +198,8 @@ Although both games hold exciting potential, there was definitely a clear favour
 </table>
 
 ## User-Stories
->"As a Player from General Public I want to play a game based on flappy birds with new innovative features so that it grabs my intrigue and attention." 
+>
+>"As a Player from General Public I want to play a game based on flappy birds with new innovative features so that it grabs my intrigue and attention."
 
 >"As a member of the Development Team I want to implement a first in class app/game that push me to learn new skills."
 
@@ -203,9 +219,10 @@ Although both games hold exciting potential, there was definitely a clear favour
 
 **Description** - Super Spaceman is a game with inspiration taken from the game Flappy Bird. Within the following user specifiction, we are going to take you through a step-by-step routine of which a general player would encounter when playing the game.
 
-**Aim** - The Aim of the game is to prevent Super Spaceman from dying. Throughout the game he encounters many hazards, of which he will have to avoid in order to survive and continue playing. As the user plays the game, Super Spaceman picks up speed. 
+**Aim** - The Aim of the game is to prevent Super Spaceman from dying. Throughout the game he encounters many hazards, of which he will have to avoid in order to survive and continue playing. As the user plays the game, Super Spaceman picks up speed.
 
 ## Usecase Specification
+
 <table>
     <tbody>
         <tr>
@@ -269,29 +286,27 @@ Although both games hold exciting potential, there was definitely a clear favour
     </tbody>
 </table>
 
+## Usecase - Diagram
 
-## Usecase - Diagram 
 <img src="./readmeFiles/usecasediagram.png">
 
-
 ## Reflection
-This week, our team gained valuable insights into the specific requirements of our game and we learnt lots about different player experiences. The task highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many. For example, including exciting and sophisticated features, whilst also being adaptable to those with disabilities. As a team, we enjoyed the process of collaborating and coming to these decisions, and due to our effective planning, we were able to produce a user story and use case that matched and reflected our initial game requirements. 
+
+This week, our team gained valuable insights into the specific requirements of our game and we learnt lots about different player experiences. The task highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many. For example, including exciting and sophisticated features, whilst also being adaptable to those with disabilities. As a team, we enjoyed the process of collaborating and coming to these decisions, and due to our effective planning, we were able to produce a user story and use case that matched and reflected our initial game requirements.
 
 However, when discussing our use case specification and creating our use case diagram, we realised that our initial plan was perhaps over complicated. We had some slight issues when defining whether something was an ‘include’ or ‘extend’. Some of our members were unable to meet in person, and so when we came together to discuss our use case diagram, it was difficult to explain over the phone, specific things that we wanted them to change and why. This meant that we had to refactor lots, which overall emphasised the importance of remaining flexible throughout the game design process. Ultimately, this task was an important learning journey that provided us with a solid game design that we think will be open to many.
 
+## Potential Challenges
 
-
-
-## Potential Challenges 
 Based on Flappy Bird, but the player can transport to different maps.
 
-- Challenge 1 - Entering transport pipes - 
+- Challenge 1 - Entering transport pipes -
 - Challenge 2 - Data structure for storing the map - and changing it when they exit the portal pipes
 - Challenge 3 - How to decide if the player enters a new map, or just a different location on the current map. (the control flow)
 - Challenge 4 - Deciding where you go on the current map.
 
-
 Extra notes:
+
 - Generating the code for randomised hazards
 - Implementing losing health when the player hits a hazards
 
@@ -299,13 +314,22 @@ Extra notes:
 
 <img src="./readmeFiles/Classes_Diagram _v0.png">
 
+# Qualitative Evaluation
+
+Too collect Qualitative data for our game we will use two methords namly the Think Aloud and Heuristic Evaluation methords. This should provide us with the relevant with and depth of data to gain meaningful insights.  
+
 ## Think Aloud
 
-task 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
-task 2 - pipes creation, need to create pipes.  
-feedback of  a participant: The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
+Feedback 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
+
+Feedback 2 - pipes creation, need to create pipes.  
+
+Feedback 3 - The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
+
+Feedback 4 - It would be easier to use the spacebar to control the character.
 
 ## Heuristic Evaluation
+
 <table>
     <tbody>
         <tr>
@@ -319,8 +343,8 @@ feedback of  a participant: The pipes only generates randomly within the first t
         </tr>
         <tr>
             <td>Pipes</td>
-            <td>can't too narrow</td>
             <td>pay attention to the spacing between the pipes(at least could be able to see the next pipe when passing through this pipe)</td>
+            <td>Aesthetic and Minimalist Design</td>
             <td>4</td>
             <td>1</td>
             <td>4</td>
@@ -328,8 +352,8 @@ feedback of  a participant: The pipes only generates randomly within the first t
         </tr>
         <tr>
             <td>Character</td>
-            <td>need big jump(need to click many times to jump higher)</td>
-            <td></td>
+            <td>Need bigger jumps(need to click many times to jump higher)</td>
+            <td>Consistency and Standards</td>
             <td>4</td>
             <td>0</td>
             <td>0</td>
@@ -337,8 +361,8 @@ feedback of  a participant: The pipes only generates randomly within the first t
         </tr>
         <tr>
             <td>Gravity</td>
-            <td>fall too slow</td>
-            <td>need acceleration</td>
+            <td>Fall too slowly. Character need more Gravity</td>
+            <td>Consistency and Standards</td>
             <td>0</td>
             <td>0</td>
             <td>0</td>
@@ -346,50 +370,272 @@ feedback of  a participant: The pipes only generates randomly within the first t
         </tr>
         <tr>
             <td>Movements</td>
-            <td>Gameplay judgments are a bit sketchy, the distances of pipes are a bit large</td>
-            <td>Reset the judgments of collision, narrowing the distances of pipes</td>
+            <td>Gameplay judgments are a bit sketchy, the distances of pipes are a bit large. Reset the judgments of collision, narrowing the distances of pipes</td>
+            <td>Consistency and Standards</td>
             <td>4</td>
             <td>2</td>
             <td>4</td>
             <td>3</td>
         </tr>
+    </tbody>
+</table>
+
+## Summary - Qualitative Evaluation
+
+
+The Heuristic Evaluation bought important issues about our game, to our attention. The issues primarily related to Consistency and Standards, but also the Aesthetic and Design of our game. The most severe issue related to our character interface. We found that the user needs to click many times to make the character jump higher, leading to a frustrating gameplay. This was a common issue, scoring 4/4 and led to a sum total of 4/4. We have decided to modify the character slightly, and increase the height of the jump per click. We have also decided to increase the gravity rate. This is because we found that the character fell too slowly, making it difficult to progress further through the game.
+
+We noted issues relating to the Movements and Pipes interfaces of our game. This included the distances between pipes being too large, the pipes not generating randomly and the character falling off the screen. Although the issues individually are relatively minor, accumulated together they are noticeably persistent and severe (3/4), and overall leads to a rather ‘sketchy’ gameplay. Therefore, we have decided to reset the judgements of collision, narrow the distance between pipes and ensure that the pipes pattern does not continuously repeat. This not only improves the Consistency and Standards usability, but also the Aesthetic and Minimalist Design usability.
+
+
+# Quantitavie Evaluation
+
+In this section we will analysie and showcase collected data from participants who have played our game. We selected the NASA TLXs and System Unability Survey(SUS) to do this.
+
+## NASA TLXs Questionair
+
+<table>
+    <thead>
+        <th>Participant(Names Hidden for Privacy)</th>
+        <th>Mental Demand</th>
+        <th>Physical Demand</th>
+        <th>Temporal Demand</th>
+        <th>Performance</th>
+        <th>Effort</th>
+        <th>Frustration</th>
+        <th>RAW Nasa TLX Scour</th>
+    </thead>
+    <tbody>
         <tr>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
-            <td> </td>
+            <td>1</td>
+            <td>5</td>
+            <td>3</td>
+            <td>3</td>
+            <td>0</td>
+            <td>5</td>
+            <td>5</td>
+            <td>3.5</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>16</td>
+            <td>20</td>
+            <td>1</td>
+            <td>2</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>5</td>
+            <td>6</td>
+            <td>3</td>
+            <td>7</td>
+            <td>4.5</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>0</td>
+            <td>3</td>
+            <td>2</td>
+            <td>3.33</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0</td>
+            <td>1</td>
+            <td>1</td>
+            <td>0.83</td>
         </tr>
     </tbody>
 </table>
 
-## Setting up processing in Inteliji 
-https://www.youtube.com/watch?v=_h2GZgnPcnM
+## System Unability Survey(SUS)
 
-## Example code of Flappy Bird
-https://forum.processing.org/two/discussion/3580/flappy-code.html
+Scale: <br>
+1 == Strongly Disagree, <br> 
+5 == Strongly Agree     <br>
+
+<table>
+    <thead>
+        <td>Participant(Names Hidden for Privacy)</td>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>I think that I would like to use this system frequently</td>
+            <td>4</td>
+            <td>4</td>
+            <td>3</td>
+            <td>5</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>I found the system unnecessarily complex</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I thought the system was easy to use</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>I think that I would need the support of a technical person to be able to use this system.</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I found the various functions in the system were well integrated</td>
+            <td>4</td>
+            <td>4</td>
+            <td>2</td>
+            <td>5</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I though there was too much inconsistency in this system</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>I would imagine that most people would learn to use this system very quickly</td>
+            <td>5</td>
+            <td>5</td>
+            <td>4</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>I found the system very cumbersome to use</td>
+            <td>1</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+            <td>I felt very confident using the system</td>
+            <td>5</td>
+            <td>5</td>
+            <td>3</td>
+            <td>3</td>
+            <td>5</td>
+        <tr>
+        </tr>
+            <td>I needed to learn a lot of things before I could get going with this system</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </tbody>
+</table>
+
+## Summary - Quantitative Evaluation
+
+To appropriately evaluate the user experience and system usability of SuperSpaceMan, we used the NASA (TLX) and System Usability Survey - two approaches that provide significant quantitative insight into a user’s interaction, and the overall performance of our game.
+
+The results of the NASA questionnaire strongly highlighted that our game is not particularly demanding. For each of the three categories that measured demand (mental, physical and temporal), results were very low, primarily between 1 - 5, with one participant (participant 5) even voting 1 for all three demand categories. 
+
+One result in particular stands out. Participant 2 scored the temporal demand of SuperSpaceMan, very high, at 16 out of 20. The reason for this is unclear and when compared with the rest of the data, is an anomaly. The participant potentially misunderstood the questionnaire’s scale, or there was a human error when collecting the data. This seems plausible considering the participant scored the mental and physical demand categories at 1 and 2. The game’s effort and frustration scores are also low, and consequently, so is our overall RAW NASA TLX score. Our highest score being Participant 2, at 8, and the lowest being Participant 5 and 0.83. The overall score for Participant’s 1, 3 and 4 were all similar, ranging from 3.33 - 4.5. These findings point to a low workload. 
+
+The results of the System Usability Survey likewise corroborate this. Every participant scored our game a 5/5, strongly agreeing that “the system was easy to use”.Despite scoring an average of 3.8 on the SUS, when users were asked if they would “like to use our system frequently”, our game could potentially lack the challenge needed to engage users. 
+
+These results are surprising! Whilst collecting the data, we noticed that many participants struggled to get very far into the game, rarely making it past the third pipe. Nevertheless, our data highlights a key area of improvement and looking forward, we have decided to make the game slightly more demanding,  whilst keeping the system simple to use. 
+This ensures that SuperSpaceMan achieves a suitable balance between demand and playability.
 
 
-## Mark Scheem 
+# Sprint 1
+
+## Improvments:
+
+> SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen. We have designed it as such that the user much click the screen to go back to the start screen as prior to this we allowed it to be done with keys though the user would hold down the keys and would end up in a sudo infinate loop senario untill the key was lifter. 
+
+> Make improvments to the collisions. The character before we made the changes would not die if it hit the top or bottom of the screen. We added collision to detect this and now the character does indeed die upone such impact with the top and bottom of the screen. 
+
+> Increased the amount of "G-force" applyed to the character so that it falls quicker. At present the character falls too slowley. This means that by no falt of the user the character colides into obsticals(mainly pipes) as the character does not fall quicker enough. We changed this so that now the character does fall much quicker. To ofset this we have also had to increase the deltaY which is used to move the character up upone jumping. 
+
+
+## Sprint 2 TODO LIST 
+
+> Found bug with in trasport pipe if touched from left super space man does not die. 
+
+> TNT and ForceFeild have both been implement sucesfully. However to finnish it off we need switching logic to generate them. 
+
+> changing background upone transport pipe being entered. 
+
+# Group notes
+
+<https://processing.org/tutorials>
+
+## Mark Scheme
 
 Project Report
 
-Your group report will be written up on Github (formatted with Markdown) as the front page of your team’s repo, within the module’s Github organisation: https://github.com/UoB-COMSM0110. Please follow the report structure below. For each section we want to see that you’ve engaged with the taught material and reflected on your process. You can also demonstrate that you’ve gone beyond the taught component. We’ve given a rough indicator of how long each section could be, however we won’t be penalising you if you go under or over (within reason!). Include as many figures, tables, and references as you need.
-
 1. Team
-    
-    o Who’s in your team + team photo.
+
+Who’s in your team + team photo.
 
 2. Introduction (5% ~250 words)
 
-    o Describe your game, what is based on, what makes it novel?
+Describe your game, what is based on, what makes it novel?
 
 3. Requirements (15% ~750 words)
 
-    o Use case diagrams, user stories. Early stages design. Ideation process. How did you decide as a team what to develop?
+Use case diagrams, user stories. Early stages design. Ideation process. How did you decide as a team what to develop?
 
 4. Design (15% ~750 words)
 
-    o System architecture. Class diagrams, behavioural diagrams.
+System architecture. Class diagrams, behavioural diagrams.
+
+5. Implementation (15% ~750 words)
+
+Describe implementation of your game, in particular highlighting the three areas of challenge in developing your game.
+
+6. Evaluation (15% ~750 words)
+
+One qualitative evaluation (your choice)
+
+One quantitative evaluation (of your choice)
+
+Description of how code was tested.
+
+7. Process (15% ~750 words)
+
+Teamwork. How did you work together, what tools did you use. Did you have team roles? Reflection on how you worked together.
+
+8. Conclusion (10% ~500 words)
+
+Reflect on project as a whole. Lessons learned. Reflect on challenges. Future work.
+
+· Quality of report writing, presentation, use of figures and visual material (5%)
+
+· Documentation of code (5%)
+
+· Individual contribution. Provide a table of everyone's contribution, which may be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Let us know as soon as possible if there are any issues with teamwork as soon as they are apparent.

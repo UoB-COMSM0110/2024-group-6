@@ -1,11 +1,14 @@
 class GameCharacter {
 
-    private int xPosition;
-    private int yPosition;
+    protected int xPosition;
+    protected int yPosition;
     private int deltaY;
     private int gforce;
-    PImage character;
-    PApplet game;
+    protected PImage character;
+    protected PApplet game;
+
+    public GameCharacter(){}
+
 
     public GameCharacter(PApplet processingMethord){
         this.game = processingMethord;
@@ -14,8 +17,8 @@ class GameCharacter {
         this.character = this.game.loadImage("assets/spaceman1.png");
         this.game.imageMode(PConstants.CENTER);
         this.game.image(this.character,this.xPosition,this.yPosition);
-        this.deltaY = 50;
-        this.gforce = 1;
+        this.deltaY = 63;
+        this.gforce = 4;
     }
 
     public int getX(){
