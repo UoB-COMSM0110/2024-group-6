@@ -96,7 +96,7 @@ void updateData(){
     bird.getCharacter();
     bird.gravity();
     
-
+    forceFeild.collison(bird.getX(), bird.getY());
     if(forceFeild.getValidForceFeild((int)millis())){
         forceFeild.validForceFeild(bird.getX(), bird.getY());
     } else {
