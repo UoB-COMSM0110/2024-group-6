@@ -161,7 +161,7 @@ void checkForCollison(){
 
     // Check for collison with TNT or ForceFeild 
     if ( randomNum == 0){
-        hasDied = tnt.collison(bird.getX(), bird.getY());
+        collisonTest2 = tnt.collison(bird.getX(), bird.getY());
         // System.out.println(hasDied);
     }
     

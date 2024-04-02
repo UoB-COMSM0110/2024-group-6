@@ -4,7 +4,7 @@ public class TNT extends GameCharacter {
 
     public TNT(PApplet processingMethord){
         this.game = processingMethord;
-        this.xPosition = (game.width/2)+325;
+        this.xPosition = (game.width/2)+300;
         this.yPosition = (int)random(0,height); //(game.height/2);
         this.characterWidth = 64; 
     }
@@ -22,8 +22,11 @@ public class TNT extends GameCharacter {
                 return false;
         //Pipe UP || DOWN
         }else if((x >= this.xPosition ) && (x <= this.xPosition + this.characterWidth)){    
-            if(y == this.yPosition){
-            // if(this.yPosition + this.characterWidth > y && this.yPosition < y){
+        System.out.println(this.yPosition + this.characterWidth > y && this.yPosition < y);
+
+
+            // if(y == this.yPosition){
+            if(this.yPosition + this.characterWidth > y && this.yPosition < y){
                 return true;
             }
         }
