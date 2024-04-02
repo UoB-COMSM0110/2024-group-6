@@ -46,7 +46,6 @@ class HazardPipe{
         } else {
             this.hazardPipe = true;
         }
-
         generatePipe();
     }
 
@@ -60,7 +59,6 @@ class HazardPipe{
             this.xPosition = width + this.pipeWidth + this.pipeInterval;
             generateInitalPipe();
         }
-        
         generatePipe();
     }
 
