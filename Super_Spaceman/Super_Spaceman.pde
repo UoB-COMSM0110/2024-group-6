@@ -75,7 +75,6 @@ void updateData(){
     // if(forceFeildOrTNT = 0){}
     tnt.getCharacter();
     
-
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();

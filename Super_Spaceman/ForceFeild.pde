@@ -40,7 +40,7 @@ public class ForceFeild extends GameCharacter {
 
     public boolean getValidForceFeild(int time){
         if(collisonEndTime >= time){
-            System.out.println("TRUE");
+            // System.out.println("TRUE");
             return true;
         }
         return false;

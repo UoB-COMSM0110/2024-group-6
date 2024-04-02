@@ -150,22 +150,34 @@ class HazardPipe{
         //Pipe L || R 
         // BUG !!! -- Fix at the moment mr SuperSpaceMan can hit the 
         // right or left of the pipe and not die 
-        if(((x < this.xPosition) || (x > this.xPosition + this.pipeWidth))){
-                return false;
+        boolean leftOfPipe = (x < this.xPosition);
+        boolean rightOfPipe = (x > this.xPosition + this.pipeWidth);
+        if( leftOfPipe || rightOfPipe ){
+            return false;
         
         //Pipe UP || DOWN
-        }else if(( (x <= this.xPosition + this.pipeWidth) && (x >= this.xPosition) )){
+        }else if(((x <= this.xPosition + this.pipeWidth) && (x >= this.xPosition) )){
             
             if( y < this.bottomPipeYPosition && y > this.topPipeYPosition){
                 return false;
             } else if(!hazardPipe){
-                if(transportPipeTop && y < this.bottomPipeYPosition){
+
+                if( x == this.xPosition && y < this.topPipeYPosition && transportPipeTop){
+                    return true;
+                }
+
+                if( x == this.xPosition && y > this.bottomPipeYPosition && !transportPipeTop){
+                    return true;
+                }
+
+                if(transportPipeTop && y < this.topPipeYPosition ){ //this.bottomPipeYPosition
                     transportCollison = true;
-                    // System.out.println("Top"+transportCollison);
+                    System.out.println("Top"+transportCollison + this.topPipeYPosition);
                     return false;
-                } else if(!transportPipeTop && y > this.topPipeYPosition){
+                
+                } else if(!transportPipeTop && y > this.bottomPipeYPosition ){
                     transportCollison = true;
-                    // System.out.println("Bottom"+transportCollison);
+                    System.out.println("Bottom"+transportCollison + this.bottomPipeYPosition);
                     return false;
                 }
             }
