@@ -73,7 +73,6 @@ void draw() {
 void updateData(){
 
     //forceFeildOrTNT = (int)random(0,3);
-    //background(spacebackground);
     background(0,0,50); 
     noStroke();
     int offsetMoonX = 100;
@@ -85,10 +84,6 @@ void updateData(){
     ellipse(210+offsetMoonX,160,10,10);
     ellipse(220+offsetMoonX,130,15,15);
     ellipse(170+offsetMoonX,130,10,10);
-
-        
-    
-    //background("assets/spacebackground.jpg");
     
     pipeOne.updateX();
     pipeTwo.updateX();
