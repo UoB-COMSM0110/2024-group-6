@@ -69,17 +69,17 @@ void draw() {
 void updateData(){
 
     //forceFeildOrTNT = (int)random(0,3);
-    background(0,0,50); 
-    noStroke();
-    int offsetMoonX = 100;
-    fill(200,200,200);
-    ellipse(200+offsetMoonX , 150, 100, 100);
-
-    fill(180,180,180);
-    ellipse(190+offsetMoonX,140,20,20);
-    ellipse(210+offsetMoonX,160,10,10);
-    ellipse(220+offsetMoonX,130,15,15);
-    ellipse(170+offsetMoonX,130,10,10);
+    
+    background(0,0,50); // needs to be moved to enums or background class 
+    noStroke(); // needs to be moved to enums or background class 
+    int offsetMoonX = 100; // needs to be moved to enums or background class 
+    fill(200,200,200); // needs to be moved to enums or background class 
+    ellipse(200+offsetMoonX , 150, 100, 100); // needs to be moved to enums or background class 
+    fill(180,180,180); // needs to be moved to enums or background class 
+    ellipse(190+offsetMoonX,140,20,20); // needs to be moved to enums or background class 
+    ellipse(210+offsetMoonX,160,10,10); // needs to be moved to enums or background class 
+    ellipse(220+offsetMoonX,130,15,15); // needs to be moved to enums or background class 
+    ellipse(170+offsetMoonX,130,10,10); // needs to be moved to enums or background class 
     
     pipeOne.updateX();
     pipeTwo.updateX();

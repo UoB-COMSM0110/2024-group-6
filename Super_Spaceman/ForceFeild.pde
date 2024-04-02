@@ -29,10 +29,10 @@ public class ForceFeild extends GameCharacter {
                 return false;
         //Pipe UP || DOWN
         } else if((x >= this.xPosition ) && (x <= this.xPosition + this.characterWidth)){  
-            if(y == this.yPosition){
-                System.out.println("picked up");
+            
+            if(this.yPosition + this.characterWidth > y && this.yPosition < y){
                 collisonStartTime = millis();
-                collisonEndTime = collisonStartTime + 110; 
+                collisonEndTime = collisonStartTime + 5010;  
                 return true;
             }
         }
@@ -41,7 +41,6 @@ public class ForceFeild extends GameCharacter {
 
     public boolean getValidForceFeild(int time){
         if(collisonEndTime >= time){
-            System.out.println("TRUE");
             return true;
         }
         return false;
