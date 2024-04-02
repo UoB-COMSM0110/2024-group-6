@@ -102,7 +102,7 @@ void updateData(){
     bird.gravity();
     
 
-    if(!forceFeild.getValidForceFeild((int)millis())){
+    if(forceFeild.getValidForceFeild((int)millis())){
         forceFeild.validForceFeild(bird.getX(), bird.getY());
     } else {
         forceFeild.getCharacter();
@@ -131,7 +131,7 @@ void checkForCollison(){
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
 
     //tnt or forcefeild         
-    forceFeild.collison(bird.getX(), bird.getY());
+    //forceFeild.collison(bird.getX(), bird.getY());
     if(forceFeild.getValidForceFeild((int)millis())){
         collisonTest1 = false;
         collisonTest2 = false;
