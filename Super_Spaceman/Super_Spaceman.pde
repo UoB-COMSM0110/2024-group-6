@@ -11,7 +11,8 @@ boolean hasDied = false;
 
 TNT tnt;
 ForceFeild forceFeild;
-int forceFeildOrTNT;
+int forceFeildOrTNTCounter;
+int randomNum;
 
 GameCharacter bird;
 HazardPipe pipeOne;
@@ -30,9 +31,11 @@ void setup() {
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
   
+
   // Add - ForceFeild / TNT / nothing 
-  //tnt = new TNT(this);
-  forceFeild = new ForceFeild(this); 
+  genTNTorForceFeild();
+  // tnt = new TNT(this);
+  // forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
   background(0,0,50); 
@@ -43,8 +46,9 @@ void setup() {
   pipeTwo.generateInitalPipe();
   
   // Generate - ForceFeild / TNT / nothing
-  //tnt.getCharacter();
-  forceFeild.getCharacter();
+    System.out.println(randomNum);
+  if(randomNum == 0){tnt.getCharacter();}
+  if(randomNum == 1){forceFeild.getCharacter();}
 
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
@@ -58,18 +62,23 @@ void draw() {
 
         if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
             diedScreen();
-        } else {
+        } else { 
             updateData();
         }
         checkForCollison();
+
     }
 
 }
 
 void updateData(){
 
-    //forceFeildOrTNT = (int)random(0,3);
-    
+    forceFeildOrTNTCounter++;
+    if(forceFeildOrTNTCounter == width){
+        genTNTorForceFeild();
+        forceFeildOrTNTCounter = 0;
+    }
+
     background(0,0,50); // needs to be moved to enums or background class 
     noStroke(); // needs to be moved to enums or background class 
     int offsetMoonX = 100; // needs to be moved to enums or background class 
@@ -83,20 +92,24 @@ void updateData(){
     
     pipeOne.updateX();
     pipeTwo.updateX();
-
-    // UpdateX - ForceFeild / TNT / nothing 
-    // if(forceFeildOrTNT = 0){}
-    //tnt.getCharacter();
+    
+    if ( randomNum == 0){
+        tnt.getCharacter();
+    }
     
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
     
-    forceFeild.collison(bird.getX(), bird.getY());
-    if(forceFeild.getValidForceFeild((int)millis())){
+    if( randomNum == 1 ){
+        forceFeild.collison(bird.getX(), bird.getY());
+    }
+    if(randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
         forceFeild.validForceFeild(bird.getX(), bird.getY());
     } else {
-        forceFeild.getCharacter();
+        if( randomNum == 1 ){
+            forceFeild.getCharacter();
+        }
     }
 
 }
@@ -110,14 +123,19 @@ void checkForCollison(){
     if(pipeThree.getTransportCollison()){ System.out.println("transport colission"); } //Cecily add in change of background here + reset bird and pipes
 
     // Check for collison with TNT or ForceFeild 
-    //collisonTest2 = tnt.collison(bird.getX(), bird.getY());
+    if ( randomNum == 0){
+        hasDied = tnt.collison(bird.getX(), bird.getY());
+        System.out.println(hasDied);
+    }
     
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
 
-    //tnt or forcefeild         
-    forceFeild.collison(bird.getX(), bird.getY());
-    if(forceFeild.getValidForceFeild((int)millis())){
+    //tnt or forcefeild  
+    if( randomNum == 1 ){
+        forceFeild.collison(bird.getX(), bird.getY());
+    }       
+    if( randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
         collisonTest1 = false;
         collisonTest2 = false;
         collisonTest3 = false; 
@@ -153,6 +171,17 @@ void diedScreen(){
 
     textSize(30);
     text("Click to Exit",width/2,height/1.2);
+}
+
+void genTNTorForceFeild(){
+    randomNum = (int)random(0,2);
+    if(randomNum == 0){
+        tnt = new TNT(this);
+    } else if (randomNum == 1) {
+        forceFeild = new ForceFeild(this); 
+    }
+
+
 }
 
 void mousePressed() { 
