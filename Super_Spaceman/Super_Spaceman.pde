@@ -36,10 +36,6 @@ void setup() {
 
   pipeThree = new HazardPipe();
   background(0,0,50); 
-  //loadImage("assets/spacebackground.jpg");
-//   spacebackground = loadImage("assets/spacebackground.jpg");
-//   imageMode(PConstants.CENTER);
-//   image(spacebackground, width/2, height/2);
 
   bird = new GameCharacter(this); 
   pipeOne.generateInitalPipe();
@@ -109,15 +105,9 @@ void checkForCollison(){
     collisonTest1 = pipeOne.collison(bird.getX(), bird.getY());
     collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
-    if(pipeOne.getTransportCollison()){  
-        System.out.println("transport colission");
-      } //Cecily add in change of background here + reset bird and pipes
-    if(pipeTwo.getTransportCollison()){
-        System.out.println("transport colission");
-    } //Cecily add in change of background here + reset bird and pipes
-    if(pipeThree.getTransportCollison()){
-        System.out.println("transport colission");
-    } //Cecily add in change of background here + reset bird and pipes
+    if(pipeOne.getTransportCollison()){ System.out.println("transport colission");} //Cecily add in change of background here + reset bird and pipes
+    if(pipeTwo.getTransportCollison()){System.out.println("transport colission"); } //Cecily add in change of background here + reset bird and pipes
+    if(pipeThree.getTransportCollison()){ System.out.println("transport colission"); } //Cecily add in change of background here + reset bird and pipes
 
     // Check for collison with TNT or ForceFeild 
     //collisonTest2 = tnt.collison(bird.getX(), bird.getY());
