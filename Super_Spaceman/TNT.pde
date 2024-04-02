@@ -23,6 +23,7 @@ public class TNT extends GameCharacter {
         //Pipe UP || DOWN
         }else if((x >= this.xPosition ) && (x <= this.xPosition + this.characterWidth)){    
             if(y == this.yPosition){
+            // if(this.yPosition + this.characterWidth > y && this.yPosition < y){
                 return true;
             }
         }

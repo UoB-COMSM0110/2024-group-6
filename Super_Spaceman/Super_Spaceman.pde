@@ -11,7 +11,8 @@ boolean hasDied = false;
 
 TNT tnt;
 ForceFeild forceFeild;
-int forceFeildOrTNT;
+int forceFeildOrTNTCounter;
+int randomNum;
 
 GameCharacter bird;
 HazardPipe pipeOne;
@@ -30,16 +31,14 @@ void setup() {
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
   
+
   // Add - ForceFeild / TNT / nothing 
-  //tnt = new TNT(this);
-  forceFeild = new ForceFeild(this); 
+  genTNTorForceFeild();
+  // tnt = new TNT(this);
+  // forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
   background(0,0,50); 
-  //loadImage("assets/spacebackground.jpg");
-//   spacebackground = loadImage("assets/spacebackground.jpg");
-//   imageMode(PConstants.CENTER);
-//   image(spacebackground, width/2, height/2);
 
   bird = new GameCharacter(this); 
   pipeOne.generateInitalPipe();
@@ -47,8 +46,9 @@ void setup() {
   pipeTwo.generateInitalPipe();
   
   // Generate - ForceFeild / TNT / nothing
-  //tnt.getCharacter();
-  forceFeild.getCharacter();
+    // System.out.println(randomNum);
+  if(randomNum == 0){tnt.getCharacter();}
+  if(randomNum == 1){forceFeild.getCharacter();}
 
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
@@ -62,83 +62,91 @@ void draw() {
 
         if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
             diedScreen();
-        } else {
+        } else { 
             updateData();
         }
         checkForCollison();
+
     }
 
 }
 
 void updateData(){
-    //forceFeildOrTNT = (int)random(0,3);
-    //background(spacebackground);
-    background(0,0,50); 
+    background(0,0,50); // needs to be moved to enums or background class 
 
     //twinkly star drawings
     stroke(255);
     for(int i = 0; i < 100; i++){
         point(random(width), random(height));
     }
-
-    //larger stars
     noStroke();
+    //larger stars
     // fill(255, 255, 224);
     // for(int i = 0; i < 10; i++){
     //     float starSize = random(3, 6);
     //     ellipse(random(width), random(height), starSize, starSize);
     // }
     // noStroke();
+
+    forceFeildOrTNTCounter++;
+    if(forceFeildOrTNTCounter == width){
+        genTNTorForceFeild();
+        forceFeildOrTNTCounter = 0;
+    }
+    noStroke(); // needs to be moved to enums or background class 
+
     //moon
-    int offsetMoonX = 100;
-    fill(200,200,200);
-    ellipse(200+offsetMoonX , 150, 100, 100);
+    int offsetMoonX = 100; // needs to be moved to enums or background class 
+    fill(200,200,200); // needs to be moved to enums or background class 
+    ellipse(200+offsetMoonX , 150, 100, 100); // needs to be moved to enums or background class 
+
     //moon's craters
-    fill(180,180,180);
-    ellipse(190+offsetMoonX,140,20,20);
-    ellipse(210+offsetMoonX,160,10,10);
-    ellipse(220+offsetMoonX,130,15,15);
-    ellipse(170+offsetMoonX,130,10,10);
+    fill(180,180,180); // needs to be moved to enums or background class 
+    ellipse(190+offsetMoonX,140,20,20); // needs to be moved to enums or background class 
+    ellipse(210+offsetMoonX,160,10,10); // needs to be moved to enums or background class 
+    ellipse(220+offsetMoonX,130,15,15); // needs to be moved to enums or background class 
+    ellipse(170+offsetMoonX,130,10,10); // needs to be moved to enums or background class 
     ellipse(185+offsetMoonX,170,25,25);
     fill(170, 170, 170);
     ellipse(185+offsetMoonX,110,5,5);
     //ellipse(160+offsetMoonX,160,15,15);
 
-    //blue planet
-    fill(0, 100, 200);
-    ellipse(250, 400, 80, 80);
+    // //blue planet
+    // fill(0, 100, 200);
+    // ellipse(250, 400, 80, 80);
 
-    //supposed to be a planet with a ring
-    fill(150, 75, 0);
-    ellipse(500,100, 120, 120);
-    //noFill();
-    stroke(180, 100, 0);
-    strokeWeight(3);
-    noFill();
-    arc(500, 100, 150, 50, 0, PI);
+    // //supposed to be a planet with a ring
+    // fill(150, 75, 0);
+    // ellipse(500,100, 120, 120);
+    // //noFill();
+    // stroke(180, 100, 0);
+    // strokeWeight(3);
+    // noFill();
+    // arc(500, 100, 150, 50, 0, PI);
 
     noStroke();
     fill(255);
-        
-    
-    //background("assets/spacebackground.jpg");
-    
+
     pipeOne.updateX();
     pipeTwo.updateX();
-
-    // UpdateX - ForceFeild / TNT / nothing 
-    // if(forceFeildOrTNT = 0){}
-    //tnt.getCharacter();
+    
+    if ( randomNum == 0){
+        tnt.getCharacter();
+    }
     
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
     
-
-    if(forceFeild.getValidForceFeild((int)millis())){
+    if( randomNum == 1 ){
+        forceFeild.collison(bird.getX(), bird.getY());
+    }
+    if(randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
         forceFeild.validForceFeild(bird.getX(), bird.getY());
     } else {
-        forceFeild.getCharacter();
+        if( randomNum == 1 ){
+            forceFeild.getCharacter();
+        }
     }
 
 }
@@ -147,25 +155,24 @@ void checkForCollison(){
     collisonTest1 = pipeOne.collison(bird.getX(), bird.getY());
     collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
-    if(pipeOne.getTransportCollison()){  
-        System.out.println("transport colission");
-      } //Cecily add in change of background here + reset bird and pipes
-    if(pipeTwo.getTransportCollison()){
-        System.out.println("transport colission");
-    } //Cecily add in change of background here + reset bird and pipes
-    if(pipeThree.getTransportCollison()){
-        System.out.println("transport colission");
-    } //Cecily add in change of background here + reset bird and pipes
+    if(pipeOne.getTransportCollison()){ System.out.println("transport colission");} //Cecily add in change of background here + reset bird and pipes
+    if(pipeTwo.getTransportCollison()){System.out.println("transport colission"); } //Cecily add in change of background here + reset bird and pipes
+    if(pipeThree.getTransportCollison()){ System.out.println("transport colission"); } //Cecily add in change of background here + reset bird and pipes
 
     // Check for collison with TNT or ForceFeild 
-    //collisonTest2 = tnt.collison(bird.getX(), bird.getY());
+    if ( randomNum == 0){
+        hasDied = tnt.collison(bird.getX(), bird.getY());
+        // System.out.println(hasDied);
+    }
     
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
 
-    //tnt or forcefeild         
-    //forceFeild.collison(bird.getX(), bird.getY());
-    if(forceFeild.getValidForceFeild((int)millis())){
+    //tnt or forcefeild  
+    if( randomNum == 1 ){
+        forceFeild.collison(bird.getX(), bird.getY());
+    }       
+    if( randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
         collisonTest1 = false;
         collisonTest2 = false;
         collisonTest3 = false; 
@@ -201,6 +208,17 @@ void diedScreen(){
 
     textSize(30);
     text("Click to Exit",width/2,height/1.2);
+}
+
+void genTNTorForceFeild(){
+    randomNum = (int)random(0,2);
+    if(randomNum == 0){
+        tnt = new TNT(this);
+    } else if (randomNum == 1) {
+        forceFeild = new ForceFeild(this); 
+    }
+
+
 }
 
 void mousePressed() { 
