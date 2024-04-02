@@ -46,7 +46,7 @@ void setup() {
   pipeTwo.generateInitalPipe();
   
   // Generate - ForceFeild / TNT / nothing
-    System.out.println(randomNum);
+    // System.out.println(randomNum);
   if(randomNum == 0){tnt.getCharacter();}
   if(randomNum == 1){forceFeild.getCharacter();}
 
@@ -125,7 +125,7 @@ void checkForCollison(){
     // Check for collison with TNT or ForceFeild 
     if ( randomNum == 0){
         hasDied = tnt.collison(bird.getX(), bird.getY());
-        System.out.println(hasDied);
+        // System.out.println(hasDied);
     }
     
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
