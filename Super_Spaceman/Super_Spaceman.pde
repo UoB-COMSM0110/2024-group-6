@@ -71,21 +71,54 @@ void draw() {
 }
 
 void updateData(){
-
     //forceFeildOrTNT = (int)random(0,3);
     //background(spacebackground);
     background(0,0,50); 
+
+    //twinkly star drawings
+    stroke(255);
+    for(int i = 0; i < 100; i++){
+        point(random(width), random(height));
+    }
+
+    //larger stars
     noStroke();
+    // fill(255, 255, 224);
+    // for(int i = 0; i < 10; i++){
+    //     float starSize = random(3, 6);
+    //     ellipse(random(width), random(height), starSize, starSize);
+    // }
+    // noStroke();
+    //moon
     int offsetMoonX = 100;
     fill(200,200,200);
     ellipse(200+offsetMoonX , 150, 100, 100);
-
+    //moon's craters
     fill(180,180,180);
     ellipse(190+offsetMoonX,140,20,20);
     ellipse(210+offsetMoonX,160,10,10);
     ellipse(220+offsetMoonX,130,15,15);
     ellipse(170+offsetMoonX,130,10,10);
+    ellipse(185+offsetMoonX,170,25,25);
+    fill(170, 170, 170);
+    ellipse(185+offsetMoonX,110,5,5);
+    //ellipse(160+offsetMoonX,160,15,15);
 
+    //blue planet
+    fill(0, 100, 200);
+    ellipse(250, 400, 80, 80);
+
+    //supposed to be a planet with a ring
+    fill(150, 75, 0);
+    ellipse(500,100, 120, 120);
+    //noFill();
+    stroke(180, 100, 0);
+    strokeWeight(3);
+    noFill();
+    arc(500, 100, 150, 50, 0, PI);
+
+    noStroke();
+    fill(255);
         
     
     //background("assets/spacebackground.jpg");
