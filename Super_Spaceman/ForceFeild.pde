@@ -30,10 +30,10 @@ public class ForceFeild extends GameCharacter {
         //Pipe UP || DOWN
         } else if((x >= this.xPosition ) && (x <= this.xPosition + this.characterWidth)){  
             if(y == this.yPosition){
-                    System.out.println("picked up");
-                    collisonStartTime = millis();
-                    collisonEndTime = collisonStartTime + 110; 
-                    return true;
+                System.out.println("picked up");
+                collisonStartTime = millis();
+                collisonEndTime = collisonStartTime + 110; 
+                return true;
             }
         }
         return false;
