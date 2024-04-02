@@ -23,24 +23,38 @@ public class ForceFeild extends GameCharacter {
         this.game.image(this.character, birdX, birdY);
     }
 
-    public boolean collison(int x, int y){ 
+    public boolean collison(int x, int y ){ 
         //Pipe L || R 
         if(((x < this.xPosition) || (x > this.xPosition + this.characterWidth))){
                 return false;
         //Pipe UP || DOWN
-        }else if((x >= this.xPosition ) && (x <= this.xPosition + this.characterWidth)){    
-            if( y < this.yPosition + this.characterWidth && y > this.yPosition){
-                return false;
-            } 
+        } else if((x >= this.xPosition ) && (x <= this.xPosition + this.characterWidth)){  
+            //System.out.println("test");  
+            
+            // if(y >= this.yPosition && y <= this.yPosition + this.characterWidth){
+            //     return true;
+            // }
+
+            if(y == this.yPosition){
+                    System.out.println("picked up");
+                    collisonStartTime = millis();
+                    collisonEndTime = collisonStartTime + 110; 
+                    return true;
+            }
+
+
+            // if( y >= this.yPosition && y <= this.yPosition + this.characterWidth){
+            //     return true;
+            // } 
         }
-        collisonStartTime = millis();
-        collisonEndTime = collisonStartTime + 110; 
-        return true;
+        //System.out.println("test");
+  
+        return false;
     }
 
     public boolean getValidForceFeild(int time){
         if(collisonEndTime >= time){
-            // System.out.println("TRUE");
+            System.out.println("TRUE");
             return true;
         }
         return false;

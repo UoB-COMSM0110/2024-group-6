@@ -22,11 +22,11 @@ public class TNT extends GameCharacter {
                 return false;
         //Pipe UP || DOWN
         }else if((x >= this.xPosition ) && (x <= this.xPosition + this.characterWidth)){    
-            if( y < this.yPosition + this.characterWidth && y > this.yPosition){
-                return false;
-            } 
+            if(y == this.yPosition){
+                return true;
+            }
         }
-        return true;
+        return false;
     }
 
 }

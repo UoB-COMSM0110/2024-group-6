@@ -31,7 +31,7 @@ void setup() {
   pipeTwo = new HazardPipe();
   
   // Add - ForceFeild / TNT / nothing 
-  tnt = new TNT(this);
+  //tnt = new TNT(this);
   forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
@@ -47,7 +47,7 @@ void setup() {
   pipeTwo.generateInitalPipe();
   
   // Generate - ForceFeild / TNT / nothing
-  tnt.getCharacter();
+  //tnt.getCharacter();
   forceFeild.getCharacter();
 
   pipeThree.setXPosition(width+400);
@@ -72,7 +72,7 @@ void draw() {
 
 void updateData(){
 
-    forceFeildOrTNT = (int)random(0,3);
+    //forceFeildOrTNT = (int)random(0,3);
     //background(spacebackground);
     background(0,0,50); 
     noStroke();
@@ -95,14 +95,14 @@ void updateData(){
 
     // UpdateX - ForceFeild / TNT / nothing 
     // if(forceFeildOrTNT = 0){}
-    tnt.getCharacter();
+    //tnt.getCharacter();
     
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
     
 
-    if(forceFeild.getValidForceFeild((int)millis())){
+    if(!forceFeild.getValidForceFeild((int)millis())){
         forceFeild.validForceFeild(bird.getX(), bird.getY());
     } else {
         forceFeild.getCharacter();
@@ -125,12 +125,12 @@ void checkForCollison(){
     } //Cecily add in change of background here + reset bird and pipes
 
     // Check for collison with TNT or ForceFeild 
-    collisonTest2 = tnt.collison(bird.getX(), bird.getY());
+    //collisonTest2 = tnt.collison(bird.getX(), bird.getY());
     
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
 
-    //tnt or forcefeild
+    //tnt or forcefeild         
     forceFeild.collison(bird.getX(), bird.getY());
     if(forceFeild.getValidForceFeild((int)millis())){
         collisonTest1 = false;
