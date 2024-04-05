@@ -34,12 +34,12 @@ void setup() {
 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
-  
 
+  tnt = new TNT(this);
+  forceFeild = new ForceFeild(this);
+  
   // Add - ForceFeild / TNT / nothing 
   genTNTorForceFeild();
-  // tnt = new TNT(this);
-  // forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
   background(0,0,50); 
@@ -50,9 +50,10 @@ void setup() {
   pipeTwo.generateInitalPipe();
   
   // Generate - ForceFeild / TNT / nothing
-    // System.out.println(randomNum);
   if(randomNum == 0){tnt.getCharacter();}
-  if(randomNum == 1){forceFeild.getCharacter();}
+  if(randomNum == 1){
+    forceFeild.getCharacter();
+    }
 
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
@@ -96,10 +97,14 @@ void updateGameCharacterAndObstacles() {
     if(randomNum == 0){
         tnt.getCharacter();
     }
+    if(randomNum == 1 ){
+        forceFeild.getCharacter();
+    }
     
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
+    checkForceFieldCollisions();
 
 }    
 
@@ -107,13 +112,9 @@ void checkForceFieldCollisions(){
     if(randomNum == 1){
         forceFeild.collison(bird.getX(), bird.getY());
     }
-    if(randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
+    if(forceFeild.getValidForceFeild((int)millis())){
         forceFeild.validForceFeild(bird.getX(), bird.getY());
-    } else {
-        if(randomNum == 1){
-            forceFeild.getCharacter();
-        }
-    }
+    } 
 }
 
 void checkForCollison(){
@@ -122,10 +123,9 @@ void checkForCollison(){
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
     if(pipeOne.getTransportCollison()) {
-        System.out.println("pipe 1 - transport Mars collision");
+        // System.out.println("pipe 1 - transport Mars collision");
         currentBackground = Background.Mars;
     }
-    
     
     if(pipeTwo.getTransportCollison()){System.out.println("pipe 2 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
     if(pipeThree.getTransportCollison()){ System.out.println("pipe 3 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
@@ -133,7 +133,6 @@ void checkForCollison(){
     // Check for collison with TNT or ForceFeild 
     if ( randomNum == 0){
         collisonTest2 = tnt.collison(bird.getX(), bird.getY());
-        // System.out.println(hasDied);
     }
     
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
@@ -143,7 +142,9 @@ void checkForCollison(){
     if( randomNum == 1 ){
         forceFeild.collison(bird.getX(), bird.getY());
     }       
-    if( randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
+    
+    System.out.println(forceFeild.getValidForceFeild((int)millis()));
+    if(forceFeild.getValidForceFeild((int)millis())){ //randomNum == 1 &&
         collisonTest1 = false;
         collisonTest2 = false;
         collisonTest3 = false; 
@@ -153,6 +154,7 @@ void checkForCollison(){
 }
 
 void splashScreenLogic(){
+    fill(333,345,198);
     background(0);
     textSize(40);
     textAlign(CENTER, BASELINE);
@@ -185,11 +187,9 @@ void genTNTorForceFeild(){
     randomNum = (int)random(0,2);
     if(randomNum == 0){
         tnt = new TNT(this);
-    } else if (randomNum == 1) {
+    } else if (randomNum == 1 && !forceFeild.getValidForceFeild((int)millis())) {
         forceFeild = new ForceFeild(this); 
     }
-
-
 }
 
 void mousePressed() { 
