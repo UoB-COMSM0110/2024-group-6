@@ -34,6 +34,9 @@ void setup() {
 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
+
+  tnt = new TNT(this);
+  forceFeild = new ForceFeild(this);
   
   // Add - ForceFeild / TNT / nothing 
   genTNTorForceFeild();
@@ -47,7 +50,6 @@ void setup() {
   pipeTwo.generateInitalPipe();
   
   // Generate - ForceFeild / TNT / nothing
-    // System.out.println(randomNum);
   if(randomNum == 0){tnt.getCharacter();}
   if(randomNum == 1){
     forceFeild.getCharacter();
@@ -91,7 +93,7 @@ void updateGameCharacterAndObstacles() {
    
     pipeOne.updateX();
     pipeTwo.updateX();
-       System.out.println(randomNum);
+    //    System.out.println(randomNum);
     if(randomNum == 0){
         tnt.getCharacter();
     }
@@ -102,6 +104,7 @@ void updateGameCharacterAndObstacles() {
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
+    checkForceFieldCollisions();
 
 }    
 
@@ -109,13 +112,9 @@ void checkForceFieldCollisions(){
     if(randomNum == 1){
         forceFeild.collison(bird.getX(), bird.getY());
     }
-    if(randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
+    if(forceFeild.getValidForceFeild((int)millis())){
         forceFeild.validForceFeild(bird.getX(), bird.getY());
-    } else {
-        if(randomNum == 1){
-            forceFeild.getCharacter();
-        }
-    }
+    } 
 }
 
 void checkForCollison(){
@@ -124,7 +123,7 @@ void checkForCollison(){
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
     if(pipeOne.getTransportCollison()) {
-        System.out.println("pipe 1 - transport Mars collision");
+        // System.out.println("pipe 1 - transport Mars collision");
         currentBackground = Background.Mars;
     }
     
@@ -135,7 +134,6 @@ void checkForCollison(){
     // Check for collison with TNT or ForceFeild 
     if ( randomNum == 0){
         collisonTest2 = tnt.collison(bird.getX(), bird.getY());
-        // System.out.println(hasDied);
     }
     
     if(bird.getY() > height){ collisonBottom = true;} else { collisonBottom = false;}
@@ -145,7 +143,9 @@ void checkForCollison(){
     if( randomNum == 1 ){
         forceFeild.collison(bird.getX(), bird.getY());
     }       
-    if( randomNum == 1 && forceFeild.getValidForceFeild((int)millis())){
+    
+    System.out.println(forceFeild.getValidForceFeild((int)millis()));
+    if(forceFeild.getValidForceFeild((int)millis())){ //randomNum == 1 &&
         collisonTest1 = false;
         collisonTest2 = false;
         collisonTest3 = false; 
