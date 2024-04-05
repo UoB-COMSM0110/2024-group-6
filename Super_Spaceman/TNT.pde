@@ -4,7 +4,7 @@ public class TNT extends GameCharacter {
 
     public TNT(PApplet processingMethord){
         this.game = processingMethord;
-        this.xPosition = (game.width/2)+300;
+        this.xPosition = (game.width/2)+325;
         this.yPosition = (int)random(0,height); //(game.height/2);
         this.characterWidth = 64; 
     }

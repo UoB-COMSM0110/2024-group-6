@@ -35,11 +35,8 @@ void setup() {
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
   
-
   // Add - ForceFeild / TNT / nothing 
   genTNTorForceFeild();
-  // tnt = new TNT(this);
-  // forceFeild = new ForceFeild(this); 
 
   pipeThree = new HazardPipe();
   background(0,0,50); 
@@ -52,7 +49,9 @@ void setup() {
   // Generate - ForceFeild / TNT / nothing
     // System.out.println(randomNum);
   if(randomNum == 0){tnt.getCharacter();}
-  if(randomNum == 1){forceFeild.getCharacter();}
+  if(randomNum == 1){
+    forceFeild.getCharacter();
+    }
 
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
@@ -92,9 +91,12 @@ void updateGameCharacterAndObstacles() {
    
     pipeOne.updateX();
     pipeTwo.updateX();
-    
+       System.out.println(randomNum);
     if(randomNum == 0){
         tnt.getCharacter();
+    }
+    if(randomNum == 1 ){
+        forceFeild.getCharacter();
     }
     
     pipeThree.updateX();  
