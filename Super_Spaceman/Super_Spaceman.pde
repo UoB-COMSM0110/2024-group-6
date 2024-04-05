@@ -30,7 +30,7 @@ int endTime;
 Background currentBackground = Background.Space;
 
 void setup() { 
-  //currentBackground = Background.Space;
+  currentBackground = Background.Space;
 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();

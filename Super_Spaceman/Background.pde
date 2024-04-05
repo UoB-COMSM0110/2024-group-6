@@ -7,11 +7,38 @@ public enum Background {
             drawMoon(app, 100);
         }
     },
+    
     Mars(255, 140, 0) {
         @Override
         public void drawBackground(PApplet app) {
             app.background(this.r, this.g, this.b);
-            //add more mars background features in
+            
+            drawColouredStars(app, 150);
+            drawDustStorm(app);
+
+
+            drawPlanet(app, app.width * 0.1f, app.height * 0.2f, 30, 255, 204, 0); 
+            drawPlanet(app, app.width * 0.8f, app.height * 0.1f, 20, 255, 165, 0); 
+            drawPlanet(app, app.width * 0.3f, app.height * 0.1f, 50, 165, 42, 42);
+            drawPlanet(app, app.width * 0.6f, app.height * 0.2f, 25, 139, 0, 0);
+            drawPlanet(app, app.width * 0.85f, app.height * 0.15f, 25, 255, 223, 0); 
+            drawPlanet(app, app.width * 0.75f, app.height * 0.05f, 20, 205, 133, 63); 
+
+            //drawMountains(app, 0, app.height * 0.6f, app.width, app.height * 0.4f);
+            drawMountains(app, 0, app.height, app.width * 0.3f, app.height * 0.5f);
+            drawMountains(app, app.width * 0.25f, app.height, app.width * 0.5f, app.height * 0.4f); 
+            drawMountains(app, app.width * 0.7f, app.height, app.width * 0.3f, app.height * 0.5f); 
+            
+            drawAlienFlora(app, app.width * 0.2f, app.height * 0.8f);
+            drawAlienFlora(app, app.width * 0.4f, app.height * 0.75f);
+
+            drawBoulders(app, app.width * 0.2f, app.height * 0.75f, 40);
+            drawBoulders(app, app.width * 0.5f, app.height * 0.8f, 30);
+            drawBoulders(app, app.width * 0.45f, app.height * 0.78f, 60);
+            drawBoulders(app, app.width * 0.6f, app.height * 0.82f, 40);
+            drawBoulders(app, app.width * 0.75f, app.height * 0.76f, 50);
+            
+            
         }
     };
 
@@ -22,6 +49,69 @@ public enum Background {
         this.r = r;
         this.g = g;
         this.b = b;
+    }
+
+    private static void drawAlienFlora(PApplet app, float x, float y) {
+        app.fill(130, 0, 0);
+        app.beginShape();
+        app.vertex(x, y);
+        app.bezierVertex(x - 10, y - 30, x + 10, y - 60, x, y - 90);
+        app.bezierVertex(x + 10, y - 60, x - 10, y - 30, x, y);
+        app.endShape(PApplet.CLOSE);
+    }
+
+    private static void drawMartianSkyline(PApplet app) {
+        app.fill(100, 50, 0);
+        app.beginShape();
+        float baseY = app.height * 0.5f;
+        app.vertex(0, baseY);
+        for (float x = 0; x < app.width; x += 50) {
+            float y = baseY - app.random(50, 100);
+            app.vertex(x, y);
+        }
+        app.vertex(app.width, baseY);
+        app.vertex(app.width, app.height);
+        app.vertex(0, app.height);
+        app.endShape(PApplet.CLOSE);
+    }
+
+    private static void drawDustStorm(PApplet app) {
+        app.fill(255, 140, 0, 50);
+        app.rect(0, 0, app.width, app.height);
+    }
+
+
+    //need to refactor as this is still not working properly
+    private static void drawColouredStars(PApplet app, int numberOfStars) {
+        for (int i = 0; i < numberOfStars; i++) {
+            float x = app.random(app.width);
+            float y = app.random(app.height);
+            float starSize = app.random(1, 3);
+            int starColour = app.color(app.random(150, 255), app.random(100, 255), app.random(100, 255));
+            app.stroke(starColour);
+            app.point(x, y);
+        }
+        app.noStroke();
+    }
+
+    private static void drawBoulders(PApplet app, float x, float y, float size){
+        app.fill(120, 60, 0);
+        app.ellipse(x, y, size, size);
+    }
+
+    private static void drawMountains(PApplet app, float startX, float startY, float width, float height) {
+        float peakX = startX + width / 2;
+        float peakY = startY - height; 
+        app.fill(150, 75, 0); 
+        app.triangle(startX, startY, peakX, peakY, startX + width, startY);
+    }
+
+    private static void drawPlanet(PApplet app, float x, float y, float size, int r, int g, int b) {
+        app.noStroke();
+        app.fill(r, g, b, 120);
+        app.ellipse(x, y, size + 10, size + 10);
+        app.fill(r, g, b);
+        app.ellipse(x, y, size, size);
     }
 
     public abstract void drawBackground(PApplet app);
