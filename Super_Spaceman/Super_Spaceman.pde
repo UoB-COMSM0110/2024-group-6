@@ -125,14 +125,24 @@ void checkForCollison(){
     if(pipeOne.getTransportCollison()) {
         // System.out.println("pipe 1 - transport Mars collision");
         currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
-
         pipeOne.setTransportCollison(false);
     }
     
-    if(pipeTwo.getTransportCollison()){System.out.println("pipe 2 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
-    if(pipeThree.getTransportCollison()){ System.out.println("pipe 3 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
+    if(pipeTwo.getTransportCollison()){
+        // System.out.println("pipe 2 - transport collision"); 
+        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
+        // pipeOne.setTransportCollison(false);    
+    } //Cecily add in change of background here + reset bird and pipes
+    
+    if(pipeThree.getTransportCollison()){ 
+        // System.out.println("pipe 3 - transport collision"); 
+        
+        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
+        // pipeOne.setTransportCollison(false);
+        } //Cecily add in change of background here + reset bird and pipes
 
     // Check for collison with TNT or ForceFeild 
+    
     if (randomNum == 0){
         collisonTest2 = tnt.collison(bird.getX(), bird.getY());
     }
