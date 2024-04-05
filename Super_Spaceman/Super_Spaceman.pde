@@ -155,6 +155,7 @@ void checkForCollison(){
 }
 
 void splashScreenLogic(){
+    fill(333,345,198);
     background(0);
     textSize(40);
     textAlign(CENTER, BASELINE);
@@ -187,7 +188,7 @@ void genTNTorForceFeild(){
     randomNum = (int)random(0,2);
     if(randomNum == 0){
         tnt = new TNT(this);
-    } else if (randomNum == 1) {
+    } else if (randomNum == 1 && !forceFeild.getValidForceFeild((int)millis())) {
         forceFeild = new ForceFeild(this); 
     }
 

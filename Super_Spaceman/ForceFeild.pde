@@ -33,7 +33,7 @@ public class ForceFeild extends GameCharacter {
             
             if(this.yPosition + this.characterWidth > y && this.yPosition < y){
                 collisonStartTime = millis();
-                collisonEndTime = collisonStartTime + 3010;  
+                collisonEndTime = collisonStartTime + 2010;  
                 return true;
             }
         }
