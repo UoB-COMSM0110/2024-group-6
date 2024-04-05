@@ -135,19 +135,10 @@ class HazardPipe{
     public void setTransportCollison(boolean newValue){
         transportCollison = newValue;
     }
-
-    // two diffrent types of collisons based on hazardPipe
-    // check colision with correct serface if so transportCollion = true and return false
-    // implement getter methord for transportCollion
-    // if transportCollion == true do the below
-    // generate new background within updateData() ,
-    // generate new pipes && move bird to center of screen from within updateData()
     
     public boolean collison(int x, int y){
         
         //Pipe L || R 
-        // BUG !!! -- Fix at the moment mr SuperSpaceMan can hit the 
-        // right or left of the pipe and not die 
         boolean leftOfPipe = (x < this.xPosition);
         boolean rightOfPipe = (x > this.xPosition + this.pipeWidth);
         if( leftOfPipe || rightOfPipe ){
