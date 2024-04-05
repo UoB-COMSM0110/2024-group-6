@@ -93,7 +93,7 @@ void updateGameCharacterAndObstacles() {
    
     pipeOne.updateX();
     pipeTwo.updateX();
-    //    System.out.println(randomNum);
+    
     if(randomNum == 0){
         tnt.getCharacter();
     }
@@ -126,7 +126,6 @@ void checkForCollison(){
         // System.out.println("pipe 1 - transport Mars collision");
         currentBackground = Background.Mars;
     }
-    
     
     if(pipeTwo.getTransportCollison()){System.out.println("pipe 2 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
     if(pipeThree.getTransportCollison()){ System.out.println("pipe 3 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
@@ -191,8 +190,6 @@ void genTNTorForceFeild(){
     } else if (randomNum == 1 && !forceFeild.getValidForceFeild((int)millis())) {
         forceFeild = new ForceFeild(this); 
     }
-
-
 }
 
 void mousePressed() { 

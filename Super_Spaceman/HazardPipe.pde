@@ -119,7 +119,6 @@ class HazardPipe{
         return this.pipeSizeTop;
     }
 
-
     public void setPipeInterval(int intaval){
         this.pipeInterval = intaval;
     }
