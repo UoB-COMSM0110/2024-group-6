@@ -123,8 +123,15 @@ void checkForCollison(){
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
     if(pipeOne.getTransportCollison()) {
-        // System.out.println("pipe 1 - transport Mars collision");
-        currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
+        double rand = Math.random();
+        if(rand < 1.0 /3.0) {
+            currentBackground = Background.Mars;
+        } else if (rand < 2.0 / 3.0) {
+            currentBackground = Background.Moon;
+        } else {
+            currentBackground = Background.Saturn;
+        }
+        
         pipeOne.setTransportCollison(false);
     }
     

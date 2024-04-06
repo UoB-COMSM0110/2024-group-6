@@ -6,6 +6,9 @@ public enum Background {
             app.background(this.r, this.g, this.b);
             drawStars(app);
             drawMoon(app, 100);
+
+            drawMars(app, app.width * 0.3f, app.height * 0.1f, 40);
+            drawSaturn(app, app.width * 0.25f, app.height * 0.6f, 80);
         }
     },
     
@@ -59,6 +62,31 @@ public enum Background {
             drawCraters(app, app.width * 0.3f, app.height * 0.65f, 20);
             drawCraters(app, app.width * 0.5f, app.height * 0.85f, 15);
             drawCraters(app, app.width * 0.7f, app.height * 0.75f, 35);
+        }
+    },
+
+
+    Saturn(20, 30, 40) {
+        @Override
+        public void drawBackground(PApplet app) {
+            app.background(this.r, this.g, this.b);
+            drawStars(app);
+
+            float saturnX = app.width * 0.5f;
+            float saturnY = app.height * 0.5f;
+            float saturnSize = 200;
+
+            app.fill(204, 153, 0);
+            app.noStroke();
+            app.ellipse(saturnX, saturnY, saturnSize, saturnSize);
+
+            //the rings
+            app.stroke(204, 153, 0);
+            app.noFill();
+            app.strokeWeight(2);
+            for (float i = saturnSize * 0.6f; i <= saturnSize; i+= 5) {
+                app.ellipse(saturnX, saturnY, saturnSize + i, saturnSize / 3);
+            }
         }
     };
     
@@ -184,10 +212,27 @@ public enum Background {
         // arc(500, 100, 150, 50, 0, PI);
     };
 
+    private static void drawMars(PApplet app, float x, float y, float size) {
+        app.fill(255, 165, 0);
+        app.noStroke();
+        app.ellipse(x, y, size, size);
+    }
+
+    private static void drawSaturn(PApplet app, float saturnX, float saturnY, float saturnSize) {
+        app.fill(204, 153, 0);
+        app.noStroke();
+        app.ellipse(saturnX, saturnY, saturnSize, saturnSize);
+
+        app.stroke(204, 153, 0);
+        app.noFill();
+        app.strokeWeight(2);
+        for(float i = saturnSize * 0.6f; i <= saturnSize; i += 5) {
+            app.ellipse(saturnX, saturnY, saturnSize + i, saturnSize / 3);
+        }
+    }
+
     // Milkyway,
     // Earth,
 
 
-
-    
 }
