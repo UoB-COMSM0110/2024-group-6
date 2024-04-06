@@ -1,3 +1,4 @@
+
 public enum Background {
     Space(0, 0, 50) {
         @Override
@@ -5,6 +6,9 @@ public enum Background {
             app.background(this.r, this.g, this.b);
             drawStars(app);
             drawMoon(app, 100);
+
+            drawMars(app, app.width * 0.3f, app.height * 0.1f, 40);
+            drawSaturn(app, app.width * 0.25f, app.height * 0.6f, 80);
         }
     },
     
@@ -15,7 +19,6 @@ public enum Background {
             
             drawColouredStars(app, 150);
             drawDustStorm(app);
-
 
             drawPlanet(app, app.width * 0.1f, app.height * 0.2f, 30, 255, 204, 0); 
             drawPlanet(app, app.width * 0.8f, app.height * 0.1f, 20, 255, 165, 0); 
@@ -37,10 +40,56 @@ public enum Background {
             drawBoulders(app, app.width * 0.45f, app.height * 0.78f, 60);
             drawBoulders(app, app.width * 0.6f, app.height * 0.82f, 40);
             drawBoulders(app, app.width * 0.75f, app.height * 0.76f, 50);
+        }
+    },
+
+    Moon(20, 20, 40) {
+        @Override
+        public void drawBackground(PApplet app) {
+            app.background(this.r, this.g, this.b);
+            drawStars(app);
             
+            //moon semi circle
+            app.fill(200, 200, 200); 
+            app.rect(0, app.height / 2, app.width, app.height / 2);
+
+        
+            drawCraters(app, app.width * 0.2f, app.height * 0.75f, 30);
+            drawCraters(app, app.width * 0.4f, app.height * 0.6f, 45);
+            drawCraters(app, app.width * 0.6f, app.height * 0.8f, 40);
+            drawCraters(app, app.width * 0.8f, app.height * 0.7f, 25);
             
+            drawCraters(app, app.width * 0.3f, app.height * 0.65f, 20);
+            drawCraters(app, app.width * 0.5f, app.height * 0.85f, 15);
+            drawCraters(app, app.width * 0.7f, app.height * 0.75f, 35);
+        }
+    },
+
+
+    Saturn(20, 30, 40) {
+        @Override
+        public void drawBackground(PApplet app) {
+            app.background(this.r, this.g, this.b);
+            drawStars(app);
+
+            float saturnX = app.width * 0.5f;
+            float saturnY = app.height * 0.5f;
+            float saturnSize = 200;
+
+            app.fill(204, 153, 0);
+            app.noStroke();
+            app.ellipse(saturnX, saturnY, saturnSize, saturnSize);
+
+            //the rings
+            app.stroke(204, 153, 0);
+            app.noFill();
+            app.strokeWeight(2);
+            for (float i = saturnSize * 0.6f; i <= saturnSize; i+= 5) {
+                app.ellipse(saturnX, saturnY, saturnSize + i, saturnSize / 3);
+            }
         }
     };
+    
 
     //colour values for the background
     final int r, g, b;
@@ -51,6 +100,10 @@ public enum Background {
         this.b = b;
     }
 
+    public abstract void drawBackground(PApplet app);
+
+
+    //MARS METHODS:
     private static void drawAlienFlora(PApplet app, float x, float y) {
         app.fill(130, 0, 0);
         app.beginShape();
@@ -79,7 +132,6 @@ public enum Background {
         app.fill(255, 140, 0, 50);
         app.rect(0, 0, app.width, app.height);
     }
-
 
     //need to refactor as this is still not working properly
     private static void drawColouredStars(PApplet app, int numberOfStars) {
@@ -114,8 +166,6 @@ public enum Background {
         app.ellipse(x, y, size, size);
     }
 
-    public abstract void drawBackground(PApplet app);
-
     private static void drawStars(PApplet app) {
         app.stroke(255);
         for(int i = 0; i < 100; i++) {
@@ -124,6 +174,14 @@ public enum Background {
         app.noStroke();
     }
 
+
+    //MOON METHODS:
+    private static void drawCraters(PApplet app, float x, float y, float size) {
+        app.fill(150, 150, 150);            
+        app.ellipse(x, y, size, size * 0.75);
+    }
+
+    //SPACE METHODS:
     private static void drawMoon(PApplet app, int offsetX) {
         //int offsetMoonX = 100; 
         app.fill(200, 200, 200); 
@@ -152,9 +210,29 @@ public enum Background {
         // strokeWeight(3);
         // noFill();
         // arc(500, 100, 150, 50, 0, PI);
+    };
+
+    private static void drawMars(PApplet app, float x, float y, float size) {
+        app.fill(255, 165, 0);
+        app.noStroke();
+        app.ellipse(x, y, size, size);
     }
-    // Milkway,
-    // Moon,
+
+    private static void drawSaturn(PApplet app, float saturnX, float saturnY, float saturnSize) {
+        app.fill(204, 153, 0);
+        app.noStroke();
+        app.ellipse(saturnX, saturnY, saturnSize, saturnSize);
+
+        app.stroke(204, 153, 0);
+        app.noFill();
+        app.strokeWeight(2);
+        for(float i = saturnSize * 0.6f; i <= saturnSize; i += 5) {
+            app.ellipse(saturnX, saturnY, saturnSize + i, saturnSize / 3);
+        }
+    }
+
+    // Milkyway,
     // Earth,
-    
+
+
 }

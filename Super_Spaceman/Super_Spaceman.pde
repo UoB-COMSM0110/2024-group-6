@@ -123,15 +123,34 @@ void checkForCollison(){
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
     if(pipeOne.getTransportCollison()) {
-        // System.out.println("pipe 1 - transport Mars collision");
-        currentBackground = Background.Mars;
+        double rand = Math.random();
+        if(rand < 1.0 /3.0) {
+            currentBackground = Background.Mars;
+        } else if (rand < 2.0 / 3.0) {
+            currentBackground = Background.Moon;
+        } else {
+            currentBackground = Background.Saturn;
+        }
+        
+        pipeOne.setTransportCollison(false);
     }
     
-    if(pipeTwo.getTransportCollison()){System.out.println("pipe 2 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
-    if(pipeThree.getTransportCollison()){ System.out.println("pipe 3 - transport collision"); } //Cecily add in change of background here + reset bird and pipes
+    if(pipeTwo.getTransportCollison()){
+        // System.out.println("pipe 2 - transport collision"); 
+        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
+        // pipeOne.setTransportCollison(false);    
+    } //Cecily add in change of background here + reset bird and pipes
+    
+    if(pipeThree.getTransportCollison()){ 
+        // System.out.println("pipe 3 - transport collision"); 
+        
+        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
+        // pipeOne.setTransportCollison(false);
+        } //Cecily add in change of background here + reset bird and pipes
 
     // Check for collison with TNT or ForceFeild 
-    if ( randomNum == 0){
+    
+    if (randomNum == 0){
         collisonTest2 = tnt.collison(bird.getX(), bird.getY());
     }
     
@@ -139,7 +158,7 @@ void checkForCollison(){
     if(bird.getY() <= 0 ){ collisonTop = true;} else { collisonTop = false;}
 
     //tnt or forcefeild  
-    if( randomNum == 1 ){
+    if(randomNum == 1 ){
         forceFeild.collison(bird.getX(), bird.getY());
     }       
     
