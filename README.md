@@ -357,7 +357,7 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
             <td>4</td>
             <td>0</td>
             <td>0</td>
-            <td>4</td>
+            <td>1.3</td>
         </tr>
         <tr>
             <td>Gravity</td>
@@ -375,7 +375,52 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
             <td>4</td>
             <td>2</td>
             <td>4</td>
+            <td>3.3</td>
+        </tr>
+        <tr>
+            <td>Bomb</td>
+            <td>Sometimes, randomly generated bombs appear on the essential path leading to the next exit, making it unavoidable and causing the player to fail</td>
+            <td>Error prevention</td>
+            <td>1</td>
+            <td>4</td>
+            <td>4</td>
             <td>3</td>
+        </tr>
+        <tr>
+            <td>Shield</td>
+            <td>The randomly generated shield quickly expires and disappears before you have a chance to use it</td>
+            <td>Error prevention</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Transport pipes</td>
+            <td>The transport pipes are difficult to activate, only changing the background in rare cases. Once the background has changed, entering the transport pipe again will not trigger another background change</td>
+            <td>Error prevention</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>Hazard pipes</td>
+            <td>After collision with the bottom pipe, the player can continue to jump and proceed with the game'This issue can be resolved by disabling the keyboard input'</td>
+            <td>Error prevention</td>
+            <td>4</td>
+            <td>1</td>
+            <td>4</td>
+            <td>3</td>
+        </tr>
+         <tr>
+            <td>Background</td>
+            <td>The number of stars in the background and their frequency of blinking is too high, which may cause discomfort for some players</td>
+            <td>Aesthetic and Minimalist Design</td>
+            <td>1</td>
+            <td>1</td>
+            <td>4</td>
+            <td>2</td>
         </tr>
     </tbody>
 </table>
