@@ -30,6 +30,8 @@ int endTime;
 Background currentBackground = Background.Space;
 
 void setup() { 
+    //initialiseGame();
+
   currentBackground = Background.Space;
 
   pipeOne = new HazardPipe();
@@ -38,7 +40,7 @@ void setup() {
   tnt = new TNT(this);
   forceFeild = new ForceFeild(this);
   
-  // Add - ForceFeild / TNT / nothing 
+  //Add - ForceFeild / TNT / nothing 
   genTNTorForceFeild();
 
   pipeThree = new HazardPipe();
@@ -49,7 +51,7 @@ void setup() {
   pipeTwo.setXPosition(width+200);
   pipeTwo.generateInitalPipe();
   
-  // Generate - ForceFeild / TNT / nothing
+  //Generate - ForceFeild / TNT / nothing
   if(randomNum == 0){tnt.getCharacter();}
   if(randomNum == 1){
     forceFeild.getCharacter();
@@ -58,6 +60,36 @@ void setup() {
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
 }
+
+// void initialiseGame() {
+//     pipeOne = new HazardPipe();
+//     pipeTwo = new HazardPipe();
+//     pipeThree = new HazardPipe();
+//     genTNTorForceFeild();
+//     background(0,0,50); 
+//     bird = new GameCharacter(this); 
+//     tnt = new TNT(this);
+//     forceFeild = new ForceFeild(this);
+
+//     pipeOne.generateInitalPipe();
+//     pipeTwo.setXPosition(width+200);
+//     pipeTwo.generateInitalPipe();
+//     if(randomNum == 0) {
+//         tnt.getCharacter();
+//     }
+
+//     if(randomNum == 1){
+//         forceFeild.getCharacter();
+//     }
+
+//     pipeThree.setXPosition(width+400);
+//     pipeThree.generateInitalPipe();
+
+//     if ( currentBackground == null) {
+//         currentBackground = Background.Space;
+//     }
+
+// }
 
 void draw() {
 
@@ -122,31 +154,26 @@ void checkForCollison(){
     collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
+    // if (pipeOne.getTransportCollison() || pipeTwo.getTransportCollison() || pipeThree.getTransportCollison()) {
+    //     changeBackground();
+    //     initialiseGame();
+    //     resetPipesAndCollisions();
+    // }
+
     if(pipeOne.getTransportCollison()) {
-        double rand = Math.random();
-        if(rand < 1.0 /3.0) {
-            currentBackground = Background.Mars;
-        } else if (rand < 2.0 / 3.0) {
-            currentBackground = Background.Moon;
-        } else {
-            currentBackground = Background.Saturn;
-        }
-        
+        changeBackground();
         pipeOne.setTransportCollison(false);
     }
     
-    if(pipeTwo.getTransportCollison()){
-        // System.out.println("pipe 2 - transport collision"); 
-        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
-        // pipeOne.setTransportCollison(false);    
-    } //Cecily add in change of background here + reset bird and pipes
+    if(pipeTwo.getTransportCollison()) {
+        changeBackground();
+        pipeTwo.setTransportCollison(false);    
+    } 
     
-    if(pipeThree.getTransportCollison()){ 
-        // System.out.println("pipe 3 - transport collision"); 
-        
-        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
-        // pipeOne.setTransportCollison(false);
-        } //Cecily add in change of background here + reset bird and pipes
+    if(pipeThree.getTransportCollison()) { 
+        changeBackground();
+        pipeThree.setTransportCollison(false); 
+    } 
 
     // Check for collison with TNT or ForceFeild 
     
@@ -169,6 +196,23 @@ void checkForCollison(){
         collisonTest3 = false; 
         collisonBottom = false;
         collisonTop = false;
+    }
+}
+
+// void resetPipesAndCollisions() {
+//     pipeOne.setTransportCollison(false);
+//     pipeTwo.setTransportCollison(false);
+//     pipeThree.setTransportCollison(false);
+// }
+
+void changeBackground() {
+    double rand = Math.random();
+    if (rand < 1.0 / 3.0) {
+        currentBackground = Background.Mars;
+    } else if (rand < 2.0 / 3.0) {
+        currentBackground = Background.Moon;
+    } else {
+        currentBackground = Background.Saturn;
     }
 }
 

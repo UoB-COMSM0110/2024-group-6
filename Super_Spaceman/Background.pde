@@ -89,7 +89,7 @@ public enum Background {
             }
         }
     };
-    
+
 
     //colour values for the background
     final int r, g, b;
@@ -167,9 +167,10 @@ public enum Background {
     }
 
     private static void drawStars(PApplet app) {
-        app.stroke(255);
-        for(int i = 0; i < 100; i++) {
+        app.stroke(120);
+        for(int i = 0; i < 75; i++) {
             app.point(app.random(app.width), app.random(app.height));
+
         }
         app.noStroke();
     }
@@ -183,7 +184,6 @@ public enum Background {
 
     //SPACE METHODS:
     private static void drawMoon(PApplet app, int offsetX) {
-        //int offsetMoonX = 100; 
         app.fill(200, 200, 200); 
         app.ellipse(200 + offsetX , 150, 100, 100); 
 
@@ -196,20 +196,6 @@ public enum Background {
         app.ellipse(185 + offsetX,170,25,25);
         app.fill(170, 170, 170);
         app.ellipse(185+offsetX,110,5,5);
-        //ellipse(160+offsetX,160,15,15);
-
-        // //blue planet
-        // fill(0, 100, 200);
-        // ellipse(250, 400, 80, 80);
-
-        // //supposed to be a planet with a ring
-        // fill(150, 75, 0);
-        // ellipse(500,100, 120, 120);
-        // //noFill();
-        // stroke(180, 100, 0);
-        // strokeWeight(3);
-        // noFill();
-        // arc(500, 100, 150, 50, 0, PI);
     };
 
     private static void drawMars(PApplet app, float x, float y, float size) {
@@ -230,9 +216,5 @@ public enum Background {
             app.ellipse(saturnX, saturnY, saturnSize + i, saturnSize / 3);
         }
     }
-
-    // Milkyway,
-    // Earth,
-
 
 }
