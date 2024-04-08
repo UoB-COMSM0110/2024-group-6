@@ -203,7 +203,7 @@ void diedScreen(){
 }
 
 void genTNTorForceFeild(){
-    randomNum = (int)random(0,2);
+    randomNum = (int)random(0,5);
     if(randomNum == 0){
         tnt = new TNT(this);
     } else if (randomNum == 1 && !forceFeild.getValidForceFeild((int)millis())) {
