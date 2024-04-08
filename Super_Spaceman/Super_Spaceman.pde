@@ -8,6 +8,7 @@ void settings() {
 
 boolean splashScreen = true; 
 boolean hasDied = false;
+boolean forbidSpacebar = false; // add a flag to forbid spacebar.
 
 TNT tnt;
 ForceFeild forceFeild;
@@ -67,6 +68,7 @@ void draw() {
 
         if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
             diedScreen();
+            forbidSpacebar = true; //add a flag to forbid spacebar.
         } else { 
             updateData();
         }
@@ -222,6 +224,7 @@ void mousePressed() {
         currentBackground = Background.Space;
         splashScreen = true;
         hasDied = false;
+        forbidSpacebar = false;//reset the flag for next game.
         collisonTest1 = false;
         collisonTest2 = false;
         collisonTest3 = false;
@@ -234,7 +237,7 @@ void mousePressed() {
 public void keyPressed(){  
     if(splashScreen){
         splashScreen = false;
-    } else {
+    } else if(!forbidSpacebar){//change to forbid spacebar.
         bird.jump();
     }
 }
