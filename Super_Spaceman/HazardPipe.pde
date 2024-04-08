@@ -22,9 +22,6 @@ class HazardPipe{
         this.transportPipeTop = true;
     }
 
-
-
-    // Maybe logic goes here for transport pipe
     public void generateInitalPipe(){
 
         this.topPipeYPosition = (int)random(height-minGapSize);
@@ -84,14 +81,16 @@ class HazardPipe{
                 rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
 
                 //bottom pipe
-                fill(333,345,198);
+                fill(255,255,0);
+                // fill(333,345,198);
                 noStroke();
                 rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
             }
 
             if(!this.transportPipeTop){
                 //Top Pipe
-                fill(333,345,198);
+                fill(255,255,0);
+                // fill(333,345,198);
                 noStroke();
                 rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
 
