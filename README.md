@@ -1,5 +1,7 @@
 # 2024-group-6
 
+https://docs.google.com/document/d/1CAvMM9M0nOD37zgNwwQbP-oFkJBle_J5mAp0DXFvtpo/edit?usp=sharing
+
 ## Table of Contents  
 
 - [Team Photo](#team-photo)
