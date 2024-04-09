@@ -9,7 +9,6 @@ class GameCharacter {
 
     public GameCharacter(){}
 
-
     public GameCharacter(PApplet processingMethord){
         this.game = processingMethord;
         this.xPosition = game.width/2;
@@ -53,6 +52,5 @@ class GameCharacter {
     public void setIncreaseDeltaY(){
         this.deltaY += 1;
     }
-
 
 }

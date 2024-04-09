@@ -51,8 +51,7 @@ class HazardPipe{
     public void setXPosition(int xPosition){
         this.xPosition = xPosition;
     }
-
-
+    
     //add getter and setter methods for this.PipeSpeed 
     public void setPipeSpeed(int speed){
         this.pipeSpeed = speed;
@@ -73,9 +72,6 @@ class HazardPipe{
     }
 
     private void generatePipe(){
-        
-        // System.out.println(this.xPosition+" "+0+" "+this.pipeWidth+" "+this.topPipeYPosition);
-
         if(this.hazardPipe){
             //Top Pipe
             fill(255,255,0);
@@ -174,12 +170,10 @@ class HazardPipe{
 
                 if(transportPipeTop && y < this.topPipeYPosition ){ //this.bottomPipeYPosition
                     transportCollison = true;
-                    // System.out.println("Top"+transportCollison + this.topPipeYPosition);
                     return false;
                 
                 } else if(!transportPipeTop && y > this.bottomPipeYPosition ){
                     transportCollison = true;
-                    // System.out.println("Bottom"+transportCollison + this.bottomPipeYPosition);
                     return false;
                 }
             }

@@ -43,9 +43,9 @@ void setup() {
 
   pipeThree = new HazardPipe();
   
-    pipeOne.setPipeSpeed(1);
-    pipeTwo.setPipeSpeed(1);
-    pipeThree.setPipeSpeed(1);
+  pipeOne.setPipeSpeed(1);
+  pipeTwo.setPipeSpeed(1);
+  pipeThree.setPipeSpeed(1);
   
   background(0,0,50); 
 
@@ -90,9 +90,6 @@ void updateData(){
     currentBackground.drawBackground(this);
 
     forceFeildOrTNTCounter++;
-    
-    System.out.println(forceFeildOrTNTCounter);
-
     if(forceFeildOrTNTCounter == width){
         genTNTorForceFeild();
         forceFeildOrTNTCounter = 0;
@@ -102,18 +99,7 @@ void updateData(){
 }
 
 void updateGameCharacterAndObstacles() {
-
-    speedUpPipesCnt++;
-    if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
-        int speed = pipeOne.getPipeSpeed()+1;
-        // System.out.println("gamesSpeed: "+ speed);
-        pipeOne.setPipeSpeed(speed);
-        pipeTwo.setPipeSpeed(speed);
-        pipeThree.setPipeSpeed(speed);
-        tnt.setPipeSpeed(speed);
-        forceFeild.setPipeSpeed(speed);
-    }  
-   
+  
     pipeOne.updateX();
     pipeTwo.updateX();
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
@@ -127,6 +113,18 @@ void updateGameCharacterAndObstacles() {
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
+
+    speedUpPipesCnt++;
+    if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
+        int speed = pipeOne.getPipeSpeed()+1;
+        System.out.println("gamesSpeed: "+ speed);
+        pipeOne.setPipeSpeed(speed);
+        pipeTwo.setPipeSpeed(speed);
+        pipeThree.setPipeSpeed(speed);
+        tnt.setTNTSpeed(speed);
+        forceFeild.setForceFeildSpeed(speed);
+    }  
+
     checkForceFieldCollisions();
 
 }    
@@ -161,7 +159,6 @@ void checkForCollison(){
     } 
 
     // Check for collison with TNT or ForceFeild 
-    
     if (randomNum == 0){
         collisonTest2 = tnt.collison(bird.getX(), bird.getY());
     }
@@ -174,7 +171,6 @@ void checkForCollison(){
         forceFeild.collison(bird.getX(), bird.getY());
     }       
     
-    // System.out.println(forceFeild.getValidForceFeild((int)millis()));
     if(forceFeild.getValidForceFeild((int)millis())){ //randomNum == 1 &&
         collisonTest1 = false;
         collisonTest2 = false;
@@ -233,8 +229,10 @@ void genTNTorForceFeild(){
     System.out.println(randomNum);
     if(randomNum == 0){
         tnt = new TNT(this);
+        tnt.setTNTSpeed(pipeOne.getPipeSpeed());
     } else if (randomNum == 1 && !forceFeild.getValidForceFeild((int)millis())) {
         forceFeild = new ForceFeild(this); 
+        forceFeild.setForceFeildSpeed(pipeOne.getPipeSpeed());
     }
 }
 
