@@ -4,10 +4,6 @@ void settings() {
     size(400, 600);
 }
 
-
-
-//PImage spacebackground;
-
 boolean splashScreen = true; 
 boolean hasDied = false;
 
@@ -32,9 +28,6 @@ int endTime;
 Background currentBackground = Background.Space;
 
 void setup() { 
-    //initialiseGame();
-
-  //currentBackground = Background.Space;
 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
@@ -62,36 +55,6 @@ void setup() {
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
 }
-
-// void initialiseGame() {
-//     pipeOne = new HazardPipe();
-//     pipeTwo = new HazardPipe();
-//     pipeThree = new HazardPipe();
-//     genTNTorForceFeild();
-//     background(0,0,50); 
-//     bird = new GameCharacter(this); 
-//     tnt = new TNT(this);
-//     forceFeild = new ForceFeild(this);
-
-//     pipeOne.generateInitalPipe();
-//     pipeTwo.setXPosition(width+200);
-//     pipeTwo.generateInitalPipe();
-//     if(randomNum == 0) {
-//         tnt.getCharacter();
-//     }
-
-//     if(randomNum == 1){
-//         forceFeild.getCharacter();
-//     }
-
-//     pipeThree.setXPosition(width+400);
-//     pipeThree.generateInitalPipe();
-
-//     if ( currentBackground == null) {
-//         currentBackground = Background.Space;
-//     }
-
-// }
 
 void draw() {
 
@@ -156,12 +119,6 @@ void checkForCollison(){
     collisonTest2 = pipeTwo.collison(bird.getX(), bird.getY());
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
-    // if (pipeOne.getTransportCollison() || pipeTwo.getTransportCollison() || pipeThree.getTransportCollison()) {
-    //     changeBackground();
-    //     initialiseGame();
-    //     resetPipesAndCollisions();
-    // }
-
     if(pipeOne.getTransportCollison()) {
         changeBackground();
         pipeOne.setTransportCollison(false);
@@ -201,11 +158,6 @@ void checkForCollison(){
     }
 }
 
-// void resetPipesAndCollisions() {
-//     pipeOne.setTransportCollison(false);
-//     pipeTwo.setTransportCollison(false);
-//     pipeThree.setTransportCollison(false);
-// }
 
 void changeBackground() {
     double rand = Math.random();
@@ -216,7 +168,7 @@ void changeBackground() {
     } else {
         currentBackground = Background.Saturn;
     }
-   //call set up?
+ 
    setup();
 }
 
