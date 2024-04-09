@@ -103,7 +103,7 @@ void updateGameCharacterAndObstacles() {
     speedUpPipesCnt++;
     if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
         int speed = pipeOne.getPipeSpeed()+1;
-        System.out.println("gamesSpeed: "+ speed);
+        // System.out.println("gamesSpeed: "+ speed);
         pipeOne.setPipeSpeed(speed);
         pipeTwo.setPipeSpeed(speed);
         pipeThree.setPipeSpeed(speed);
@@ -226,7 +226,8 @@ void diedScreen(){
 }
 
 void genTNTorForceFeild(){
-    randomNum = (int)random(0,5);
+    randomNum = (int)random(0,2);
+    System.out.println(randomNum);
     if(randomNum == 0){
         tnt = new TNT(this);
     } else if (randomNum == 1 && !forceFeild.getValidForceFeild((int)millis())) {

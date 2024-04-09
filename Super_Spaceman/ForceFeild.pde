@@ -9,6 +9,7 @@ public class ForceFeild extends GameCharacter {
         this.game = processingMethord;
         this.xPosition = (game.width/2)+325;
         this.yPosition = (int)random(0,height); //(game.height/2);
+        System.out.println("ForceFiled: "+this.xPosition+" "+this.yPosition);
         this.characterWidth = 64; 
     }
 
