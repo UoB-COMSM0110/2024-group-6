@@ -42,6 +42,11 @@ void setup() {
   genTNTorForceFeild();
 
   pipeThree = new HazardPipe();
+  
+    pipeOne.setPipeSpeed(1);
+    pipeTwo.setPipeSpeed(1);
+    pipeThree.setPipeSpeed(1);
+  
   background(0,0,50); 
 
   bird = new GameCharacter(this); 
