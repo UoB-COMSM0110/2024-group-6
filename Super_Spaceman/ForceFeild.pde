@@ -3,6 +3,7 @@ public class ForceFeild extends GameCharacter {
     private int characterWidth;
     private int collisonStartTime;
     private int collisonEndTime;
+    private int pipeSpeed;
 
     public ForceFeild(PApplet processingMethord){
         this.game = processingMethord;
@@ -17,6 +18,14 @@ public class ForceFeild extends GameCharacter {
         this.character = this.game.loadImage("assets/shield-Small.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
         this.xPosition -= this.pipeSpeed; // control speed
+    }
+
+    public void setPipeSpeed(int speed){
+        this.pipeSpeed = speed;
+    }
+ 
+    public int getPipeSpeed(){
+        return this.pipeSpeed;
     }
 
     public void validForceFeild(int birdX, int birdY){

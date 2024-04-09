@@ -1,6 +1,7 @@
 public class TNT extends GameCharacter {
 
     private int characterWidth;
+    private int pipeSpeed;
 
     public TNT(PApplet processingMethord){
         this.game = processingMethord;
@@ -14,6 +15,14 @@ public class TNT extends GameCharacter {
         this.character = this.game.loadImage("assets/bomb.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
         this.xPosition -= this.pipeSpeed; //control speed
+    }
+
+    public void setPipeSpeed(int speed){
+        this.pipeSpeed = speed;
+    }
+ 
+    public int getPipeSpeed(){
+        return this.pipeSpeed;
     }
 
     public boolean collison(int x, int y){ 
