@@ -51,7 +51,10 @@ class HazardPipe{
     }
 
     public void updateX (){
-        this.xPosition -= 1;
+        this.xPosition -= 2;
+        //add getter and setter methods for this.xPosition 
+        //use new getter and setter methods to increase the speed 
+        //add logic in to increase speed post certian time intervals within superspaceman class
         if(this.xPosition == -this.pipeWidth){
             this.xPosition = width + this.pipeWidth + this.pipeInterval;
             generateInitalPipe();
