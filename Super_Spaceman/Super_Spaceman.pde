@@ -4,6 +4,8 @@ void settings() {
     size(400, 600);
 }
 
+
+
 //PImage spacebackground;
 
 boolean splashScreen = true; 
@@ -32,7 +34,7 @@ Background currentBackground = Background.Space;
 void setup() { 
     //initialiseGame();
 
-  currentBackground = Background.Space;
+  //currentBackground = Background.Space;
 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
@@ -214,6 +216,8 @@ void changeBackground() {
     } else {
         currentBackground = Background.Saturn;
     }
+   //call set up?
+   setup();
 }
 
 void splashScreenLogic(){
