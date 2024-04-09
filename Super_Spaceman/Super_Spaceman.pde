@@ -64,6 +64,7 @@ void setup() {
   pipeThree.generateInitalPipe();
 
   increaseSpeedIntival = 1000;
+  speedUpPipesCnt=0;
 }
 
 void draw() {
