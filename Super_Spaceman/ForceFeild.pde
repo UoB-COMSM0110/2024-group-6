@@ -18,7 +18,7 @@ public class ForceFeild extends GameCharacter {
             // System.out.println("getCharacter()");
         this.character = this.game.loadImage("assets/shield-Small.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
-        this.xPosition -= this.pipeSpeed; // control speed
+        this.xPosition -= 1; // control speed this.pipeSpeed
     }
 
     public void setPipeSpeed(int speed){

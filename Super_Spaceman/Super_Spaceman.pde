@@ -90,6 +90,9 @@ void updateData(){
     currentBackground.drawBackground(this);
 
     forceFeildOrTNTCounter++;
+    
+    System.out.println(forceFeildOrTNTCounter);
+
     if(forceFeildOrTNTCounter == width){
         genTNTorForceFeild();
         forceFeildOrTNTCounter = 0;

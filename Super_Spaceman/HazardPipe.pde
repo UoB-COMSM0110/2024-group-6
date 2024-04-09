@@ -74,7 +74,7 @@ class HazardPipe{
 
     private void generatePipe(){
         
-        System.out.println(this.xPosition+" "+0+" "+this.pipeWidth+" "+this.topPipeYPosition);
+        // System.out.println(this.xPosition+" "+0+" "+this.pipeWidth+" "+this.topPipeYPosition);
 
         if(this.hazardPipe){
             //Top Pipe

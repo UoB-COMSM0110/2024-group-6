@@ -15,7 +15,7 @@ public class TNT extends GameCharacter {
     public void getCharacter(){
         this.character = this.game.loadImage("assets/bomb.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
-        this.xPosition -= this.pipeSpeed; //control speed
+        this.xPosition -= 1; //control speed this.pipeSpeed
     }
 
     public void setPipeSpeed(int speed){
