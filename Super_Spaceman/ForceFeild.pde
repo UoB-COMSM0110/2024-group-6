@@ -13,7 +13,7 @@ public class ForceFeild extends GameCharacter {
 
     @Override
     public void getCharacter(){
-            System.out.println("getCharacter()");
+            // System.out.println("getCharacter()");
         this.character = this.game.loadImage("assets/shield-Small.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
         this.xPosition -= 1;

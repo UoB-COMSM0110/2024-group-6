@@ -25,6 +25,8 @@ boolean collisonBottom;
 
 int startTime;
 int endTime;
+int speedUpPipesCnt;
+int increaseSpeedIntival;
 
 Background currentBackground = Background.Space;
 
@@ -55,6 +57,8 @@ void setup() {
 
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
+
+  increaseSpeedIntival = 1000;
 }
 
 void draw() {
@@ -83,16 +87,25 @@ void updateData(){
     if(forceFeildOrTNTCounter == width){
         genTNTorForceFeild();
         forceFeildOrTNTCounter = 0;
-    }
+    }      
 
     updateGameCharacterAndObstacles();
 }
 
 void updateGameCharacterAndObstacles() {
+
+    speedUpPipesCnt++;
+    if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
+        int speed = pipeOne.getPipeSpeed()+1;
+        System.out.println("gamesSpeed: "+ speed);
+        pipeOne.setPipeSpeed(speed);
+        pipeTwo.setPipeSpeed(speed);
+        pipeThree.setPipeSpeed(speed);
+    }  
    
     pipeOne.updateX();
     pipeTwo.updateX();
-    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
     if(randomNum == 0){
         tnt.getCharacter();
     }
@@ -150,7 +163,7 @@ void checkForCollison(){
         forceFeild.collison(bird.getX(), bird.getY());
     }       
     
-    System.out.println(forceFeild.getValidForceFeild((int)millis()));
+    // System.out.println(forceFeild.getValidForceFeild((int)millis()));
     if(forceFeild.getValidForceFeild((int)millis())){ //randomNum == 1 &&
         collisonTest1 = false;
         collisonTest2 = false;
