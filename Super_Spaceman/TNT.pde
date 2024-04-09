@@ -13,7 +13,7 @@ public class TNT extends GameCharacter {
     public void getCharacter(){
         this.character = this.game.loadImage("assets/bomb.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
-        this.xPosition -= 1;
+        this.xPosition -= this.pipeSpeed; //control speed
     }
 
     public boolean collison(int x, int y){ 

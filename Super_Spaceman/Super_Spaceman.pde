@@ -107,6 +107,8 @@ void updateGameCharacterAndObstacles() {
         pipeOne.setPipeSpeed(speed);
         pipeTwo.setPipeSpeed(speed);
         pipeThree.setPipeSpeed(speed);
+        tnt.setPipeSpeed(speed);
+        forceFeild.setPipeSpeed(speed);
     }  
    
     pipeOne.updateX();
