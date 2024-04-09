@@ -28,7 +28,7 @@ class HazardPipe{
         this.bottomPipeYPosition = (int)random(topPipeYPosition + minGapSize,height);
         
         //random number that switch hazardPipe on or off??
-        int randNum = (int)random(0,3); // 10
+        int randNum = (int)random(0,5); // 10
         int transportPipUpOrDown = (int)random(0,2);
         if( 0 == randNum){
 
@@ -51,7 +51,7 @@ class HazardPipe{
     }
 
     public void updateX (){
-        this.xPosition -= 2;
+        this.xPosition -= 1;
         //add getter and setter methods for this.xPosition 
         //use new getter and setter methods to increase the speed 
         //add logic in to increase speed post certian time intervals within superspaceman class
