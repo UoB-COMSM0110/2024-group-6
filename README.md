@@ -293,11 +293,11 @@ Although both games hold exciting potential, there was definitely a clear favour
     </tbody>
 </table>
 
-# Design
-
 ## Usecase - Diagram
 
 <img src="./readmeFiles/usecasediagram.png">
+
+# Design
 
 ## Reflection
 
