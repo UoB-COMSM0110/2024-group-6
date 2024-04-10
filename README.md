@@ -309,6 +309,7 @@ However, when discussing our use case specification and creating our use case di
 
 <img src="./readmeFiles/Classes_Diagram _v0.png">
 
+
 # Implementation
 
 ## Potential Challenges
@@ -324,6 +325,9 @@ Extra notes:
 
 - Generating the code for randomised hazards
 - Implementing losing health when the player hits a hazards
+
+## Latest Class Diagram 
+<img src="./readmeFiles/latestClassDiagram.png">
 
 ## Sprint 1
 
