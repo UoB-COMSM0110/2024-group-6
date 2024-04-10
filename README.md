@@ -2,6 +2,8 @@
 
 https://docs.google.com/document/d/1CAvMM9M0nOD37zgNwwQbP-oFkJBle_J5mAp0DXFvtpo/edit?usp=sharing
 
+https://uob.sharepoint.com/:w:/t/UnitTeams-COMSM0110-2023-24-TB-2-A-StaffRoom/EcdatTaJe2pPr2Kpwmpd4CgBLi26G6r4eK0BCxyvjammvg?e=HhvG8I
+
 # Table of Contents  
 
 - [Team](#team)
@@ -661,49 +663,3 @@ This ensures that SuperSpaceMan achieves a suitable balance between demand and p
 # Group notes
 
 <https://processing.org/tutorials>
-
-## Mark Scheme
-
-Project Report
-
-1. Team
-
-Who’s in your team + team photo.
-
-2. Introduction (5% ~250 words)
-
-Describe your game, what is based on, what makes it novel?
-
-3. Requirements (15% ~750 words)
-
-Use case diagrams, user stories. Early stages design. Ideation process. How did you decide as a team what to develop?
-
-4. Design (15% ~750 words)
-
-System architecture. Class diagrams, behavioural diagrams.
-
-5. Implementation (15% ~750 words)
-
-Describe implementation of your game, in particular highlighting the three areas of challenge in developing your game.
-
-6. Evaluation (15% ~750 words)
-
-One qualitative evaluation (your choice)
-
-One quantitative evaluation (of your choice)
-
-Description of how code was tested.
-
-7. Process (15% ~750 words)
-
-Teamwork. How did you work together, what tools did you use. Did you have team roles? Reflection on how you worked together.
-
-8. Conclusion (10% ~500 words)
-
-Reflect on project as a whole. Lessons learned. Reflect on challenges. Future work.
-
-· Quality of report writing, presentation, use of figures and visual material (5%)
-
-· Documentation of code (5%)
-
-· Individual contribution. Provide a table of everyone's contribution, which may be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Let us know as soon as possible if there are any issues with teamwork as soon as they are apparent.
