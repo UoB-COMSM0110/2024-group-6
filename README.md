@@ -4,6 +4,8 @@ https://docs.google.com/document/d/1CAvMM9M0nOD37zgNwwQbP-oFkJBle_J5mAp0DXFvtpo/
 
 https://uob.sharepoint.com/:w:/t/UnitTeams-COMSM0110-2023-24-TB-2-A-StaffRoom/EcdatTaJe2pPr2Kpwmpd4CgBLi26G6r4eK0BCxyvjammvg?e=HhvG8I
 
+<https://processing.org/tutorials>
+
 # Table of Contents  
 
 - [Team](#team)
@@ -657,6 +659,3 @@ This ensures that SuperSpaceMan achieves a suitable balance between demand and p
 "DO NOT WRITE ANYTHING HERE YET"
 
 
-# Group notes
-
-<https://processing.org/tutorials>
