@@ -648,16 +648,13 @@ These results are surprising! Whilst collecting the data, we noticed that many p
 This ensures that SuperSpaceMan achieves a suitable balance between demand and playability.
 
 # Process
+"COPY OVER FROM GOOGLE DOCUMENT"
 
 # Conclusion
-
-
+"COPY OVER FROM GOOGLE DOCUMENT"
 
 # Individual contribution
-
 "DO NOT WRITE ANYTHING HERE YET"
-
-
 
 
 # Group notes
