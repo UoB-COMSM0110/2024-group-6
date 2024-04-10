@@ -98,7 +98,7 @@ void updateData(){
     updateGameCharacterAndObstacles();
 }
 
-void updateGameCharacterAndObstacles() {
+void updateGameCharacterAndObstacles(){
   
     pipeOne.updateX();
     pipeTwo.updateX();
