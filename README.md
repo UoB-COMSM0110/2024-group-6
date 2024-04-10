@@ -306,8 +306,10 @@ However, when discussing our use case specification and creating our use case di
 # Design
 
 ## Classes Diagram
-
 <img src="./readmeFiles/Classes_Diagram _v0.png">
+
+## Communication Diagram
+<img src="./readmeFiles/CommunicatiionDiagram.png">
 
 
 # Implementation
