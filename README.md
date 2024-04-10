@@ -305,6 +305,12 @@ However, when discussing our use case specification and creating our use case di
 
 # Design
 
+## Classes Diagram
+
+<img src="./readmeFiles/Classes_Diagram _v0.png">
+
+# Implementation
+
 ## Potential Challenges
 
 Based on Flappy Bird, but the player can transport to different maps.
@@ -318,13 +324,6 @@ Extra notes:
 
 - Generating the code for randomised hazards
 - Implementing losing health when the player hits a hazards
-
-## Classes Diagram
-
-<img src="./readmeFiles/Classes_Diagram _v0.png">
-
-
-# Implementation
 
 ## Sprint 1
 
