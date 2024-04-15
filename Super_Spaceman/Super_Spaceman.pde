@@ -222,7 +222,7 @@ void splashScreenLogic(){
     textSize(30);
     text("press Spacebar to Start",width/2,height/1.2);
     textSize(20);
-    text("click RightKey to check Instruction & Pause",width/2,height/1.1);
+    text("click RightKey to Check Instruction & Pause",width/2,height/1.1);
     startTime = millis();
 }
 
