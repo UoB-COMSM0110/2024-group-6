@@ -9,6 +9,8 @@ character acceleration
 
 Instructions
 
+game timer at top of screen
+
 feature branches and not weekly branches 
 git flow workflow 
 git trunk workflow
