@@ -75,6 +75,7 @@ void draw() {
         background(0); //for cleaning canvas
         if(splashScreen){
             splashScreenLogic();
+            rightNum = 0;
         } else {
 
             if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
@@ -204,7 +205,7 @@ void changeBackground() {
 
 void instructionScreen(){
     textSize(30);
-    text("click RightKey to quit",width/2,height-30);
+    text("click RightKey to Exit",width/2,height-30);
     instruction = loadImage("assets/instruction1.png");
     image(instruction,width/2,height/2);
 }
@@ -221,7 +222,7 @@ void splashScreenLogic(){
     textSize(30);
     text("press Spacebar to Start",width/2,height/1.2);
     textSize(20);
-    text("click RightKey to check Instruction",width/2,height/1.1);
+    text("click RightKey to check Instruction & Pause",width/2,height/1.1);
     startTime = millis();
 }
 
@@ -238,7 +239,7 @@ void diedScreen(){
     text("Game Duration: "+duration,width/2,height/1.4);
 
     textSize(30);
-    text("Click LeftKey to Exit",width/2,height/1.2);
+    text("click LeftKey to Exit",width/2,height/1.2);
 }
 
 void genTNTorForceFeild(){
