@@ -13,7 +13,7 @@ class GameCharacter {
         this.game = processingMethord;
         this.xPosition = game.width/2;
         this.yPosition = game.height/2;
-        this.character = this.game.loadImage("assets/spaceman1.png");
+        this.character = this.game.loadImage("assets/spaceman2.png");
         this.game.imageMode(PConstants.CENTER);
         this.game.image(this.character,this.xPosition,this.yPosition);
         this.deltaY = 63;
@@ -45,7 +45,7 @@ class GameCharacter {
     }
 
     public void getCharacter(){
-        this.character = this.game.loadImage("assets/spaceman1.png");
+        this.character = this.game.loadImage("assets/spaceman2.png");
         this.game.image(this.character,this.xPosition,this.yPosition);
     }
 
