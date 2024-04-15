@@ -206,7 +206,7 @@ void changeBackground() {
 void instructionScreen(){
     textSize(30);
     text("click RightKey to Exit",width/2,height-30);
-    instruction = loadImage("assets/instruction1.png");
+    instruction = loadImage("assets/instruction.png");
     image(instruction,width/2,height/2);
 }
 
