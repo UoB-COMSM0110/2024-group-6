@@ -1,23 +1,24 @@
 # 2024-group-6
 
-## Table of Contents  
+https://docs.google.com/document/d/1CAvMM9M0nOD37zgNwwQbP-oFkJBle_J5mAp0DXFvtpo/edit?usp=sharing
 
-- [Team Photo](#team-photo)
-- [Group Members](#group-members)
-- [Game Ideas](#game-ideas)
-- [Game Features](#game-features)
-- [Snake](#snake)
-- [Flappy Bird](#flappy-bird)
-- [Game Selection](#game-selection---why-we-have-chosen-super-spaceman)
-- [Stake Holders](#stake-holders)
-- [User Stories](#user-stories)
-- [Usecase Specification - General Player](#usecase-specification---general-player)
-- [Usecase Specification](#usecase-specification)
-- [Usecase - Diagram](#usecase---diagram)
-- [Potential Challenges](#potential-challenges)
-- [Classes Diagram](#classes-diagram)
-- [Think Aloud](#think-aloud)
-- [Heuristic Evaluation](#heuristic-evaluation)
+https://uob.sharepoint.com/:w:/t/UnitTeams-COMSM0110-2023-24-TB-2-A-StaffRoom/EcdatTaJe2pPr2Kpwmpd4CgBLi26G6r4eK0BCxyvjammvg?e=HhvG8I
+
+<https://processing.org/tutorials>
+
+# Table of Contents  
+
+- [Team](#team)
+- [Introduction](#introduction)
+- [Requirements](#requirements)
+- [Design](#design)
+- [Implementation](#implementation)
+- [Evaluation](#evaluation)
+- [Process](#process)
+- [Conclusion](#conclusion)
+- [Individual contribution](#individual-contribution)
+
+# Team 
 
 ## Team Photo
 
@@ -57,6 +58,12 @@
         <td>@QQiyyue</td>
     </tr>
 </table>
+
+# Introduction
+
+"I dont think we have a section on this"
+
+# Requirements
 
 ## Game Ideas
 
@@ -296,6 +303,17 @@ This week, our team gained valuable insights into the specific requirements of o
 
 However, when discussing our use case specification and creating our use case diagram, we realised that our initial plan was perhaps over complicated. We had some slight issues when defining whether something was an ‘include’ or ‘extend’. Some of our members were unable to meet in person, and so when we came together to discuss our use case diagram, it was difficult to explain over the phone, specific things that we wanted them to change and why. This meant that we had to refactor lots, which overall emphasised the importance of remaining flexible throughout the game design process. Ultimately, this task was an important learning journey that provided us with a solid game design that we think will be open to many.
 
+# Design
+
+## Classes Diagram
+<img src="./readmeFiles/Classes_Diagram _v0.png">
+
+## Communication Diagram
+<img src="./readmeFiles/CommunicationDiagram.png">
+
+
+# Implementation
+
 ## Potential Challenges
 
 Based on Flappy Bird, but the player can transport to different maps.
@@ -310,15 +328,36 @@ Extra notes:
 - Generating the code for randomised hazards
 - Implementing losing health when the player hits a hazards
 
-## Classes Diagram
+## Latest Class Diagram 
+<img src="./readmeFiles/latestClassDiagram.png">
 
-<img src="./readmeFiles/Classes_Diagram _v0.png">
+## Sprint 1
 
-# Qualitative Evaluation
+### Improvments:
+
+> SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen. We have designed it as such that the user much click the screen to go back to the start screen as prior to this we allowed it to be done with keys though the user would hold down the keys and would end up in a sudo infinate loop senario untill the key was lifter. 
+
+> Make improvments to the collisions. The character before we made the changes would not die if it hit the top or bottom of the screen. We added collision to detect this and now the character does indeed die upone such impact with the top and bottom of the screen. 
+
+> Increased the amount of "G-force" applyed to the character so that it falls quicker. At present the character falls too slowley. This means that by no falt of the user the character colides into obsticals(mainly pipes) as the character does not fall quicker enough. We changed this so that now the character does fall much quicker. To ofset this we have also had to increase the deltaY which is used to move the character up upone jumping. 
+
+
+### Sprint 2 TODO LIST 
+
+> Found bug with in trasport pipe if touched from left super space man does not die. 
+
+> TNT and ForceFeild have both been implement sucesfully. However to finnish it off we need switching logic to generate them. 
+
+> changing background upone transport pipe being entered. 
+
+
+# Evaluation
+
+## Qualitative Evaluation
 
 Too collect Qualitative data for our game we will use two methords namly the Think Aloud and Heuristic Evaluation methords. This should provide us with the relevant with and depth of data to gain meaningful insights.  
 
-## Think Aloud
+### Think Aloud
 
 Feedback 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
 
@@ -328,7 +367,7 @@ Feedback 3 - The pipes only generates randomly within the first three pairs inte
 
 Feedback 4 - It would be easier to use the spacebar to control the character.
 
-## Heuristic Evaluation
+### Heuristic Evaluation
 
 <table>
     <tbody>
@@ -425,7 +464,7 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
     </tbody>
 </table>
 
-## Summary - Qualitative Evaluation
+### Summary - Qualitative Evaluation
 
 
 The Heuristic Evaluation bought important issues about our game, to our attention. The issues primarily related to Consistency and Standards, but also the Aesthetic and Design of our game. The most severe issue related to our character interface. We found that the user needs to click many times to make the character jump higher, leading to a frustrating gameplay. This was a common issue, scoring 4/4 and led to a sum total of 4/4. We have decided to modify the character slightly, and increase the height of the jump per click. We have also decided to increase the gravity rate. This is because we found that the character fell too slowly, making it difficult to progress further through the game.
@@ -433,11 +472,11 @@ The Heuristic Evaluation bought important issues about our game, to our attentio
 We noted issues relating to the Movements and Pipes interfaces of our game. This included the distances between pipes being too large, the pipes not generating randomly and the character falling off the screen. Although the issues individually are relatively minor, accumulated together they are noticeably persistent and severe (3/4), and overall leads to a rather ‘sketchy’ gameplay. Therefore, we have decided to reset the judgements of collision, narrow the distance between pipes and ensure that the pipes pattern does not continuously repeat. This not only improves the Consistency and Standards usability, but also the Aesthetic and Minimalist Design usability.
 
 
-# Quantitavie Evaluation
+## Quantitavie Evaluation
 
 In this section we will analysie and showcase collected data from participants who have played our game. We selected the NASA TLXs and System Unability Survey(SUS) to do this.
 
-## NASA TLXs Questionair
+### NASA TLXs Questionair
 
 <table>
     <thead>
@@ -504,7 +543,7 @@ In this section we will analysie and showcase collected data from participants w
     </tbody>
 </table>
 
-## System Unability Survey(SUS)
+### System Unability Survey(SUS)
 
 Scale: <br>
 1 == Strongly Disagree, <br> 
@@ -602,7 +641,7 @@ Scale: <br>
     </tbody>
 </table>
 
-## Summary - Quantitative Evaluation
+### Summary - Quantitative Evaluation
 
 To appropriately evaluate the user experience and system usability of SuperSpaceMan, we used the NASA (TLX) and System Usability Survey - two approaches that provide significant quantitative insight into a user’s interaction, and the overall performance of our game.
 
@@ -615,72 +654,13 @@ The results of the System Usability Survey likewise corroborate this. Every part
 These results are surprising! Whilst collecting the data, we noticed that many participants struggled to get very far into the game, rarely making it past the third pipe. Nevertheless, our data highlights a key area of improvement and looking forward, we have decided to make the game slightly more demanding,  whilst keeping the system simple to use. 
 This ensures that SuperSpaceMan achieves a suitable balance between demand and playability.
 
+# Process
+"COPY OVER FROM GOOGLE DOCUMENT"
 
-# Sprint 1
+# Conclusion
+"COPY OVER FROM GOOGLE DOCUMENT"
 
-## Improvments:
-
-> SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen. We have designed it as such that the user much click the screen to go back to the start screen as prior to this we allowed it to be done with keys though the user would hold down the keys and would end up in a sudo infinate loop senario untill the key was lifter. 
-
-> Make improvments to the collisions. The character before we made the changes would not die if it hit the top or bottom of the screen. We added collision to detect this and now the character does indeed die upone such impact with the top and bottom of the screen. 
-
-> Increased the amount of "G-force" applyed to the character so that it falls quicker. At present the character falls too slowley. This means that by no falt of the user the character colides into obsticals(mainly pipes) as the character does not fall quicker enough. We changed this so that now the character does fall much quicker. To ofset this we have also had to increase the deltaY which is used to move the character up upone jumping. 
+# Individual contribution
+"DO NOT WRITE ANYTHING HERE YET"
 
 
-## Sprint 2 TODO LIST 
-
-> Found bug with in trasport pipe if touched from left super space man does not die. 
-
-> TNT and ForceFeild have both been implement sucesfully. However to finnish it off we need switching logic to generate them. 
-
-> changing background upone transport pipe being entered. 
-
-# Group notes
-
-<https://processing.org/tutorials>
-
-## Mark Scheme
-
-Project Report
-
-1. Team
-
-Who’s in your team + team photo.
-
-2. Introduction (5% ~250 words)
-
-Describe your game, what is based on, what makes it novel?
-
-3. Requirements (15% ~750 words)
-
-Use case diagrams, user stories. Early stages design. Ideation process. How did you decide as a team what to develop?
-
-4. Design (15% ~750 words)
-
-System architecture. Class diagrams, behavioural diagrams.
-
-5. Implementation (15% ~750 words)
-
-Describe implementation of your game, in particular highlighting the three areas of challenge in developing your game.
-
-6. Evaluation (15% ~750 words)
-
-One qualitative evaluation (your choice)
-
-One quantitative evaluation (of your choice)
-
-Description of how code was tested.
-
-7. Process (15% ~750 words)
-
-Teamwork. How did you work together, what tools did you use. Did you have team roles? Reflection on how you worked together.
-
-8. Conclusion (10% ~500 words)
-
-Reflect on project as a whole. Lessons learned. Reflect on challenges. Future work.
-
-· Quality of report writing, presentation, use of figures and visual material (5%)
-
-· Documentation of code (5%)
-
-· Individual contribution. Provide a table of everyone's contribution, which may be used to weight individual grades. We expect that the contribution will be split evenly across team-members in most cases. Let us know as soon as possible if there are any issues with teamwork as soon as they are apparent.

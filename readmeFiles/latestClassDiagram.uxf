@@ -1,0 +1,108 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>500</x><y>540</y><w>210</w><h>120</h></coordinates><panel_attributes>&lt;&lt;Enumiration&gt;&gt;
+Background
+--
+/+Space()/
+/+Mars()/
+/+Moon()/
+/+Saturn()/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>120</y><w>280</w><h>260</h></coordinates><panel_attributes>GameCharacter
+--
+# int xPosition
+# int yPosition
+-  int deltaY
+-  int gforce
+# PImage character
+# PApplet game
+--
+/+ int getX()/
+/+ void setX(int x)/
+/+ int getY()/
+/+ void setY(int y)/
+/+ void jump()/
+/+ void gravity()/
+/+ void getCharacter()/
+/+ void setIncreaseDeltaY()/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>120</y><w>280</w><h>460</h></coordinates><panel_attributes>HazardPipe
+--
+- int pipeSizeBottom
+- int pipeSizeTop
+- int pipeInterval
+- int pipeWidth 
+- int minGapSize
+- int xPosition
+- int topPipeYPosition
+- int bottomPipeYPosition
+- int pipeSpeed
+- boolean hazardPipe
+- boolean transportPipeTop  
+- boolean transportCollison
+--
+/+ void generateInitalPipe()/
+/+ void setXPosition(int xPosition)/
+/+ void setPipeSpeed(int speed)/
+/+ int getPipeSpeed()/
+/+ void updateX()/
+/+ void generatePipe()/
+/+ void setPipeSizeBottom(int pipeSizeBottom)/
+/+ int getPipeSizeBottom()/
+/+ void setPipeSizeTop(int pipeSizeTop)/
+/+ int getPipeSizeTop()/
+/+ void setPipeInterval(int intaval)/
+/+ int getPipeInterval()/
+/+ boolean getTransportCollison()/
+/+ void setTransportCollison(boolean newValue)/
+/+ boolean collison(int x, int y)/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>260</x><y>460</y><w>210</w><h>200</h></coordinates><panel_attributes>ForceFeild
+--
+- int characterWidth;
+- int collisonStartTime;
+- int collisonEndTime;
+- int forceFeildSpeed;
+--
+/+ void getCharacter()/
+/+ void setForceFeildSpeed(int speed)/
+/+ int getForceFeildSpeed()/
+/+ void validForceFeild(int birdX, int birdY)/
+/+ boolean collison(int x, int y )/
+/+ boolean getValidForceFeild(int time)/</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>30</x><y>530</y><w>210</w><h>130</h></coordinates><panel_attributes>TNT
+--
+- int characterWidth;
+- int tntSpeed;
+--
+/+ void getCharacter()/
+/+ void setTNTSpeed(int speed)/
+/+ int getTNTSpeed()/
+/+ boolean collison(int x, int y)/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>120</x><y>370</y><w>130</w><h>180</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;Extends&gt;&gt;</panel_attributes><additional_attributes>100;10;10;160</additional_attributes></element><element><id>Relation</id><coordinates><x>210</x><y>370</y><w>180</w><h>110</h></coordinates><panel_attributes>lt=&lt;.
+&lt;&lt;Extends&gt;&gt;</panel_attributes><additional_attributes>10;10;160;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>480</x><y>10</y><w>260</w><h>470</h></coordinates><panel_attributes>Super_Spaceman
+--
+boolean splashScreen  
+boolean hasDied 
+boolean forbidSpacebar 
+TNT tnt
+ForceFeild forceFeild
+int forceFeildOrTNTCounter
+int randomNum
+GameCharacter bird
+HazardPipe pipeOne
+HazardPipe pipeTwo
+HazardPipe pipeThree
+boolean collisonTest1
+boolean collisonTest2
+boolean collisonTest3
+boolean collisonTop
+boolean collisonBottom
+int startTime
+int endTime
+int speedUpPipesCnt
+int increaseSpeedIntival
+Background currentBackground
+--
+void updateData()
+void updateGameCharacterAndObstacles()
+void checkForceFieldCollisions()
+void checkForCollison()
+void changeBackground()
+void splashScreenLogic()
+void diedScreen()
+void genTNTorForceFeild()</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>730</x><y>30</y><w>210</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;190;10;190;90</additional_attributes></element><element><id>Relation</id><coordinates><x>220</x><y>30</y><w>280</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>260;10;10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>590</x><y>470</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;.</panel_attributes><additional_attributes>10;70;10;10</additional_attributes></element></diagram>

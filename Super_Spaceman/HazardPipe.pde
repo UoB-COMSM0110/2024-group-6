@@ -8,6 +8,7 @@ class HazardPipe{
     private int xPosition;
     private int topPipeYPosition;
     private int bottomPipeYPosition;
+    private int pipeSpeed;
     
     private boolean hazardPipe;
     private boolean transportPipeTop;  
@@ -20,18 +21,16 @@ class HazardPipe{
         this.xPosition = width;
         this.hazardPipe = true;
         this.transportPipeTop = true;
+        this.pipeSpeed = 1;
     }
 
-
-
-    // Maybe logic goes here for transport pipe
     public void generateInitalPipe(){
 
         this.topPipeYPosition = (int)random(height-minGapSize);
         this.bottomPipeYPosition = (int)random(topPipeYPosition + minGapSize,height);
         
         //random number that switch hazardPipe on or off??
-        int randNum = (int)random(0,3); // 10
+        int randNum = (int)random(0,4);
         int transportPipUpOrDown = (int)random(0,2);
         if( 0 == randNum){
 
@@ -52,10 +51,20 @@ class HazardPipe{
     public void setXPosition(int xPosition){
         this.xPosition = xPosition;
     }
+    
+    //add getter and setter methods for this.PipeSpeed 
+    public void setPipeSpeed(int speed){
+        this.pipeSpeed = speed;
+    }
+ 
+    public int getPipeSpeed(){
+        return this.pipeSpeed;
+    }
 
-    public void updateX (){
-        this.xPosition -= 1;
-        if(this.xPosition == -this.pipeWidth){
+    //add logic in to increase speed post certian time intervals within superspaceman class
+    public void updateX(){
+        this.xPosition -= this.pipeSpeed;
+        if(this.xPosition <= -this.pipeWidth){
             this.xPosition = width + this.pipeWidth + this.pipeInterval;
             generateInitalPipe();
         }
@@ -63,7 +72,6 @@ class HazardPipe{
     }
 
     private void generatePipe(){
-
         if(this.hazardPipe){
             //Top Pipe
             fill(255,255,0);
@@ -84,14 +92,16 @@ class HazardPipe{
                 rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
 
                 //bottom pipe
-                fill(333,345,198);
+                fill(255,255,0);
+                // fill(333,345,198);
                 noStroke();
                 rect(this.xPosition, this.bottomPipeYPosition, this.pipeWidth, height);
             }
 
             if(!this.transportPipeTop){
                 //Top Pipe
-                fill(333,345,198);
+                fill(255,255,0);
+                // fill(333,345,198);
                 noStroke();
                 rect(this.xPosition, 0, this.pipeWidth, this.topPipeYPosition);
 
@@ -160,12 +170,10 @@ class HazardPipe{
 
                 if(transportPipeTop && y < this.topPipeYPosition ){ //this.bottomPipeYPosition
                     transportCollison = true;
-                    System.out.println("Top"+transportCollison + this.topPipeYPosition);
                     return false;
                 
                 } else if(!transportPipeTop && y > this.bottomPipeYPosition ){
                     transportCollison = true;
-                    System.out.println("Bottom"+transportCollison + this.bottomPipeYPosition);
                     return false;
                 }
             }

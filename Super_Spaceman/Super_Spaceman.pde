@@ -4,10 +4,9 @@ void settings() {
     size(400, 600);
 }
 
-//PImage spacebackground;
-
 boolean splashScreen = true; 
 boolean hasDied = false;
+boolean forbidSpacebar = false; // add a flag to forbid spacebar.
 
 TNT tnt;
 ForceFeild forceFeild;
@@ -26,11 +25,12 @@ boolean collisonBottom;
 
 int startTime;
 int endTime;
+int speedUpPipesCnt;
+int increaseSpeedIntival;
 
 Background currentBackground = Background.Space;
 
 void setup() { 
-  currentBackground = Background.Space;
 
   pipeOne = new HazardPipe();
   pipeTwo = new HazardPipe();
@@ -38,10 +38,15 @@ void setup() {
   tnt = new TNT(this);
   forceFeild = new ForceFeild(this);
   
-  // Add - ForceFeild / TNT / nothing 
+  //Add - ForceFeild / TNT / nothing 
   genTNTorForceFeild();
 
   pipeThree = new HazardPipe();
+  
+  pipeOne.setPipeSpeed(1);
+  pipeTwo.setPipeSpeed(1);
+  pipeThree.setPipeSpeed(1);
+  
   background(0,0,50); 
 
   bird = new GameCharacter(this); 
@@ -49,7 +54,7 @@ void setup() {
   pipeTwo.setXPosition(width+200);
   pipeTwo.generateInitalPipe();
   
-  // Generate - ForceFeild / TNT / nothing
+  //Generate - ForceFeild / TNT / nothing
   if(randomNum == 0){tnt.getCharacter();}
   if(randomNum == 1){
     forceFeild.getCharacter();
@@ -57,6 +62,9 @@ void setup() {
 
   pipeThree.setXPosition(width+400);
   pipeThree.generateInitalPipe();
+
+  increaseSpeedIntival = 1000;
+  speedUpPipesCnt=0;
 }
 
 void draw() {
@@ -67,6 +75,7 @@ void draw() {
 
         if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
             diedScreen();
+            forbidSpacebar = true; //add a flag to forbid spacebar.
         } else { 
             updateData();
         }
@@ -84,16 +93,16 @@ void updateData(){
     if(forceFeildOrTNTCounter == width){
         genTNTorForceFeild();
         forceFeildOrTNTCounter = 0;
-    }
+    }      
 
     updateGameCharacterAndObstacles();
 }
 
-void updateGameCharacterAndObstacles() {
-   
+void updateGameCharacterAndObstacles(){
+  
     pipeOne.updateX();
     pipeTwo.updateX();
-    
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
     if(randomNum == 0){
         tnt.getCharacter();
     }
@@ -104,6 +113,18 @@ void updateGameCharacterAndObstacles() {
     pipeThree.updateX();  
     bird.getCharacter();
     bird.gravity();
+
+    speedUpPipesCnt++;
+    if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
+        int speed = pipeOne.getPipeSpeed()+1;
+        System.out.println("gamesSpeed: "+ speed);
+        pipeOne.setPipeSpeed(speed);
+        pipeTwo.setPipeSpeed(speed);
+        pipeThree.setPipeSpeed(speed);
+        tnt.setTNTSpeed(speed);
+        forceFeild.setForceFeildSpeed(speed);
+    }  
+
     checkForceFieldCollisions();
 
 }    
@@ -123,33 +144,21 @@ void checkForCollison(){
     collisonTest3 = pipeThree.collison(bird.getX(), bird.getY());
 
     if(pipeOne.getTransportCollison()) {
-        double rand = Math.random();
-        if(rand < 1.0 /3.0) {
-            currentBackground = Background.Mars;
-        } else if (rand < 2.0 / 3.0) {
-            currentBackground = Background.Moon;
-        } else {
-            currentBackground = Background.Saturn;
-        }
-        
+        changeBackground();
         pipeOne.setTransportCollison(false);
     }
     
-    if(pipeTwo.getTransportCollison()){
-        // System.out.println("pipe 2 - transport collision"); 
-        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
-        // pipeOne.setTransportCollison(false);    
-    } //Cecily add in change of background here + reset bird and pipes
+    if(pipeTwo.getTransportCollison()) {
+        changeBackground();
+        pipeTwo.setTransportCollison(false);    
+    } 
     
-    if(pipeThree.getTransportCollison()){ 
-        // System.out.println("pipe 3 - transport collision"); 
-        
-        // currentBackground = (Math.random() < 0.5) ? Background.Mars : Background.Moon;
-        // pipeOne.setTransportCollison(false);
-        } //Cecily add in change of background here + reset bird and pipes
+    if(pipeThree.getTransportCollison()) { 
+        changeBackground();
+        pipeThree.setTransportCollison(false); 
+    } 
 
     // Check for collison with TNT or ForceFeild 
-    
     if (randomNum == 0){
         collisonTest2 = tnt.collison(bird.getX(), bird.getY());
     }
@@ -162,7 +171,6 @@ void checkForCollison(){
         forceFeild.collison(bird.getX(), bird.getY());
     }       
     
-    System.out.println(forceFeild.getValidForceFeild((int)millis()));
     if(forceFeild.getValidForceFeild((int)millis())){ //randomNum == 1 &&
         collisonTest1 = false;
         collisonTest2 = false;
@@ -170,6 +178,20 @@ void checkForCollison(){
         collisonBottom = false;
         collisonTop = false;
     }
+}
+
+
+void changeBackground() {
+    double rand = Math.random();
+    if (rand < 1.0 / 3.0) {
+        currentBackground = Background.Mars;
+    } else if (rand < 2.0 / 3.0) {
+        currentBackground = Background.Moon;
+    } else {
+        currentBackground = Background.Saturn;
+    }
+ 
+   setup();
 }
 
 void splashScreenLogic(){
@@ -204,10 +226,13 @@ void diedScreen(){
 
 void genTNTorForceFeild(){
     randomNum = (int)random(0,2);
+    System.out.println(randomNum);
     if(randomNum == 0){
         tnt = new TNT(this);
+        tnt.setTNTSpeed(pipeOne.getPipeSpeed());
     } else if (randomNum == 1 && !forceFeild.getValidForceFeild((int)millis())) {
         forceFeild = new ForceFeild(this); 
+        forceFeild.setForceFeildSpeed(pipeOne.getPipeSpeed());
     }
 }
 
@@ -222,6 +247,7 @@ void mousePressed() {
         currentBackground = Background.Space;
         splashScreen = true;
         hasDied = false;
+        forbidSpacebar = false;//reset the flag for next game.
         collisonTest1 = false;
         collisonTest2 = false;
         collisonTest3 = false;
@@ -234,7 +260,7 @@ void mousePressed() {
 public void keyPressed(){  
     if(splashScreen){
         splashScreen = false;
-    } else {
+    } else if(!forbidSpacebar){//change to forbid spacebar.
         bird.jump();
     }
 }
