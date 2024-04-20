@@ -29,6 +29,7 @@ int startTime;
 int endTime;
 int speedUpPipesCnt;
 int increaseSpeedIntival;
+boolean increaseSpeed = false; // new flag for easy or hard mode, defual easy
 
 Background currentBackground = Background.Space;
 
@@ -82,13 +83,14 @@ void draw() {
                 diedScreen();
                 forbidSpacebar = true; //add a flag to forbid spacebar.
                 rightNum = 0;
+                increaseSpeed = false; // reset the increasespeed flag
             } else { 
                 updateData();
             }
             checkForCollison();
 
         }
-    } else if(rightNum == 1){ // only once
+    } else if(rightNum == 1){
         background(0); // for cleaning canvas
         instructionScreen();
     }
@@ -124,15 +126,17 @@ void updateGameCharacterAndObstacles(){
     bird.gravity();
 
     speedUpPipesCnt++;
-    if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
-        int speed = pipeOne.getPipeSpeed()+1;
-        System.out.println("gamesSpeed: "+ speed);
-        pipeOne.setPipeSpeed(speed);
-        pipeTwo.setPipeSpeed(speed);
-        pipeThree.setPipeSpeed(speed);
-        tnt.setTNTSpeed(speed);
-        forceFeild.setForceFeildSpeed(speed);
-    }  
+    if(increaseSpeed){// decide whether to accelerate
+        if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
+            int speed = pipeOne.getPipeSpeed()+1;
+            System.out.println("gamesSpeed: "+ speed);
+            pipeOne.setPipeSpeed(speed);
+            pipeTwo.setPipeSpeed(speed);
+            pipeThree.setPipeSpeed(speed);
+            tnt.setTNTSpeed(speed);
+            forceFeild.setForceFeildSpeed(speed);
+        }  
+    }
 
     checkForceFieldCollisions();
 
@@ -223,6 +227,7 @@ void splashScreenLogic(){
     text("press Spacebar to Start & Jump",width/2,height/1.2);
     textSize(20);
     text("click RightKey to Check Instruction & Pause",width/2,height/1.1);
+    text("press 'h' or 'H' key to Enter Hard mode",width/2,height/1.05); // instruction for hard mode
     startTime = millis();
 }
 
@@ -280,11 +285,16 @@ void mousePressed() {
     }
 }
 
-public void keyPressed(){  
-    if(splashScreen){
-        splashScreen = false;
-    } else if(!forbidSpacebar){//change to forbid spacebar.
-        bird.jump();
+public void keyPressed(){
+    if(key == ' '){
+        if(splashScreen){
+            splashScreen = false;
+        } else if(!forbidSpacebar){//change to forbid spacebar.
+            bird.jump();
+        }
+    }
+    if(key == 'h' || key == 'B'){// set increaseSpeed flag for hard mode
+        increaseSpeed = true;
     }
 }
 
