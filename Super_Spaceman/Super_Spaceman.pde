@@ -7,6 +7,8 @@ void settings() {
 boolean splashScreen = true; 
 boolean hasDied = false;
 boolean forbidSpacebar = false; // add a flag to forbid spacebar.
+PImage instruction;
+int rightNum = 0; //control instruction screen.
 
 TNT tnt;
 ForceFeild forceFeild;
@@ -68,21 +70,28 @@ void setup() {
 }
 
 void draw() {
+    
+    if(rightNum != 1){
+        background(0); //for cleaning canvas
+        if(splashScreen){
+            splashScreenLogic();
+            rightNum = 0;
+        } else {
 
-    if(splashScreen){
-        splashScreenLogic();
-    } else {
+            if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
+                diedScreen();
+                forbidSpacebar = true; //add a flag to forbid spacebar.
+                rightNum = 0;
+            } else { 
+                updateData();
+            }
+            checkForCollison();
 
-        if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
-            diedScreen();
-            forbidSpacebar = true; //add a flag to forbid spacebar.
-        } else { 
-            updateData();
         }
-        checkForCollison();
-
+    } else if(rightNum == 1){ // only once
+        background(0); // for cleaning canvas
+        instructionScreen();
     }
-
 }
 
 void updateData(){
@@ -194,6 +203,13 @@ void changeBackground() {
    setup();
 }
 
+void instructionScreen(){
+    textSize(30);
+    text("click RightKey to Exit",width/2,height-30);
+    instruction = loadImage("assets/instruction.png");
+    image(instruction,width/2,height/2);
+}
+
 void splashScreenLogic(){
     fill(333,345,198);
     background(0);
@@ -204,7 +220,9 @@ void splashScreenLogic(){
     bird.getCharacter();
 
     textSize(30);
-    text("press Spacebar to Start",width/2,height/1.2);
+    text("press Spacebar to Start & Jump",width/2,height/1.2);
+    textSize(20);
+    text("click RightKey to Check Instruction & Pause",width/2,height/1.1);
     startTime = millis();
 }
 
@@ -221,7 +239,7 @@ void diedScreen(){
     text("Game Duration: "+duration,width/2,height/1.4);
 
     textSize(30);
-    text("Click to Exit",width/2,height/1.2);
+    text("click LeftKey to Exit",width/2,height/1.2);
 }
 
 void genTNTorForceFeild(){
@@ -237,23 +255,28 @@ void genTNTorForceFeild(){
 }
 
 void mousePressed() { 
-    if(splashScreen){
-        splashScreen = false;
-    } else {
-        bird.jump();
+    if(mouseButton == RIGHT){
+        rightNum++; //switch screen to instruction
     }
+    if(mouseButton == LEFT){
+        if(splashScreen){
+            splashScreen = false;
+        } else {
+            bird.jump();
+        }
 
-    if(hasDied){
-        currentBackground = Background.Space;
-        splashScreen = true;
-        hasDied = false;
-        forbidSpacebar = false;//reset the flag for next game.
-        collisonTest1 = false;
-        collisonTest2 = false;
-        collisonTest3 = false;
-        collisonBottom = false;
-        collisonTop = false;
-        setup();
+        if(hasDied){
+            currentBackground = Background.Space;
+            splashScreen = true;
+            hasDied = false;
+            forbidSpacebar = false;//reset the flag for next game.
+            collisonTest1 = false;
+            collisonTest2 = false;
+            collisonTest3 = false;
+            collisonBottom = false;
+            collisonTop = false;
+            setup();
+        }
     }
 }
 
