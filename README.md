@@ -24,7 +24,7 @@ try catch statment
 <https://processing.org/tutorials>
 
 # Table of Contents  
-
+- [Game Demo](#demo)
 - [Team](#team)
 - [Introduction](#introduction)
 - [Requirements](#requirements)
@@ -36,7 +36,7 @@ try catch statment
 - [Individual contribution](#individual-contribution)
 
 
-# Demo
+# Game Demo
 
 [![SuperSpaceMan-Demo](./readmeFiles/Thumbnails/SuperSpaceManDemo.jpeg)](https://youtu.be/QXA_l8Sz884 "SuperSpaceMan-Demo")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
