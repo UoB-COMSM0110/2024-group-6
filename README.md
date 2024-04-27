@@ -40,7 +40,7 @@ try catch statment
 
 # Game Demo
 
-[![SuperSpaceMan-Demo](./readmeFiles/Thumbnails/SuperSpaceManDemo.jpeg)](https://youtu.be/QXA_l8Sz884 "SuperSpaceMan-Demo")
+[![SuperSpaceMan-Demo](./readmeFiles/Thumbnails/SuperSpaceManDemo.jpeg)](https://youtu.be/5Lbdqw5HvW0 "SuperSpaceMan-Demo")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
 # Team 
