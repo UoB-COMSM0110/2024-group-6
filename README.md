@@ -564,8 +564,10 @@ As seen in Figure 23, our second set of quantitative testing showed a significan
 
 Comparing our results using the Wilcoxon Signed Rank Test further corroborates this. As shown in Figure 24, using an alpha value of 0.05, our W test statistic was 1, meaning it was considerably below the needed 5 to be significantly different. The practical application of NASA TLX has been highly valuable in managing the demand and playability of Super Spaceman. It has given us a greater understanding of our game from the player’s perspective, helping us to assess what adjustments needed to be made. It was ultimately a highly effective way of measuring the subjective perceived workload (Rubio et al, 2004).
 
-**Figure 24 - Wilcoxon Results**
-<img src="readmeFiles/Wilcoxon.png">
+**Figure 24 - Wilcoxon Results**<br>
+W test statistic = 1<br>
+Number of non-tied pairs (n) = 9
+<img src="readmeFiles/Wilcoxin.png">
 
 
 
