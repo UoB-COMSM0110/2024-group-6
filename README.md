@@ -95,6 +95,13 @@ The addition of hazards such as TNT, which upon contact, immediately kills the p
 
 **insert hazards gif**
 
+<figure>
+  <img src="static/introduction/helping_platform.gif" alt="dynamic map manipulation" style="width:30%">
+  <figcaption>Demonstration of dynamic map manipulation</figcaption>
+</figure>
+<br>
+<br>
+
 The inclusion of interactive game props capable of destroying hazards, as well as a protective force field shield that grants the player immunity. This feature is highly interactive and aims to engage the player with strategic thinking. 
 
 **Insert shields GIF**
