@@ -93,22 +93,28 @@ As such, we have introduced three new features that make our game innovative and
 
 The addition of hazards such as TNT, which upon contact, immediately kills the player. This will increase the level of difficulty, ensuring our game has a suitable level of workload in order to remain engaging.
 
-**insert hazards gif**
+**Figure 1 - Demonstration of TNT Hazard**
 
 <figure>
-  <img src="static/introduction/helping_platform.gif" alt="dynamic map manipulation" style="width:30%">
-  <figcaption>Demonstration of dynamic map manipulation</figcaption>
+  <img src="readmeFiles/GIF/TNT.gif" alt="dynamic map manipulation" style="width:30%">
 </figure>
-<br>
-<br>
+
 
 The inclusion of interactive game props capable of destroying hazards, as well as a protective force field shield that grants the player immunity. This feature is highly interactive and aims to engage the player with strategic thinking. 
 
-**Insert shields GIF**
+**Figure 2 - Demonstration of Force Field**
+<figure>
+  <img src="readmeFiles/GIF/ForceField.gif" alt="dynamic map manipulation" style="width:30%">
+</figure>
+
 
 The final feature introduces innovative patterns that allow the player to navigate through transport pipes to reach new locations and avoid upcoming hazards. This adds a captivating visual element to the game, and again encourages the user to use strategic thinking.
 
-**Insert backgrounds GIF**
+
+**Figure 3 - Demonstration of Teleportation**
+<figure>
+  <img src="readmeFiles/GIF/changeBackgrand3.gif" alt="dynamic map manipulation" style="width:30%">
+</figure>
 
 We knew that our game would evolve as we created and have therefore decided to follow an Agile workflow. This enabled our team to remain flexible and improve our game in response to regular testing.
 
@@ -116,8 +122,13 @@ We knew that our game would evolve as we created and have therefore decided to f
 
 # Requirements
 
-## Game Ideas
+**Early Stages Design & Ideation Process**
 
+To begin our ideation process, our team played and discussed several favourite computer games, creating a shortlist of seven. After brainstorming feature ideas, how we could implement them and user appeal, we narrowed our focus to two games: Flappy Bird and Snake. This open discussion was essential in shaping our direction. We then created paper prototypes of novel ideas based on these games, allowing us to visualise the product concept and requirements of our games. 
+
+
+
+**Figure 4 - Early Game Ideas**
 Key:
 1-9 : Top Options
 M: Maybe
@@ -136,71 +147,11 @@ N: Removed From List
 | Zuma| <https://en.wikipedia.org/wiki/Zuma_(video_game)>  | N |
 | Deemo| <https://en.wikipedia.org/wiki/Deemo>  | N |
 
-## Game Features
-
-<table>
-    <thead>
-        <th>Game</th>
-        <th>Feature 1</th>
-        <th>Feature 2</th>
-        <th>Feature 3</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Snake</td>
-            <td>2 Player</td>
-            <td>walls</td>
-            <td>crash into smaller snakes</td>
-        </tr>
-        <tr>
-            <td>brick braker</td>
-            <td>time limit have to break enough bricks to get a particular score</td>
-            <td></td>
-            <td> </td>
-        </tr>
-        <tr>
-            <td>Flappy Birds</td>
-            <td>can go up pipes - leads to new places on the map or a new map entirely</td>
-            <td>birds attachement or powers e.g go through a circle and get super power for instance ability to knock thing over </td>
-            <td>portals back to start</td>
-        </tr>
-        <tr>
-            <td>Kingdom Rush</td>
-            <td>natural disasters(earth quake)</td>
-            <td>new attackers/new towers </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Super Mario Bros</td>
-            <td> give mario a plumming truck(with a battering ram)</td>
-            <td>seasons of the year () partial sight of the screen </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Tetris</td>
-            <td>new blocks </td>
-            <td>exploding blocks </td>
-            <td>dynamic screen size </td>
-            <td>Miner that deal damage to blocks </td>
-        </tr>
-        <tr>
-            <td>Angry Birds</td>
-            <td>different animals e.g. giraffs, elephants and sharks</td>
-            <td>water mode (underwater sling shot + above watersling shot) </td>
-            <td>change pigs to rats everytime you fail they increase in number</td>
-        </tr>
-    </tbody>
-</table>
 
 
 
 
-Early Stages Design & Ideation Process
-
-To begin our ideation process, our team played and discussed several favourite computer games, creating a shortlist of seven. After brainstorming feature ideas, how we could implement them and user appeal, we narrowed our focus to two games: Flappy Bird and Snake. This open discussion was essential in shaping our direction. We then created paper prototypes of novel ideas based on these games, allowing us to visualise the product concept and requirements of our games. 
-
-
-### SnakeWars Prototype
+### Figure 5 - SnakeWars Prototype
 
 [![Snake Wars](./readmeFiles/Thumbnails/snakeWarsThumnail.png)](https://www.youtube.com/watch?v=iB4qEvqEI_E "Snake Wars")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
@@ -209,75 +160,22 @@ Snake is a game that each of our team members had enjoyed playing and we all agr
 
 Although both games hold potential, our ideation process showed that Flappy Bird, i.e. ‘Super Spaceman’ had a greater scope for features, creative opportunities and user appeal.
 
-### SnakeWars Prototype
+### Figure 6 - Super Spaceman Prototype
 <!-- check to see if link works at a latter date https://img.youtube.com/vi/6UDCoNbmHIw/maxresdefault.jpg -->
 [![Super SpaceMan](./readmeFiles/Thumbnails/supperSpaceManThumnail.png)](https://www.youtube.com/watch?v=6UDCoNbmHIw "Super SpaceMan")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
 For Super Spaceman, we were able to think of multiple categories, including various different hazards and power ups (as demonstrated in the above prototype). When researching these features, we concluded that Super Spaceman would also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we felt more excited about creating detailed graphics for the interface for Super Spaceman. Our thoughts were validated in Monday’s lab, where our paper prototype for Super Spaceman received overwhelmingly positive feedback. There was a consensus that this was the more innovative concept and the most promising in terms of popularity. Creating the paper prototype played an important role in this decision. The tangible visualisation demonstrated the game’s potential and helped us to decide on our game features.
 
+# Use Case Diagram & User Specifications
 
-## Stake Holders
+We then created a Use Case diagram and Specification. This demonstrated the logic and flow of our game and helped us identify the functional requirements of Super Spaceman, and what we would need to implement to achieve these requirements. 
 
-<table>
-    <thead>
-        <tr>
-            <th>Stake Holder</td>
-            <th>Notes</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Development Team</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>Viewers</td>
-            <td>People watch live game play e.g. on Youtube, Twitch or over a friends shoulder</td>
-        </tr>
-        <tr>
-            <td>Player - Coursemates</td>
-            <td>A player base familiar with the project requirements and can peer review our work.</td>
-        </tr>
-        <tr>
-            <td>Player - General Public</td>
-            <td>N/A</td>
-        </tr>
-        <tr>
-            <td>Player - Disabilities(Colour Blind) </td>
-            <td>Users with colour blindness should be able to use the app</td>
-        </tr>
-        <tr>
-            <td>Markers</td>
-            <td>Looking to play the app to mark our work within 5 mins</td>
-        </tr>
-    </tbody>
-</table>
-
-## User-Stories
->
->"As a Player from General Public I want to play a game based on flappy birds with new innovative features so that it grabs my intrigue and attention."
-
->"As a member of the Development Team I want to implement a first in class app/game that push me to learn new skills."
-
->"As a Viewer I want to watch a game to learn by watching players that are more skilled than myself so that I can improve my game play."
-
->"As a Coursemate playing another groups game, I want to learn off them and become inspired by their vision and implementations of their app/game."
-
->"As a Player with a disability such as being colour blind I find it very difficult to play some games that dont cater to this. I would like a game which caters to my needs of having different colour contrasts so that i am not impared by my lack vision."
-
->"As a Marker I want to quickly assess the assignment that I am marking by playing the game within 5 mins."
-
->"As a Player from the general public, I want to explore different maps/scenarios in the game, so that I can experience freshness and novelty."
-
->"As a Viewer, I want to see changes in the speed of the game process,  as this is what captures my attention."
-
-## Usecase Specification - General Player
+**Figure 7 - Usecase Diagram**
+<img src="./readmeFiles/usecasediagram.png">
 
 
-
-## Usecase Specification
-
+**Figure 8 - Usecase Specification - General Player**
 <table>
     <tbody>
         <tr>
@@ -341,40 +239,83 @@ For Super Spaceman, we were able to think of multiple categories, including vari
     </tbody>
 </table>
 
-Use Case Diagram & User Specifications
-
-We then created a Use Case diagram and Specification. This demonstrated the logic and flow of our game and helped us identify the functional requirements of Super Spaceman, and what we would need to implement to achieve these requirements. 
-
-**insert Use Case Diagram and Use Case Specification**
-
 As seen in Figure X, we also identified our stakeholders and created user-stories using the Onion Model. This helped identify our stakeholders' relation to the game, as well as visualise their various layers of involvement. 
 
 
-**insert onion model**
+**Figure 9 - Onion Model**
 
-**insert Stakeholders table and User-Stories**
+**Figure 10 - Stake Holders Table**
 
-Requirements:
+<table>
+    <thead>
+        <tr>
+            <th>Stake Holder</td>
+            <th>Notes</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Development Team</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>Viewers</td>
+            <td>People watch live game play e.g. on Youtube, Twitch or over a friends shoulder</td>
+        </tr>
+        <tr>
+            <td>Player - Coursemates</td>
+            <td>A player base familiar with the project requirements and can peer review our work.</td>
+        </tr>
+        <tr>
+            <td>Player - General Public</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>Player - Disabilities (Colour Blind) </td>
+            <td>Users with colour blindness should be able to use the app</td>
+        </tr>
+        <tr>
+            <td>Markers</td>
+            <td>Looking to play the app to mark our work within 5 mins</td>
+        </tr>
+    </tbody>
+</table>
 
+**Figure 11 - User-Stories**
+>
+>"As a Player from General Public I want to play a game based on flappy birds with new innovative features so that it grabs my intrigue and attention."
+
+>"As a member of the Development Team I want to implement a first in class app/game that push me to learn new skills."
+
+>"As a Viewer I want to watch a game to learn by watching players that are more skilled than myself so that I can improve my game play."
+
+>"As a Coursemate playing another groups game, I want to learn off them and become inspired by their vision and implementations of their app/game."
+
+>"As a Player with a disability such as being colour blind I find it very difficult to play some games that dont cater to this. I would like a game which caters to my needs of having different colour contrasts so that i am not impared by my lack vision."
+
+>"As a Marker I want to quickly assess the assignment that I am marking by playing the game within 5 mins."
+
+>"As a Player from the general public, I want to explore different maps/scenarios in the game, so that I can experience freshness and novelty."
+
+>"As a Viewer, I want to see changes in the speed of the game process,  as this is what captures my attention."
+
+
+
+## Requirements
 Using user stories and use-case diagrams helped our team identify our top-level user needs. This gave us a clear understanding of what is needed of our game. Whilst also highlighted some additional things to consider. 
 
-Our game should provide a fun and engaging experience to users, which will be measured against our Heuristic Evaluation, aiming to achieve a score below 2 for each Heuristic.
-There should be a suitable balance between demand and playability - The average RAW TLX score of our testing participants should be above 25 to achieve a “medium” workload according to researchers NASA interpretation (Rubio et al, 2004).
-It should be inspired by Flappy Birds, but include at least 3 innovative and bug-free features that are not present in the original game. Each feature will pass manual testing before the game is released.
-Our game should challenge us as software engineers, and provide us with new skills. Each member will be able to identify at least one new technical skill by the end of the project.
-Our game should be clear and concise, where all features can be demonstrated within 1-2 minutes of gameplay, which will be assessed by the marker.
-Our game should be accessible to all players, and include adaptability features that cater to those with disabilities.
+<ul>
+    <li>Our game should provide a fun and engaging experience to users, which will be measured against our Heuristic Evaluation, aiming to achieve a score below 2 for each Heuristic.</li>
+    <li>There should be a suitable balance between demand and playability - The average RAW TLX score of our testing participants should be above 25 to achieve a “medium” workload according to researchers NASA interpretation (Rubio et al, 2004).</li>
+    <li>It should be inspired by Flappy Birds, but include at least 3 innovative and bug-free features that are not present in the original game. Each feature will pass manual testing before the game is released.</li>
+    <li>Our game should challenge us as software engineers, and provide us with new skills. Each member will be able to identify at least one new technical skill by the end of the project.</li>
+    <li>Our game should be clear and concise, where all features can be demonstrated within 1-2 minutes of gameplay, which will be assessed by the marker.</li>
+    <li>Our game should be accessible to all players, and include adaptability features that cater to those with disabilities.</li>
+</ul>
 
 Creating requirements also highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many, but also analysed our requirements and acknowledged that there could be conflicts between our requirements. For example, including exciting and sophisticated features that can clearly be demonstrated to a marker within 5 minutes. We also acknowledged that it may be unrealistic to implement all of our requirements, particularly the adaptability features, within our project time frame.
 The Elicitation Techniques used proved to be an effective planning tool. They helped us as a team decide what exactly to develop, providing us with clear requirements and a precise acceptance criteria. 
 
-
-
-
-
-## Usecase - Diagram
-
-<img src="./readmeFiles/usecasediagram.png">
 
 
 
