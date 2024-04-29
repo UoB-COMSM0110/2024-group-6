@@ -86,7 +86,23 @@ try catch statment
 
 # Introduction
 
-"I dont think we have a section on this"
+
+Inspired by the addictive dynamics of the mobile app, Flappy Bird, “Super Spaceman” offers players a novel experience by incorporating space-themed features and enhanced control mechanics onto a desktop platform. Whilst designing our game, it was important that the game aligns closely with our initial requirements and engages the player with its features but also maintains a suitable balance between difficulty and accessibility.
+
+As such, we have introduced three new features that make our game innovative and novel: 
+The addition of hazards such as TNT, which upon contact, immediately kills the player. This will increase the level of difficulty, ensuring our game has a suitable level of workload in order to remain engaging.
+
+**Insert GIF**
+
+The inclusion of interactive game props capable of destroying hazards, as well as a protective force field shield that grants the player immunity. This feature is highly interactive and aims to engage the player with strategic thinking. 
+
+**Insert GIF**
+
+The final feature introduces innovative patterns that allow the player to navigate through transport pipes to reach new locations and avoid upcoming hazards. This adds a captivating visual element to the game, and again encourages the user to use strategic thinking.
+
+**Insert GIF**
+
+We knew that our game would evolve as we created and have therefore decided to follow an Agile workflow. This enabled our team to remain flexible and improve our game in response to regular testing.
 
 # Requirements
 
@@ -166,31 +182,30 @@ N: Removed From List
     </tbody>
 </table>
 
-## Snake
 
-For snake we have short listed this classic game for many reasons. The top reasons that we picked this game were for its multitude of options and possibilities to be extended with new exciting inovative software devlopment features. As a group, we have highlighted the opportunity to extend Snake with features such as 2 player game play, added walls and eating smaller snakes. Each one of these features will give us, as a group, plenty to work on. The Two Player feature will enable two users on the same machine to play the same game. While adding walls will make it much harder for the snake to move around and access the much needed nutrients need for game play. To offset this we will include smaller snakes to increase the ability for the snake to increase in size.
 
-### Prototype
+
+Early Stages Design & Ideation Process
+
+To begin our ideation process, our team played and discussed several favourite computer games, creating a shortlist of seven. After brainstorming feature ideas, how we could implement them and user appeal, we narrowed our focus to two games: Flappy Bird and Snake. This open discussion was essential in shaping our direction. We then created paper prototypes of novel ideas based on these games, allowing us to visualise the product concept and requirements of our games. 
+
+
+### SnakeWars Prototype
 
 [![Snake Wars](./readmeFiles/Thumbnails/snakeWarsThumnail.png)](https://www.youtube.com/watch?v=iB4qEvqEI_E "Snake Wars")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
-Following creating a prototype for Snake, we quickly found many positives and negative associated though carrying out our development process. This included a change of name, good demonstration and not much in the way of a need to change the core elements of our design. Feedback quickly prompted us to change the name of the game to Snake Wars as the original was too similar to other games out there.  
+Snake is a game that each of our team members had enjoyed playing and we all agreed that it could be a good game to extend. However, following our development process, and displaying our paper prototype to other class members, we concluded that we did not want to take the idea of ‘Snake Wars’ any further. Our feedback from class members was generally neutral, but lacking excitement. Despite discussing a few ideas on how to extend the game, it felt restricted, and the ideas did not flow as easily as in our discussion on our second game idea.
 
-## Flappy Bird
+Although both games hold potential, our ideation process showed that Flappy Bird, i.e. ‘Super Spaceman’ had a greater scope for features, creative opportunities and user appeal.
 
-Choosing Flappy Bird as our inspiration brings a delightful challenge to the table. Our concept introduces several innovative features: Firstly, we can incorporate new patterns that allow players to navigate through pipes to reach new locations or maps. Secondly, we aim to enhance the bird's abilities through unique means, e.g. the ability to shoot lasers. Lastly, we propose adding new gates that redirect players to the starting point, elevating the difficulty level of the game.
-
-### Prototype
+### SnakeWars Prototype
 <!-- check to see if link works at a latter date https://img.youtube.com/vi/6UDCoNbmHIw/maxresdefault.jpg -->
 [![Super SpaceMan](./readmeFiles/Thumbnails/supperSpaceManThumnail.png)](https://www.youtube.com/watch?v=6UDCoNbmHIw "Super SpaceMan")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
-We have ultimately chosen to base our game idea on Flappy Bird and transform it into "Super Spaceman" (the name may be subject to change). As demonstrated in the above prototype, we have introduced three new features: the inclusion of game props, such as heart items to increase lives and a prop gun to destroy debuff effects; alongside these, the addition of negative buffs (such as signs that immediately return the player to the starting point upon collision and signs that alter gravity) constitutes another new feature. The final feature allows players to either access another map through special new channels/portals, or to complete the game by traversing obstacles.
+For Super Spaceman, we were able to think of multiple categories, including various different hazards and power ups (as demonstrated in the above prototype). When researching these features, we concluded that Super Spaceman would also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we felt more excited about creating detailed graphics for the interface for Super Spaceman. Our thoughts were validated in Monday’s lab, where our paper prototype for Super Spaceman received overwhelmingly positive feedback. There was a consensus that this was the more innovative concept and the most promising in terms of popularity. Creating the paper prototype played an important role in this decision. The tangible visualisation demonstrated the game’s potential and helped us to decide on our game features.
 
-## Game Selection - Why we have chosen Super Spaceman
-
-Although both games hold exciting potential, there was definitely a clear favourite throughout the research process, and the group has collectively agreed to pursue Super Spaceman. Ultimately, Super Spaceman has a greater scope for game features and creative opportunities. For Snake, we could not think of many challenges other than implementing walls, where as, for SSM, we were able to think of multiple categories, including various different hazards and power ups. So much, that we have had to spend time narrowing down which of our ideas to use. When researching these features, we concluded that SSM will also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we feel more excited about the interface for SSM, and have already thought of different game maps. Our thoughts were confirmed in Monday’s lab, where we received positive feedback for SSM, and there was a general consensus that this was a more innovative idea and would be the most popular game.
 
 ## Stake Holders
 
@@ -249,9 +264,7 @@ Although both games hold exciting potential, there was definitely a clear favour
 
 ## Usecase Specification - General Player
 
-**Description** - Super Spaceman is a game with inspiration taken from the game Flappy Bird. Within the following user specifiction, we are going to take you through a step-by-step routine of which a general player would encounter when playing the game.
 
-**Aim** - The Aim of the game is to prevent Super Spaceman from dying. Throughout the game he encounters many hazards, of which he will have to avoid in order to survive and continue playing. As the user plays the game, Super Spaceman picks up speed.
 
 ## Usecase Specification
 
@@ -318,81 +331,130 @@ Although both games hold exciting potential, there was definitely a clear favour
     </tbody>
 </table>
 
+Use Case Diagram & User Specifications
+
+We then created a Use Case diagram and Specification. This demonstrated the logic and flow of our game and helped us identify the functional requirements of Super Spaceman, and what we would need to implement to achieve these requirements. 
+
+**insert Use Case Diagram and Use Case Specification**
+
+As seen in Figure X, we also identified our stakeholders and created user-stories using the Onion Model. This helped identify our stakeholders' relation to the game, as well as visualise their various layers of involvement. 
+
+
+**insert onion model**
+
+**insert Stakeholders table and User-Stories**
+
+Requirements:
+
+Using user stories and use-case diagrams helped our team identify our top-level user needs. This gave us a clear understanding of what is needed of our game. Whilst also highlighted some additional things to consider. 
+
+Our game should provide a fun and engaging experience to users, which will be measured against our Heuristic Evaluation, aiming to achieve a score below 2 for each Heuristic.
+There should be a suitable balance between demand and playability - The average RAW TLX score of our testing participants should be above 25 to achieve a “medium” workload according to researchers NASA interpretation (Rubio et al, 2004).
+It should be inspired by Flappy Birds, but include at least 3 innovative and bug-free features that are not present in the original game. Each feature will pass manual testing before the game is released.
+Our game should challenge us as software engineers, and provide us with new skills. Each member will be able to identify at least one new technical skill by the end of the project.
+Our game should be clear and concise, where all features can be demonstrated within 1-2 minutes of gameplay, which will be assessed by the marker.
+Our game should be accessible to all players, and include adaptability features that cater to those with disabilities.
+
+Creating requirements also highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many, but also analysed our requirements and acknowledged that there could be conflicts between our requirements. For example, including exciting and sophisticated features that can clearly be demonstrated to a marker within 5 minutes. We also acknowledged that it may be unrealistic to implement all of our requirements, particularly the adaptability features, within our project time frame.
+The Elicitation Techniques used proved to be an effective planning tool. They helped us as a team decide what exactly to develop, providing us with clear requirements and a precise acceptance criteria. 
+
+
+
+
+
 ## Usecase - Diagram
 
 <img src="./readmeFiles/usecasediagram.png">
 
-## Reflection
 
-This week, our team gained valuable insights into the specific requirements of our game and we learnt lots about different player experiences. The task highlighted just how important it is to consider all potential players, as well as clearly understanding every player’s needs. We discussed specific ways to ensure that our game resonates with many. For example, including exciting and sophisticated features, whilst also being adaptable to those with disabilities. As a team, we enjoyed the process of collaborating and coming to these decisions, and due to our effective planning, we were able to produce a user story and use case that matched and reflected our initial game requirements.
-
-However, when discussing our use case specification and creating our use case diagram, we realised that our initial plan was perhaps over complicated. We had some slight issues when defining whether something was an ‘include’ or ‘extend’. Some of our members were unable to meet in person, and so when we came together to discuss our use case diagram, it was difficult to explain over the phone, specific things that we wanted them to change and why. This meant that we had to refactor lots, which overall emphasised the importance of remaining flexible throughout the game design process. Ultimately, this task was an important learning journey that provided us with a solid game design that we think will be open to many.
 
 # Design
 
+Original Class Diagram
+In the original design, the SuperSpaceMan class acts like the spinal cord for the game logic. As such all other classes ultimately link back to this one class.  The class sets three variables: time, winOrLose and startGame. As well as stores methods and logic for the gameLoop() getWinOrLose(), StartGame() and getTime(). The UserInput and Screen classes are used to record input from the user and display the gameplay to the user. E.g. when the user presses the spacebar this will be recorded in the UserInput class and displayed using the Screen class. The Character class is used to store and control the data of the player's character. This includes the character screen x and y position. The HazardPipe and TransportPipe are used to display game objects that the user will have to interact with. As the two classes are quite similar they will take a lot of their methods and attributes from Abstract classes. The big difference between the two classes is that the hazard pipes kill the player while the transport pipes transport the player to a new map. 
+
+**insert original class diagram
 ## Classes Diagram
 <img src="./readmeFiles/Classes_Diagram _v0.png">
+
+
+Communication Diagram
+The SuperSpaceMan Class interacts with the UserInputs Class through the getSpaceBar() method, which can be used to monitor whether users press the spacebar key to move. The UserInputs Class also manages the character's interactions with the obstacles through the setNewX() and setNewY() methods, which shows the new character's position on the screen.
+
+The Screen Class is used to show the game state on the screen through the printScreen() method that includes the characters, backgrounds, obstacles etc. In addition, the UserInput Class interacts with the Hazard Pipeline and Transport Pipeline classes, implementing the setNewX() and setNewY() methods. These interactions transport characters to new locations and move game obstacles.
+
+When the Screen interacts with the pipe, we use the getpipetype() method to return the pipe type. If TransportPipe is returned, SuperSpaceMan is transported to a new map. However, if HazardPipe is returned, it is game over for the player. The getwinorlose() method can obtain the win-or-lose status of the game.
 
 ## Communication Diagram
 <img src="./readmeFiles/CommunicationDiagram.png">
 
 
-# Implementation
-
-## Potential Challenges
-
-Based on Flappy Bird, but the player can transport to different maps.
-
-- Challenge 1 - Entering transport pipes -
-- Challenge 2 - Data structure for storing the map - and changing it when they exit the portal pipes
-- Challenge 3 - How to decide if the player enters a new map, or just a different location on the current map. (the control flow)
-- Challenge 4 - Deciding where you go on the current map.
-
-Extra notes:
-
-- Generating the code for randomised hazards
-- Implementing losing health when the player hits a hazards
+Class Diagrams - Delegating Tasks 
+Our conceptual ideology surrounding our code development consisted of many abstractions. This was so we could simplify our code development process and delegate amongst team members. The class diagram design process sparked many conversations and ideas of how best to lay out and delegate workload. However, as always no plan survives first contact with the enemy. Or in this instance, our initial drafts! 
 
 ## Latest Class Diagram 
 <img src="./readmeFiles/latestClassDiagram.png">
 
-## Sprint 1
+Why did we update our Class Diagram?
+Upon starting to code we realised that we had made major errors in our Class diagram. This was due to our understanding of the Processing library. We quickly found that many abstractions in the Processing library made a lot of our classes redundant or unnecessary. As such we deployed an agile swift movement away from our original diagram. Most notably we had to scrap the UserInputs, Screen, Hazard, Pipe, and TransportPipe classes. This was followed by a big refactor and change of scope of the SuperSpaceMan and Hazardpipe Classes. We had to include much of the Processing logic within the SuperSpaceMan class e.g. Draw(), and KeyPressed() methods etc. Along with the removal of the Hazard, and Pipe classes as Processing does not have a way to deal with Abstract and Interfaces classes. As a result of this, we combined the HazardPipe and TransportPipe classes into one class called HazardPipe. Thankfully Processing was able to support Extend and Enumeration classes which simplified our game development for the Background, TNT and Forcefield classes. 
 
-### Improvments:
+The ForceField Class which extends from the GameCharacter class adds extra functionality by adding methods such as setTNTSpeed(), getTNTSpeed(), and collisions(). The collision() method is particularly important as it detects whether the player has collided with a forcefield. 
+Whilst the TNT Class provides an obstacle for the users. It has a collision method, which detects whether the user has knocked the game character (SuperSpaceMan) into a TNT object. Upon impact, the game ends as the user's game character has died.
 
-> SUS - "I found the system unnecessarily complex", when the results were analysed we found this quesition inparticularly scored low. To improve this scoure we embarked on a program too add a splash screen and a you have died screen that returns users to the splash screen. We have designed it as such that the user much click the screen to go back to the start screen as prior to this we allowed it to be done with keys though the user would hold down the keys and would end up in a sudo infinate loop senario untill the key was lifter. 
-
-> Make improvments to the collisions. The character before we made the changes would not die if it hit the top or bottom of the screen. We added collision to detect this and now the character does indeed die upone such impact with the top and bottom of the screen. 
-
-> Increased the amount of "G-force" applyed to the character so that it falls quicker. At present the character falls too slowley. This means that by no falt of the user the character colides into obsticals(mainly pipes) as the character does not fall quicker enough. We changed this so that now the character does fall much quicker. To ofset this we have also had to increase the deltaY which is used to move the character up upone jumping. 
+Our new and improved HazardPipe class now contains logic for what was the old HazardPipe and TransportPipe classes. This meant we had to combine the two classes' functionality. In terms of gameplay, HazardPipes are to be avoided at all costs whilst TransportPipes transport a player to a new map.  To do this we had to randomly generate the length of the pipes as well as the type of pipes.  This presented a new and interesting challenge when creating the collision logic as it had to be able to handle two different types of pipes within one method. 
 
 
-### Sprint 2 TODO LIST 
+# Implemmentation
+When planning our game, we identified three areas of challenge:
+Using generative level design to create the pipes
+Optimisation of backgrounds to ensure smooth gameplay  
+Creating reliable collision detection 
 
-> Found bug with in trasport pipe if touched from left super space man does not die. 
+Challenge 1: Using generative level design to create randomly generated pipes 
+The core of our game lies around our hazard and transport pipes, which generate pairs of pipes with a randomly generated space between them, meaning the pipes always have different positions along the X-axis. A random number is generated upon calling generateInitalPipe() to determine whether the pipes are transport pipes. Initially, we considered a separate class for this. However, we decided that it was more efficient to integrate it into the HazardPipe class, as it would avoid stray addresses, therefore, reducing the complexity of object management and null pointers.
 
-> TNT and ForceFeild have both been implement sucesfully. However to finnish it off we need switching logic to generate them. 
+We used the updateX() method to update the position of pipes every time the draw() method was called. Once the pipe goes beyond the edge of the screen, a new pair is generated.  
 
-> changing background upone transport pipe being entered. 
+Collision logic is used to determine whether the character has bumped into the pipes or not. Upon impact, the logic controls whether the player has died(Impact with Hazard Pipe) or transports to a new map(Contact with Transport Pipe). 
+
+Throughout the game, we use getter and setter methods to update the gameSpeed variable. This variable is used by updateX() to move the pipe a set number of pixels every time draw() is called. This increases the speed of the pipes, and therefore the game difficulty. 
+
+**Insert GIF 
+
+Challenge 2: Optimisation of backgrounds to ensure smooth gameplay between the multiple backgrounds 
+To create the different backgrounds, we used a ‘Background’ enum to define space-themed backgrounds: Space, Mars, Moon and Saturn. Each background has its own drawing method ‘drawBackground(PApplet app)’, that contains helper methods such as ‘drawCraters’, ‘drawMountains’ and ‘drawBoulders’, and utilises Processing’s drawing functions to render the background onto the canvas. Colours are set using the RGB colour values.
+
+The first issue we encountered was how the background reacted with the rest of the game code, such as the pipes and character. Throughout the coding process, there were times where we made changes to the background, only for it to affect other parts of the game, like distorting the pipes, or creating a lag in the character. After adjusting sizes and method calls within the code, this challenge was overcome. The changeBackground method in the Super_Spaceman class, holds the primary logic for changing the background, and uses ‘Math.random()’ to generate a number between 0.0 and 1.0. Each background is assigned a third of this range, and depending on what number is generated, determines the background based on the random number. This ensures the generated background is random. The method then calls the setup() method, to reset the game logic.
+
+Another issue was the background’s interaction with the pipe logic, which was supposed to change only when the character travelled through a transport pipe. Initially, this was unpredictable and the background changed only occasionally. We then realised the changeBackground() method was not being called at all appropriate moments. 
+
+**Insert GIF 
+
+Challenge 3: Creating reliable collision logic that detects hazards and power up appropriately 
+Our first challenge was to tackle the random generation of these elements. We achieved this using methods that generate random numbers and are then used to generate the y-Coordinate for the TNT/ForceField. With each loop within the draw function, the x-position is decreased to move the elements across the screen. 
+
+The next issue we found was ensuring the correct response when the character interacted with the TNT or ForceField. We used collision logic to detect this. Upon collision with TNT, the collision returns true and the character dies. When the character collides with the forcefield, further collisions return false for a set time. This logic allows the correct game flow.
+
+Another issue involved the interaction between TNT/ForceFields, and the change in gamespeed. Initially, when the speed increased, the TNT and ForceField did not match the Pipes. Further issues involved some of the TNT or ForceFields elements moving at the same pace and some not. This challenge was overcome when we introduced the speed variable, which was passed to our TNT/ForceField classes, enabling the speed of the TNT/ForceFields to match that of the pipes. 
+
+**Insert GIF 
+
 
 
 # Evaluation
+During the development process, it was important to understand whether SuperSpaceMan had a suitable balance between demand and playability, in order to meet our requirements. In our literature review, we found that in video game development, the integration of mixed research methods effectively analyses game difficulty as well as enhances player experience (Romero-Mendez et al., 2023). Therefore, we utilised quantitative and qualitative testing to evaluate our game: Heuristic evaluation and NASA TLX; - effectively combining objective metrics, as well as a detailed player experience. 
+
+There were two stages of testing. The first occurred prior to our first sprint, when few of our difficulty features had been implemented. We then repeated the testing, (after we had implemented our TNT and increased game speed feature) using the same 9 participants, after sprint 2, and compared the results. The results identified the final adjustments to be made in sprint 3. 
+
 
 ## Qualitative Evaluation
 
-Too collect Qualitative data for our game we will use two methords namly the Think Aloud and Heuristic Evaluation methords. This should provide us with the relevant with and depth of data to gain meaningful insights.  
+### Heuristic Evaluation 
 
-### Think Aloud
+Heuristic evaluation is a usability method used to review a game based on established usability principles. The evaluation method focuses on all aspects of our game (as shown in Figure X), whilst also focusing on specific features, to ensure it is engaging and accessible to all players (Paavilainen et al., 2018). 
 
-Feedback 1 - game character movements, found issues in the sense that the character dies and also goes off the screen.  
+The evaluation identified severe issues with our character interface, particularly the need for excessive clicking to make the character jump higher. This caused frustrating gameplay (4), identifying the need to increase the height of the jump per click. Testing also illuminated issues relating to the Movements and Pipes interface. For example, a greater distance between pipes, and pipes not generated randomly. Although the issues individually seem minor, accumulated they are noticeably persistent (3), adversely affecting the gameplay experience. 
 
-Feedback 2 - pipes creation, need to create pipes.  
-
-Feedback 3 - The pipes only generates randomly within the first three pairs internally, then simply repeats them continuously, resulting in only three distinct pairs of pipes indefinitely.
-
-Feedback 4 - It would be easier to use the spacebar to control the character.
-
-### Heuristic Evaluation
 
 <table>
     <tbody>
@@ -489,6 +551,13 @@ Feedback 4 - It would be easier to use the spacebar to control the character.
     </tbody>
 </table>
 
+Based on the feedback, we adjusted the logic to increase the character’s jump height, as well as introducing the spacebar as an alternative control. Additionally, we refined our pipe logic, adding a method to randomly generate pipes, and decrease the spacing between them. These improvements were corroborated in our second heuristic evaluation, where the frequency of both of our previous scores reduced from 4 to 0. These improvements positively impacted the usability of our game.
+
+Figure X - Heuristic Results - Testing Round 2
+
+Our second testing illuminated new issues relating to Error Prevention and Aesthetic Design. Noticeably, an issue with the shield powerup, which disappeared too quickly, receiving a frequency score of 4. Similarly, the new transport pipes activated inconsistently, again, scoring 4. A more minor issue involved the background stars blinking excessively, potentially causing discomfort to some players. These findings have directed our priorities for the final sprint, in order to enhance the overall game experience.
+
+
 ### Summary - Qualitative Evaluation
 
 
@@ -497,11 +566,15 @@ The Heuristic Evaluation bought important issues about our game, to our attentio
 We noted issues relating to the Movements and Pipes interfaces of our game. This included the distances between pipes being too large, the pipes not generating randomly and the character falling off the screen. Although the issues individually are relatively minor, accumulated together they are noticeably persistent and severe (3/4), and overall leads to a rather ‘sketchy’ gameplay. Therefore, we have decided to reset the judgements of collision, narrow the distance between pipes and ensure that the pipes pattern does not continuously repeat. This not only improves the Consistency and Standards usability, but also the Aesthetic and Minimalist Design usability.
 
 
-## Quantitavie Evaluation
+## Quantitative Evaluation
 
-In this section we will analysie and showcase collected data from participants who have played our game. We selected the NASA TLXs and System Unability Survey(SUS) to do this.
+NASA TLX
 
-### NASA TLXs Questionair
+We used NASA Task Load Index (TLX), finding the RAW NASA TLX score to assess the user experience. This provided a quantitative insight into the user interaction, as well as indicating the overall performance of our game (Paavilainen et al., 2018). 
+
+Figure X - NASA TLX - Testing Round 1
+
+### NASA TLXs Questionaire
 
 <table>
     <thead>
@@ -568,122 +641,66 @@ In this section we will analysie and showcase collected data from participants w
     </tbody>
 </table>
 
-### System Unability Survey(SUS)
+Shown in Figure X, the first NASA questionnaire indicated that our game was not demanding, with low scores on mental, physical and temporal subscales. Scores ranged from 5 to 20, with Participant 5 scoring as low as 0 for all demand subscales. These results point to a low workload, which is surprising given that many participants struggled to get far into the game, rarely advancing past the third pipe. Nevertheless, the data highlights an improvement area and we plan to increase the game’s demand, whilst maintaining system simplicity. 
 
-Scale: <br>
-1 == Strongly Disagree, <br> 
-5 == Strongly Agree     <br>
+One result in particular stands out. Participant 2 scored temporal demand high (75). The reason for this is unclear and compared with the rest of the data is an anomaly. The participant potentially misunderstood the scale, or there was a data collection error. This seems plausible considering the participant scored the mental and physical demand at 0 and 5.
 
-<table>
-    <thead>
-        <td>Participant(Names Hidden for Privacy)</td>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>10</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>I think that I would like to use this system frequently</td>
-            <td>4</td>
-            <td>4</td>
-            <td>3</td>
-            <td>5</td>
-            <td>3</td>
-        </tr>
-        <tr>
-            <td>I found the system unnecessarily complex</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>I thought the system was easy to use</td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>I think that I would need the support of a technical person to be able to use this system.</td>
-            <td>1</td>
-            <td>1</td>
-            <td>4</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>I found the various functions in the system were well integrated</td>
-            <td>4</td>
-            <td>4</td>
-            <td>2</td>
-            <td>5</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>I though there was too much inconsistency in this system</td>
-            <td>1</td>
-            <td>1</td>
-            <td>2</td>
-            <td>2</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td>I would imagine that most people would learn to use this system very quickly</td>
-            <td>5</td>
-            <td>5</td>
-            <td>4</td>
-            <td>5</td>
-            <td>5</td>
-        </tr>
-        <tr>
-            <td>I found the system very cumbersome to use</td>
-            <td>1</td>
-            <td>1</td>
-            <td>2</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-            <td>I felt very confident using the system</td>
-            <td>5</td>
-            <td>5</td>
-            <td>3</td>
-            <td>3</td>
-            <td>5</td>
-        <tr>
-        </tr>
-            <td>I needed to learn a lot of things before I could get going with this system</td>
-            <td>2</td>
-            <td>1</td>
-            <td>2</td>
-            <td>1</td>
-            <td>1</td>
-        </tr>
-    </tbody>
-</table>
+Figure X - NASA TLX - Testing Round 2
 
-### Summary - Quantitative Evaluation
+As seen in Figure X, our second set of quantitative testing showed a significant improvement to our game demand. The improvement can primarily be seen in mental demand, with the highest score being 80 and the lowest now 45. These results corroborate that our new features: the TNT hazard and the increased speed, have optimised the game difficulty. Our average NASA TLX RAW Score (29.72), proves that our game achieves a “medium workload” (Rubio et al, 2004), meeting our requirement that the game should have a suitable balance between demand and playability.
 
-To appropriately evaluate the user experience and system usability of SuperSpaceMan, we used the NASA (TLX) and System Usability Survey - two approaches that provide significant quantitative insight into a user’s interaction, and the overall performance of our game.
+**Insert GIF - showing speed increase
 
-The results of the NASA questionnaire strongly highlighted that our game is not particularly demanding. For each of the three categories that measured demand (mental, physical and temporal), results were very low, primarily between 1 - 5, with one participant (participant 5) even voting 1 for all three demand categories. 
+Comparing our results using the Wilcoxon Signed Rank Test further corroborates this. As shown in Figure X, using an alpha value of 0.05, our W test statistic was 1, meaning it was considerably below the needed 5 to be significantly different. The practical application of NASA TLX has been highly valuable in managing the demand and playability of Super Spaceman. It has given us a greater understanding of our game from the player’s perspective, helping us to assess what adjustments needed to be made. It was ultimately a highly effective way of measuring the subjective perceived workload (Rubio et al, 2004).
 
-One result in particular stands out. Participant 2 scored the temporal demand of SuperSpaceMan, very high, at 16 out of 20. The reason for this is unclear and when compared with the rest of the data, is an anomaly. The participant potentially misunderstood the questionnaire’s scale, or there was a human error when collecting the data. This seems plausible considering the participant scored the mental and physical demand categories at 1 and 2. The game’s effort and frustration scores are also low, and consequently, so is our overall RAW NASA TLX score. Our highest score being Participant 2, at 8, and the lowest being Participant 5 and 0.83. The overall score for Participant’s 1, 3 and 4 were all similar, ranging from 3.33 - 4.5. These findings point to a low workload. 
+insert Figure X - Wilcoxon Results:
 
-The results of the System Usability Survey likewise corroborate this. Every participant scored our game a 5/5, strongly agreeing that “the system was easy to use”.Despite scoring an average of 3.8 on the SUS, when users were asked if they would “like to use our system frequently”, our game could potentially lack the challenge needed to engage users. 
+insert NASA TLX comparison
 
-These results are surprising! Whilst collecting the data, we noticed that many participants struggled to get very far into the game, rarely making it past the third pipe. Nevertheless, our data highlights a key area of improvement and looking forward, we have decided to make the game slightly more demanding,  whilst keeping the system simple to use. 
-This ensures that SuperSpaceMan achieves a suitable balance between demand and playability.
+How was our code tested?
+
+Our code underwent manual testing, which involved identifying the issue, locating the relevant code, printing the output and adjusting the logic accordingly. This structural approach ensured targeted and focused testing (Sharaievskyi et al., 2024).
+
+We resolved issues such as incorrect acceleration settings. When adding speed settings to the pipe, it failed to generate cyclically and disappeared. Similarly, the force field and TNT did not adjust to the speed changes.
+
+We inserted print statements to the Hazard Pipes class to output current speed and the x-axis positions of generated pipes. This pinpointed the error in the judgement condition in updateX() method. Each time the x-axis position decreased, the value gradually increased, and was not equal to the negative pipe width. By modifying it to be less than or equal to the negative pipe width, we resolved the issue, similarly resolving issues with the force field and TNT.
+
 
 # Process
-"COPY OVER FROM GOOGLE DOCUMENT"
+As a team, we decided on a working practice that covered all elements of our project, using a variety of techniques to ensure we as a team worked in the most efficient and productive way possible.  
+
+Scrum
+As a Team, we created and maintained a manual Kanban board on our README.md. This enabled all teammates to have full visibility of the project at all times. Team members would create new branches to work on a particular feature and then merge it back into the dev branch. If there was a particular item of work outstanding the Kanban board would not be updated. Upon merging into Main it would become highly apparent and would be top of mind to prioritise the completion of this work the following week. 
+
+Git
+As a Team we used GitHub as our Git Forge of choice. Each week/Sprint we started a new Dev branch to maintain and organise the code. The work from the following week would be peer reviewed and then pushed to main. This enabled us to protect the Main branch from becoming non-operational. We would use our local repos to develop the code and would merge and test the code before submitting a pull request to Main.
+
+**Insert image of git graph or something
+
+Team Meetings  
+Team Meetings were a regular feature of our working practice. We consistently met Monday afternoons to discuss the plan for that week, reinforcing our commitment to working in line with an Agile methodology. Weekly team meetings were used to discuss ideas, delegate tasks and help team members with any issues. They were also used to reflect on our achievements from the previous week, ensuring every member was up-to-date. Face-to-face meetings were particularly invaluable when addressing technical issues, for example, helping each other setup computer development environments - a task that is often difficult to solve remotely. They were also useful when discussing our use case diagrams, as we found it difficult to explain over the phone, specific things that we wanted changing and why. We had realised that our initial plan was perhaps over complicated and we had some minor issues when defining whether something was an ‘include’ or ‘extend’. Ultimately, discussing and explaining in person solved this issue, as we were able to explicitly point out what needed to be changed.
+
+Team Communication
+Effective communication was pivotal to achieving our goals. We used a group chat hosted on WhatsApp, which enabled us to share files and take video calls to discuss ideas. We would post information about where we were going to meet for our weekly meeting. Without this method of communication, it would have been much more difficult to coordinate this. Video calls and voice calls became very useful over the sprints as we were not all necessarily geographically in the same city. 
+
+Design
+When designing our game we used a variety of methods. The main ways that we used were Paper Prototyping and UMLetino tool to draw Class Diagrams and Communication Diagrams. As a team we found that creating the first prototypes using paper was highly effective and allowed us to quickly, and cheaply, reiterate our designs. They facilitated team engagement allowing us to visualise our ideas, helping to reach a consensus. 
+
+Development & Testing
+We took advantage of a range of technical tools to help in development and testing. This included using Processing plugins, Live Share along with Microsoft(MS) Excel and Google Sheets for testing. We decided that it was best to use VScode as we could leverage the power of the IDE alongside the plugins. The Processing plugins allowed us to run the game from within VScodes terminal whilst Live Share enabled us to screen share. Live Share was particularly useful during the sprints as we could help one another debug and merge files while geographically being in two very distinctly different places. When it came to testing we leveraged MS Excel to collect testing data from participants. This was useful as, as a team, we could share and record the data quickly - collect HCI Evaluation data.
+
 
 # Conclusion
-"COPY OVER FROM GOOGLE DOCUMENT"
+Our journey developing Super Spaceman has been invaluable, and we have certainly learnt a lot. Our effective teamwork and strategic planning have ensured that Super Spaceman has successfully achieved almost all of our requirements. Throughout the project, we learnt about the role of Git, which was essential for organising our code and collaborating. Initially, we had issues with Git, where merging different workflows led to conflicts. However, as time went on, each team member became more comfortable using it. We also developed a systematic approach where we agreed to do one pull request into the protected main branch every Sunday. This kept our code organised and gave us a consistent goal to work towards.
+
+Developing Super Spaceman also gave us valuable experience in object-oriented design, which underpins the architecture of our game. By extending the GameCharacter class, we were able to implement hazards and power-ups and have them inherit all methods from GameCharacter, without having to create entire new classes. Object Oriented design is widely used and this assignment was great practice for future work.
+
+We collectively committed to using an agile workflow. This was the ideal approach for our team, as we knew that our ideas would change and develop throughout the development process. In response to testing, we found that our first game prototype was too easy. The Agile method taught us to be responsive to change, and as such we were able to add in features to make our game more challenging, including features such as the increase in speed, which was not even in our initial game design. This is also evident in our communication and class diagrams, which had to be consequently modified. The approach taught us the importance of being adaptive. Ideas and processes can change quickly depending on the previous week’s productivity, and there were times where we did not achieve our plans, so plans for the following week would have to be updated. 
+ 
+Our game development journey has not been entirely smooth and we have had issues with our communication as a team. We learnt that we should have delegated work early on. Unexpectedly two of our members were not able to contribute throughout the three sprints, meaning others had to take on a greater workload, to avoid falling behind. We had a significantly reduced capacity, and as such, were not able to meet our final requirement. We had hoped to implement features to ensure our game was accessible to those who are visually impaired or colourblind. If we had delegated specific tasks from the beginning, members could have planned to complete the tasks outside of the sprints. 
+
+There are certainly exciting directions to take Super Spaceman in. Looking forward, we plan to introduce a coin feature which increases your score and unlocks additional maps, allowing the player to progress throughout the game. The coins would also allow for the user to unlock other power ups. This would add an engaging and dynamic storyline aspect into the game. A timer and leaderboard would also be necessary to facilitate this future development.
+
 
 # Individual contribution
 "DO NOT WRITE ANYTHING HERE YET"
