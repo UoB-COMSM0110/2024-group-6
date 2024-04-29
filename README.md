@@ -325,8 +325,7 @@ The Elicitation Techniques used proved to be an effective planning tool. They he
 Original Class Diagram
 In the original design, the SuperSpaceMan class acts like the spinal cord for the game logic. As such all other classes ultimately link back to this one class.  The class sets three variables: time, winOrLose and startGame. As well as stores methods and logic for the gameLoop() getWinOrLose(), StartGame() and getTime(). The UserInput and Screen classes are used to record input from the user and display the gameplay to the user. E.g. when the user presses the spacebar this will be recorded in the UserInput class and displayed using the Screen class. The Character class is used to store and control the data of the player's character. This includes the character screen x and y position. The HazardPipe and TransportPipe are used to display game objects that the user will have to interact with. As the two classes are quite similar they will take a lot of their methods and attributes from Abstract classes. The big difference between the two classes is that the hazard pipes kill the player while the transport pipes transport the player to a new map. 
 
-**insert original class diagram
-## Classes Diagram
+**Figure 12 - Original Class Diagram
 <img src="./readmeFiles/Classes_Diagram _v0.png">
 
 
