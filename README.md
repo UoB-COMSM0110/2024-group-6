@@ -605,24 +605,22 @@ We inserted print statements to the Hazard Pipes class to output current speed a
 # Process
 As a team, we decided on a working practice that covered all elements of our project, using a variety of techniques to ensure we as a team worked in the most efficient and productive way possible.  
 
-**Scrum**
+**Scrum**<br>
 As a Team, we created and maintained a manual Kanban board on our README.md. This enabled all teammates to have full visibility of the project at all times. Team members would create new branches to work on a particular feature and then merge it back into the dev branch. If there was a particular item of work outstanding the Kanban board would not be updated. Upon merging into Main it would become highly apparent and would be top of mind to prioritise the completion of this work the following week. 
 
-**Git**
+**Git**<br>
 As a Team we used GitHub as our Git Forge of choice. Each week/Sprint we started a new Dev branch to maintain and organise the code. The work from the following week would be peer reviewed and then pushed to main. This enabled us to protect the Main branch from becoming non-operational. We would use our local repos to develop the code and would merge and test the code before submitting a pull request to Main.
-
-**Figure 26 - Insert image of git graph or something**
 
 **Team Meetings**  
 Team Meetings were a regular feature of our working practice. We consistently met Monday afternoons to discuss the plan for that week, reinforcing our commitment to working in line with an Agile methodology. Weekly team meetings were used to discuss ideas, delegate tasks and help team members with any issues. They were also used to reflect on our achievements from the previous week, ensuring every member was up-to-date. Face-to-face meetings were particularly invaluable when addressing technical issues, for example, helping each other setup computer development environments - a task that is often difficult to solve remotely. They were also useful when discussing our use case diagrams, as we found it difficult to explain over the phone, specific things that we wanted changing and why. We had realised that our initial plan was perhaps over complicated and we had some minor issues when defining whether something was an ‘include’ or ‘extend’. Ultimately, discussing and explaining in person solved this issue, as we were able to explicitly point out what needed to be changed.
 
-**Team Communication**
+**Team Communication**<br>
 Effective communication was pivotal to achieving our goals. We used a group chat hosted on WhatsApp, which enabled us to share files and take video calls to discuss ideas. We would post information about where we were going to meet for our weekly meeting. Without this method of communication, it would have been much more difficult to coordinate this. Video calls and voice calls became very useful over the sprints as we were not all necessarily geographically in the same city. 
 
-**Design**
+**Design**<br>
 When designing our game we used a variety of methods. The main ways that we used were Paper Prototyping and UMLetino tool to draw Class Diagrams and Communication Diagrams. As a team we found that creating the first prototypes using paper was highly effective and allowed us to quickly, and cheaply, reiterate our designs. They facilitated team engagement allowing us to visualise our ideas, helping to reach a consensus. 
 
-**Development & Testing**
+**Development & Testing**<br>
 We took advantage of a range of technical tools to help in development and testing. This included using Processing plugins, Live Share along with Microsoft(MS) Excel and Google Sheets for testing. We decided that it was best to use VScode as we could leverage the power of the IDE alongside the plugins. The Processing plugins allowed us to run the game from within VScodes terminal whilst Live Share enabled us to screen share. Live Share was particularly useful during the sprints as we could help one another debug and merge files while geographically being in two very distinctly different places. When it came to testing we leveraged MS Excel to collect testing data from participants. This was useful as, as a team, we could share and record the data quickly - collect HCI Evaluation data.
 
 
