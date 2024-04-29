@@ -90,19 +90,22 @@ try catch statment
 Inspired by the addictive dynamics of the mobile app, Flappy Bird, “Super Spaceman” offers players a novel experience by incorporating space-themed features and enhanced control mechanics onto a desktop platform. Whilst designing our game, it was important that the game aligns closely with our initial requirements and engages the player with its features but also maintains a suitable balance between difficulty and accessibility.
 
 As such, we have introduced three new features that make our game innovative and novel: 
+
 The addition of hazards such as TNT, which upon contact, immediately kills the player. This will increase the level of difficulty, ensuring our game has a suitable level of workload in order to remain engaging.
 
-**Insert GIF**
+**insert hazards gif**
 
 The inclusion of interactive game props capable of destroying hazards, as well as a protective force field shield that grants the player immunity. This feature is highly interactive and aims to engage the player with strategic thinking. 
 
-**Insert GIF**
+**Insert shields GIF**
 
 The final feature introduces innovative patterns that allow the player to navigate through transport pipes to reach new locations and avoid upcoming hazards. This adds a captivating visual element to the game, and again encourages the user to use strategic thinking.
 
-**Insert GIF**
+**Insert backgrounds GIF**
 
 We knew that our game would evolve as we created and have therefore decided to follow an Agile workflow. This enabled our team to remain flexible and improve our game in response to regular testing.
+
+
 
 # Requirements
 
