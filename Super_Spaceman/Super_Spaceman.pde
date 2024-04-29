@@ -7,6 +7,8 @@ void settings() {
 boolean splashScreen = true; 
 boolean hasDied = false;
 boolean forbidSpacebar = false; // add a flag to forbid spacebar.
+PImage instruction;
+int rightNum = 0; //control instruction screen.
 
 TNT tnt;
 ForceFeild forceFeild;
@@ -27,6 +29,7 @@ int startTime;
 int endTime;
 int speedUpPipesCnt;
 int increaseSpeedIntival;
+boolean increaseSpeed = false; // new flag for easy or hard mode, defual easy
 
 Background currentBackground = Background.Space;
 
@@ -68,21 +71,29 @@ void setup() {
 }
 
 void draw() {
+    
+    if(rightNum != 1){
+        background(0); //for cleaning canvas
+        if(splashScreen){
+            splashScreenLogic();
+            rightNum = 0;
+        } else {
 
-    if(splashScreen){
-        splashScreenLogic();
-    } else {
+            if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
+                diedScreen();
+                forbidSpacebar = true; //add a flag to forbid spacebar.
+                rightNum = 0;
+                increaseSpeed = false; // reset the increasespeed flag
+            } else { 
+                updateData();
+            }
+            checkForCollison();
 
-        if(collisonTest1 || collisonTest2 || collisonTest3 || collisonBottom || collisonTop){
-            diedScreen();
-            forbidSpacebar = true; //add a flag to forbid spacebar.
-        } else { 
-            updateData();
         }
-        checkForCollison();
-
+    } else if(rightNum == 1){
+        background(0); // for cleaning canvas
+        instructionScreen();
     }
-
 }
 
 void updateData(){
@@ -115,15 +126,17 @@ void updateGameCharacterAndObstacles(){
     bird.gravity();
 
     speedUpPipesCnt++;
-    if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
-        int speed = pipeOne.getPipeSpeed()+1;
-        System.out.println("gamesSpeed: "+ speed);
-        pipeOne.setPipeSpeed(speed);
-        pipeTwo.setPipeSpeed(speed);
-        pipeThree.setPipeSpeed(speed);
-        tnt.setTNTSpeed(speed);
-        forceFeild.setForceFeildSpeed(speed);
-    }  
+    if(increaseSpeed){// decide whether to accelerate
+        if(speedUpPipesCnt%increaseSpeedIntival == 0 ){
+            int speed = pipeOne.getPipeSpeed()+1;
+            System.out.println("gamesSpeed: "+ speed);
+            pipeOne.setPipeSpeed(speed);
+            pipeTwo.setPipeSpeed(speed);
+            pipeThree.setPipeSpeed(speed);
+            tnt.setTNTSpeed(speed);
+            forceFeild.setForceFeildSpeed(speed);
+        }  
+    }
 
     checkForceFieldCollisions();
 
@@ -194,6 +207,13 @@ void changeBackground() {
    setup();
 }
 
+void instructionScreen(){
+    textSize(30);
+    text("click RightKey to Exit",width/2,height-30);
+    instruction = loadImage("assets/instruction.png");
+    image(instruction,width/2,height/2);
+}
+
 void splashScreenLogic(){
     fill(333,345,198);
     background(0);
@@ -204,7 +224,10 @@ void splashScreenLogic(){
     bird.getCharacter();
 
     textSize(30);
-    text("press Spacebar to Start",width/2,height/1.2);
+    text("press Spacebar to Start & Jump",width/2,height/1.2);
+    textSize(20);
+    text("click RightKey to Check Instruction & Pause",width/2,height/1.1);
+    text("press 'h' or 'H' key to Enter Hard mode",width/2,height/1.05); // instruction for hard mode
     startTime = millis();
 }
 
@@ -221,7 +244,7 @@ void diedScreen(){
     text("Game Duration: "+duration,width/2,height/1.4);
 
     textSize(30);
-    text("Click to Exit",width/2,height/1.2);
+    text("click LeftKey to Exit",width/2,height/1.2);
 }
 
 void genTNTorForceFeild(){
@@ -237,31 +260,41 @@ void genTNTorForceFeild(){
 }
 
 void mousePressed() { 
-    if(splashScreen){
-        splashScreen = false;
-    } else {
-        bird.jump();
+    if(mouseButton == RIGHT){
+        rightNum++; //switch screen to instruction
     }
+    if(mouseButton == LEFT){
+        if(splashScreen){
+            splashScreen = false;
+        } else {
+            bird.jump();
+        }
 
-    if(hasDied){
-        currentBackground = Background.Space;
-        splashScreen = true;
-        hasDied = false;
-        forbidSpacebar = false;//reset the flag for next game.
-        collisonTest1 = false;
-        collisonTest2 = false;
-        collisonTest3 = false;
-        collisonBottom = false;
-        collisonTop = false;
-        setup();
+        if(hasDied){
+            currentBackground = Background.Space;
+            splashScreen = true;
+            hasDied = false;
+            forbidSpacebar = false;//reset the flag for next game.
+            collisonTest1 = false;
+            collisonTest2 = false;
+            collisonTest3 = false;
+            collisonBottom = false;
+            collisonTop = false;
+            setup();
+        }
     }
 }
 
-public void keyPressed(){  
-    if(splashScreen){
-        splashScreen = false;
-    } else if(!forbidSpacebar){//change to forbid spacebar.
-        bird.jump();
+public void keyPressed(){
+    if(key == ' '){
+        if(splashScreen){
+            splashScreen = false;
+        } else if(!forbidSpacebar){//change to forbid spacebar.
+            bird.jump();
+        }
+    }
+    if(key == 'h' || key == 'B'){// set increaseSpeed flag for hard mode
+        increaseSpeed = true;
     }
 }
 
