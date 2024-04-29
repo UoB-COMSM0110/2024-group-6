@@ -325,7 +325,7 @@ The Elicitation Techniques used proved to be an effective planning tool. They he
 Original Class Diagram
 In the original design, the SuperSpaceMan class acts like the spinal cord for the game logic. As such all other classes ultimately link back to this one class.  The class sets three variables: time, winOrLose and startGame. As well as stores methods and logic for the gameLoop() getWinOrLose(), StartGame() and getTime(). The UserInput and Screen classes are used to record input from the user and display the gameplay to the user. E.g. when the user presses the spacebar this will be recorded in the UserInput class and displayed using the Screen class. The Character class is used to store and control the data of the player's character. This includes the character screen x and y position. The HazardPipe and TransportPipe are used to display game objects that the user will have to interact with. As the two classes are quite similar they will take a lot of their methods and attributes from Abstract classes. The big difference between the two classes is that the hazard pipes kill the player while the transport pipes transport the player to a new map. 
 
-**Figure 12 - Original Class Diagram
+**Figure 12 - Original Class Diagram**
 <img src="./readmeFiles/Classes_Diagram _v0.png">
 
 
@@ -336,17 +336,19 @@ The Screen Class is used to show the game state on the screen through the printS
 
 When the Screen interacts with the pipe, we use the getpipetype() method to return the pipe type. If TransportPipe is returned, SuperSpaceMan is transported to a new map. However, if HazardPipe is returned, it is game over for the player. The getwinorlose() method can obtain the win-or-lose status of the game.
 
-## Communication Diagram
+**Figure 13 -Communication Diagram**
 <img src="./readmeFiles/CommunicationDiagram.png">
 
 
-Class Diagrams - Delegating Tasks 
+**Class Diagrams - Delegating Tasks**
+
 Our conceptual ideology surrounding our code development consisted of many abstractions. This was so we could simplify our code development process and delegate amongst team members. The class diagram design process sparked many conversations and ideas of how best to lay out and delegate workload. However, as always no plan survives first contact with the enemy. Or in this instance, our initial drafts! 
 
-## Latest Class Diagram 
+**Figure 14 - Updated Class Diagram**
 <img src="./readmeFiles/latestClassDiagram.png">
 
-Why did we update our Class Diagram?
+**Why did we update our Class Diagram?**
+
 Upon starting to code we realised that we had made major errors in our Class diagram. This was due to our understanding of the Processing library. We quickly found that many abstractions in the Processing library made a lot of our classes redundant or unnecessary. As such we deployed an agile swift movement away from our original diagram. Most notably we had to scrap the UserInputs, Screen, Hazard, Pipe, and TransportPipe classes. This was followed by a big refactor and change of scope of the SuperSpaceMan and Hazardpipe Classes. We had to include much of the Processing logic within the SuperSpaceMan class e.g. Draw(), and KeyPressed() methods etc. Along with the removal of the Hazard, and Pipe classes as Processing does not have a way to deal with Abstract and Interfaces classes. As a result of this, we combined the HazardPipe and TransportPipe classes into one class called HazardPipe. Thankfully Processing was able to support Extend and Enumeration classes which simplified our game development for the Background, TNT and Forcefield classes. 
 
 The ForceField Class which extends from the GameCharacter class adds extra functionality by adding methods such as setTNTSpeed(), getTNTSpeed(), and collisions(). The collision() method is particularly important as it detects whether the player has collided with a forcefield. 
@@ -355,13 +357,20 @@ Whilst the TNT Class provides an obstacle for the users. It has a collision meth
 Our new and improved HazardPipe class now contains logic for what was the old HazardPipe and TransportPipe classes. This meant we had to combine the two classes' functionality. In terms of gameplay, HazardPipes are to be avoided at all costs whilst TransportPipes transport a player to a new map.  To do this we had to randomly generate the length of the pipes as well as the type of pipes.  This presented a new and interesting challenge when creating the collision logic as it had to be able to handle two different types of pipes within one method. 
 
 
-# Implemmentation
-When planning our game, we identified three areas of challenge:
-Using generative level design to create the pipes
-Optimisation of backgrounds to ensure smooth gameplay  
-Creating reliable collision detection 
+# Implementation
 
-Challenge 1: Using generative level design to create randomly generated pipes 
+When planning our game, we identified three areas of challenge:
+<ol>
+    <li>Using generative level design to create the pipes
+</li>
+    <li>Optimisation of backgrounds to ensure smooth gameplay  
+</li>
+    <li>Creating reliable collision detection 
+</li>
+
+</ol>
+
+**Challenge 1:** Using generative level design to create randomly generated pipes 
 The core of our game lies around our hazard and transport pipes, which generate pairs of pipes with a randomly generated space between them, meaning the pipes always have different positions along the X-axis. A random number is generated upon calling generateInitalPipe() to determine whether the pipes are transport pipes. Initially, we considered a separate class for this. However, we decided that it was more efficient to integrate it into the HazardPipe class, as it would avoid stray addresses, therefore, reducing the complexity of object management and null pointers.
 
 We used the updateX() method to update the position of pipes every time the draw() method was called. Once the pipe goes beyond the edge of the screen, a new pair is generated.  
@@ -370,25 +379,34 @@ Collision logic is used to determine whether the character has bumped into the p
 
 Throughout the game, we use getter and setter methods to update the gameSpeed variable. This variable is used by updateX() to move the pipe a set number of pixels every time draw() is called. This increases the speed of the pipes, and therefore the game difficulty. 
 
-**Insert GIF 
+**Figure 15 - Demonstration of Pipes**
+<figure>
+  <img src="readmeFiles/GIF/normalEnd.gif" alt="dynamic map manipulation" style="width:30%">
+</figure>
 
-Challenge 2: Optimisation of backgrounds to ensure smooth gameplay between the multiple backgrounds 
+**Challenge 2:** Optimisation of backgrounds to ensure smooth gameplay between the multiple backgrounds 
 To create the different backgrounds, we used a ‘Background’ enum to define space-themed backgrounds: Space, Mars, Moon and Saturn. Each background has its own drawing method ‘drawBackground(PApplet app)’, that contains helper methods such as ‘drawCraters’, ‘drawMountains’ and ‘drawBoulders’, and utilises Processing’s drawing functions to render the background onto the canvas. Colours are set using the RGB colour values.
 
 The first issue we encountered was how the background reacted with the rest of the game code, such as the pipes and character. Throughout the coding process, there were times where we made changes to the background, only for it to affect other parts of the game, like distorting the pipes, or creating a lag in the character. After adjusting sizes and method calls within the code, this challenge was overcome. The changeBackground method in the Super_Spaceman class, holds the primary logic for changing the background, and uses ‘Math.random()’ to generate a number between 0.0 and 1.0. Each background is assigned a third of this range, and depending on what number is generated, determines the background based on the random number. This ensures the generated background is random. The method then calls the setup() method, to reset the game logic.
 
 Another issue was the background’s interaction with the pipe logic, which was supposed to change only when the character travelled through a transport pipe. Initially, this was unpredictable and the background changed only occasionally. We then realised the changeBackground() method was not being called at all appropriate moments. 
 
-**Insert GIF 
+**Figure 16 - Demonstration of Teleportation**
+<figure>
+  <img src="readmeFiles/GIF/changeBackgrand3.gif" alt="dynamic map manipulation" style="width:30%">
+</figure>
 
-Challenge 3: Creating reliable collision logic that detects hazards and power up appropriately 
+**Challenge 3:** Creating reliable collision logic that detects hazards and power up appropriately 
 Our first challenge was to tackle the random generation of these elements. We achieved this using methods that generate random numbers and are then used to generate the y-Coordinate for the TNT/ForceField. With each loop within the draw function, the x-position is decreased to move the elements across the screen. 
 
 The next issue we found was ensuring the correct response when the character interacted with the TNT or ForceField. We used collision logic to detect this. Upon collision with TNT, the collision returns true and the character dies. When the character collides with the forcefield, further collisions return false for a set time. This logic allows the correct game flow.
 
 Another issue involved the interaction between TNT/ForceFields, and the change in gamespeed. Initially, when the speed increased, the TNT and ForceField did not match the Pipes. Further issues involved some of the TNT or ForceFields elements moving at the same pace and some not. This challenge was overcome when we introduced the speed variable, which was passed to our TNT/ForceField classes, enabling the speed of the TNT/ForceFields to match that of the pipes. 
 
-**Insert GIF 
+**Figure 17 - Demonstration of Force Field**
+<figure>
+  <img src="readmeFiles/GIF/ForceField.gif" alt="dynamic map manipulation" style="width:30%">
+</figure>
 
 
 
@@ -396,6 +414,17 @@ Another issue involved the interaction between TNT/ForceFields, and the change i
 During the development process, it was important to understand whether SuperSpaceMan had a suitable balance between demand and playability, in order to meet our requirements. In our literature review, we found that in video game development, the integration of mixed research methods effectively analyses game difficulty as well as enhances player experience (Romero-Mendez et al., 2023). Therefore, we utilised quantitative and qualitative testing to evaluate our game: Heuristic evaluation and NASA TLX; - effectively combining objective metrics, as well as a detailed player experience. 
 
 There were two stages of testing. The first occurred prior to our first sprint, when few of our difficulty features had been implemented. We then repeated the testing, (after we had implemented our TNT and increased game speed feature) using the same 9 participants, after sprint 2, and compared the results. The results identified the final adjustments to be made in sprint 3. 
+
+
+**Figure 18 - Demonstration of Speed Increase**
+<figure>
+  <img src="readmeFiles/GIF/speedUp1.gif" alt="dynamic map manipulation" style="width:30%">
+</figure>
+
+**Figure 19 - Demonstration of TNT Hazard**
+<figure>
+  <img src="readmeFiles/GIF/TNT.gif" alt="dynamic map manipulation" style="width:30%">
+</figure>
 
 
 ## Qualitative Evaluation
@@ -406,7 +435,9 @@ Heuristic evaluation is a usability method used to review a game based on establ
 
 The evaluation identified severe issues with our character interface, particularly the need for excessive clicking to make the character jump higher. This caused frustrating gameplay (4), identifying the need to increase the height of the jump per click. Testing also illuminated issues relating to the Movements and Pipes interface. For example, a greater distance between pipes, and pipes not generated randomly. Although the issues individually seem minor, accumulated they are noticeably persistent (3), adversely affecting the gameplay experience. 
 
+Based on the feedback, we adjusted the logic to increase the character’s jump height, as well as introducing the spacebar as an alternative control. Additionally, we refined our pipe logic, adding a method to randomly generate pipes, and decrease the spacing between them. These improvements were corroborated in our second heuristic evaluation, where the frequency of both of our previous scores reduced from 4 to 0. These improvements positively impacted the usability of our game.
 
+**Figure 20 - Heuristic Results - Testing Round 1**
 <table>
     <tbody>
         <tr>
@@ -453,6 +484,24 @@ The evaluation identified severe issues with our character interface, particular
             <td>2</td>
             <td>4</td>
             <td>3.3</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+**Figure 21 - Heuristic Results - Testing Round 2**
+
+<table>
+    <tbody>
+        <tr>
+            <td><b>Interface</b></td>
+            <td><b>Issue</b></td>
+            <td><b>Heuristic(s)</b></td>
+            <td><b>Frequency</b> 0 (rare) to 4 (common)</td>
+            <td><b>Impact</b> 0 (easy) to difficult (4)</td>
+            <td><b>Persistence</b> 0 (once) to 4 (repeated)</td>
+            <td><b>Severity</b> = Sum Total of F+I+P/3</td>
         </tr>
         <tr>
             <td>Bomb</td>
@@ -502,9 +551,6 @@ The evaluation identified severe issues with our character interface, particular
     </tbody>
 </table>
 
-Based on the feedback, we adjusted the logic to increase the character’s jump height, as well as introducing the spacebar as an alternative control. Additionally, we refined our pipe logic, adding a method to randomly generate pipes, and decrease the spacing between them. These improvements were corroborated in our second heuristic evaluation, where the frequency of both of our previous scores reduced from 4 to 0. These improvements positively impacted the usability of our game.
-
-Figure X - Heuristic Results - Testing Round 2
 
 Our second testing illuminated new issues relating to Error Prevention and Aesthetic Design. Noticeably, an issue with the shield powerup, which disappeared too quickly, receiving a frequency score of 4. Similarly, the new transport pipes activated inconsistently, again, scoring 4. A more minor issue involved the background stars blinking excessively, potentially causing discomfort to some players. These findings have directed our priorities for the final sprint, in order to enhance the overall game experience.
 
@@ -519,96 +565,35 @@ We noted issues relating to the Movements and Pipes interfaces of our game. This
 
 ## Quantitative Evaluation
 
-NASA TLX
+**NASA TLX**
 
 We used NASA Task Load Index (TLX), finding the RAW NASA TLX score to assess the user experience. This provided a quantitative insight into the user interaction, as well as indicating the overall performance of our game (Paavilainen et al., 2018). 
 
-Figure X - NASA TLX - Testing Round 1
 
-### NASA TLXs Questionaire
-
-<table>
-    <thead>
-        <th>Participant(Names Hidden for Privacy)</th>
-        <th>Mental Demand</th>
-        <th>Physical Demand</th>
-        <th>Temporal Demand</th>
-        <th>Performance</th>
-        <th>Effort</th>
-        <th>Frustration</th>
-        <th>RAW Nasa TLX Scour</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>5</td>
-            <td>3</td>
-            <td>3</td>
-            <td>0</td>
-            <td>5</td>
-            <td>5</td>
-            <td>3.5</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>1</td>
-            <td>2</td>
-            <td>16</td>
-            <td>20</td>
-            <td>1</td>
-            <td>2</td>
-            <td>8</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>5</td>
-            <td>6</td>
-            <td>3</td>
-            <td>7</td>
-            <td>4.5</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>0</td>
-            <td>3</td>
-            <td>2</td>
-            <td>3.33</td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>0</td>
-            <td>1</td>
-            <td>1</td>
-            <td>0.83</td>
-        </tr>
-    </tbody>
-</table>
+**Figure 22 - NASA TLX - Testing Round 1**
+<img src="readmeFiles/nasa1.png">
 
 Shown in Figure X, the first NASA questionnaire indicated that our game was not demanding, with low scores on mental, physical and temporal subscales. Scores ranged from 5 to 20, with Participant 5 scoring as low as 0 for all demand subscales. These results point to a low workload, which is surprising given that many participants struggled to get far into the game, rarely advancing past the third pipe. Nevertheless, the data highlights an improvement area and we plan to increase the game’s demand, whilst maintaining system simplicity. 
 
 One result in particular stands out. Participant 2 scored temporal demand high (75). The reason for this is unclear and compared with the rest of the data is an anomaly. The participant potentially misunderstood the scale, or there was a data collection error. This seems plausible considering the participant scored the mental and physical demand at 0 and 5.
 
-Figure X - NASA TLX - Testing Round 2
+**Figure 23 - NASA TLX - Testing Round 2**
+<img src="readmeFiles/nasa2.png">
 
 As seen in Figure X, our second set of quantitative testing showed a significant improvement to our game demand. The improvement can primarily be seen in mental demand, with the highest score being 80 and the lowest now 45. These results corroborate that our new features: the TNT hazard and the increased speed, have optimised the game difficulty. Our average NASA TLX RAW Score (29.72), proves that our game achieves a “medium workload” (Rubio et al, 2004), meeting our requirement that the game should have a suitable balance between demand and playability.
 
-**Insert GIF - showing speed increase
+**Figure 25 - NASA TLX Comparison**
+<img src="readmeFiles/nasa_comparison.png">
 
 Comparing our results using the Wilcoxon Signed Rank Test further corroborates this. As shown in Figure X, using an alpha value of 0.05, our W test statistic was 1, meaning it was considerably below the needed 5 to be significantly different. The practical application of NASA TLX has been highly valuable in managing the demand and playability of Super Spaceman. It has given us a greater understanding of our game from the player’s perspective, helping us to assess what adjustments needed to be made. It was ultimately a highly effective way of measuring the subjective perceived workload (Rubio et al, 2004).
 
-insert Figure X - Wilcoxon Results:
+**Figure 24 - Wilcoxon Results**
+<img src="readmeFiles/Wilcoxon.png">
 
-insert NASA TLX comparison
 
-How was our code tested?
+
+
+**How was our code tested?**
 
 Our code underwent manual testing, which involved identifying the issue, locating the relevant code, printing the output and adjusting the logic accordingly. This structural approach ensured targeted and focused testing (Sharaievskyi et al., 2024).
 
@@ -620,24 +605,24 @@ We inserted print statements to the Hazard Pipes class to output current speed a
 # Process
 As a team, we decided on a working practice that covered all elements of our project, using a variety of techniques to ensure we as a team worked in the most efficient and productive way possible.  
 
-Scrum
+**Scrum**
 As a Team, we created and maintained a manual Kanban board on our README.md. This enabled all teammates to have full visibility of the project at all times. Team members would create new branches to work on a particular feature and then merge it back into the dev branch. If there was a particular item of work outstanding the Kanban board would not be updated. Upon merging into Main it would become highly apparent and would be top of mind to prioritise the completion of this work the following week. 
 
-Git
+**Git**
 As a Team we used GitHub as our Git Forge of choice. Each week/Sprint we started a new Dev branch to maintain and organise the code. The work from the following week would be peer reviewed and then pushed to main. This enabled us to protect the Main branch from becoming non-operational. We would use our local repos to develop the code and would merge and test the code before submitting a pull request to Main.
 
-**Insert image of git graph or something
+**Figure 26 - Insert image of git graph or something**
 
-Team Meetings  
+**Team Meetings**  
 Team Meetings were a regular feature of our working practice. We consistently met Monday afternoons to discuss the plan for that week, reinforcing our commitment to working in line with an Agile methodology. Weekly team meetings were used to discuss ideas, delegate tasks and help team members with any issues. They were also used to reflect on our achievements from the previous week, ensuring every member was up-to-date. Face-to-face meetings were particularly invaluable when addressing technical issues, for example, helping each other setup computer development environments - a task that is often difficult to solve remotely. They were also useful when discussing our use case diagrams, as we found it difficult to explain over the phone, specific things that we wanted changing and why. We had realised that our initial plan was perhaps over complicated and we had some minor issues when defining whether something was an ‘include’ or ‘extend’. Ultimately, discussing and explaining in person solved this issue, as we were able to explicitly point out what needed to be changed.
 
-Team Communication
+**Team Communication**
 Effective communication was pivotal to achieving our goals. We used a group chat hosted on WhatsApp, which enabled us to share files and take video calls to discuss ideas. We would post information about where we were going to meet for our weekly meeting. Without this method of communication, it would have been much more difficult to coordinate this. Video calls and voice calls became very useful over the sprints as we were not all necessarily geographically in the same city. 
 
-Design
+**Design**
 When designing our game we used a variety of methods. The main ways that we used were Paper Prototyping and UMLetino tool to draw Class Diagrams and Communication Diagrams. As a team we found that creating the first prototypes using paper was highly effective and allowed us to quickly, and cheaply, reiterate our designs. They facilitated team engagement allowing us to visualise our ideas, helping to reach a consensus. 
 
-Development & Testing
+**Development & Testing**
 We took advantage of a range of technical tools to help in development and testing. This included using Processing plugins, Live Share along with Microsoft(MS) Excel and Google Sheets for testing. We decided that it was best to use VScode as we could leverage the power of the IDE alongside the plugins. The Processing plugins allowed us to run the game from within VScodes terminal whilst Live Share enabled us to screen share. Live Share was particularly useful during the sprints as we could help one another debug and merge files while geographically being in two very distinctly different places. When it came to testing we leveraged MS Excel to collect testing data from participants. This was useful as, as a team, we could share and record the data quickly - collect HCI Evaluation data.
 
 
