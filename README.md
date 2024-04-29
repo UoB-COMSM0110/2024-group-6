@@ -357,7 +357,7 @@ Whilst the TNT Class provides an obstacle for the users. It has a collision meth
 Our new and improved HazardPipe class now contains logic for what was the old HazardPipe and TransportPipe classes. This meant we had to combine the two classes' functionality. In terms of gameplay, HazardPipes are to be avoided at all costs whilst TransportPipes transport a player to a new map.  To do this we had to randomly generate the length of the pipes as well as the type of pipes.  This presented a new and interesting challenge when creating the collision logic as it had to be able to handle two different types of pipes within one method. 
 
 
-# Implementation
+# Implementation & Challenges
 
 When planning our game, we identified three areas of challenge:
 <ol>
@@ -487,6 +487,7 @@ Based on the feedback, we adjusted the logic to increase the character’s jump 
         </tr>
     </tbody>
 </table>
+<br>
 
 
 
