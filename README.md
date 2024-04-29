@@ -1,7 +1,7 @@
 # 2024-group-6
 
 
-# Table of Contents  
+**Table of Contents**  
 - [Game Demo](#demo)
 - [Team](#team)
 - [Introduction](#introduction)
