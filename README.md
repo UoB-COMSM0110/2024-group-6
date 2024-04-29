@@ -1,29 +1,5 @@
 # 2024-group-6
 
-https://uob-my.sharepoint.com/:x:/r/personal/rl23261_bristol_ac_uk/Documents/quantitative-evaluations.xlsx?d=wd01f8966391c4ba9bc7159c9d6b7d96b&csf=1&web=1&e=VMSyxc
-
-https://uob-my.sharepoint.com/:p:/r/personal/rl23261_bristol_ac_uk/Documents/superspaceman(1).pptx?d=w6f40e5b14d4944e295ed4e4f06788428&csf=1&web=1&e=vs40oY
-
-https://docs.google.com/document/d/1CAvMM9M0nOD37zgNwwQbP-oFkJBle_J5mAp0DXFvtpo/edit?usp=sharing
-
-https://uob.sharepoint.com/:w:/t/UnitTeams-COMSM0110-2023-24-TB-2-A-StaffRoom/EcdatTaJe2pPr2Kpwmpd4CgBLi26G6r4eK0BCxyvjammvg?e=HhvG8I
-
-
-character acceleration
-
-Instructions
-
-game timer at top of screen
-
-feature branches and not weekly branches 
-git flow workflow 
-git trunk workflow
-
-unit testing 
-add unit testing
-try catch statment 
-
-<https://processing.org/tutorials>
 
 # Table of Contents  
 - [Game Demo](#demo)
@@ -31,12 +7,13 @@ try catch statment
 - [Introduction](#introduction)
 - [Requirements](#requirements)
 - [Design](#design)
-- [Implementation](#implementation)
+- [Implementation](#implementation-&-Challenges)
 - [Evaluation](#evaluation)
 - [Process](#process)
 - [Conclusion](#conclusion)
 - [Individual contribution](#individual-contribution)
 
+<br>
 
 # Game Demo
 
@@ -133,7 +110,6 @@ Key:
 1-9 : Top Options
 M: Maybe
 N: Removed From List
-
 | Name | URL | Sutibility / Intrest / Ranking|
 | -------- | -------- | -------- |
  Snake| <https://en.wikipedia.org/wiki/Snake_(video_game_genre)>   | 1|
@@ -239,7 +215,7 @@ We then created a Use Case diagram and Specification. This demonstrated the logi
     </tbody>
 </table>
 
-As seen in Figure X, we also identified our stakeholders and created user-stories using the Onion Model. This helped identify our stakeholders' relation to the game, as well as visualise their various layers of involvement. 
+As seen in Figure 9, we also identified our stakeholders and created user-stories using the Onion Model. This helped identify our stakeholders' relation to the game, as well as visualise their various layers of involvement. 
 
 
 **Figure 9 - Onion Model**
@@ -322,7 +298,7 @@ The Elicitation Techniques used proved to be an effective planning tool. They he
 
 # Design
 
-Original Class Diagram
+**Original Class Diagram** <br>
 In the original design, the SuperSpaceMan class acts like the spinal cord for the game logic. As such all other classes ultimately link back to this one class.  The class sets three variables: time, winOrLose and startGame. As well as stores methods and logic for the gameLoop() getWinOrLose(), StartGame() and getTime(). The UserInput and Screen classes are used to record input from the user and display the gameplay to the user. E.g. when the user presses the spacebar this will be recorded in the UserInput class and displayed using the Screen class. The Character class is used to store and control the data of the player's character. This includes the character screen x and y position. The HazardPipe and TransportPipe are used to display game objects that the user will have to interact with. As the two classes are quite similar they will take a lot of their methods and attributes from Abstract classes. The big difference between the two classes is that the hazard pipes kill the player while the transport pipes transport the player to a new map. 
 
 **Figure 12 - Original Class Diagram**
@@ -370,7 +346,7 @@ When planning our game, we identified three areas of challenge:
 
 </ol>
 
-**Challenge 1:** Using generative level design to create randomly generated pipes 
+**Challenge 1: Using generative level design to create randomly generated pipes**<br> 
 The core of our game lies around our hazard and transport pipes, which generate pairs of pipes with a randomly generated space between them, meaning the pipes always have different positions along the X-axis. A random number is generated upon calling generateInitalPipe() to determine whether the pipes are transport pipes. Initially, we considered a separate class for this. However, we decided that it was more efficient to integrate it into the HazardPipe class, as it would avoid stray addresses, therefore, reducing the complexity of object management and null pointers.
 
 We used the updateX() method to update the position of pipes every time the draw() method was called. Once the pipe goes beyond the edge of the screen, a new pair is generated.  
@@ -384,7 +360,7 @@ Throughout the game, we use getter and setter methods to update the gameSpeed va
   <img src="readmeFiles/GIF/normalEnd.gif" alt="dynamic map manipulation" style="width:30%">
 </figure>
 
-**Challenge 2:** Optimisation of backgrounds to ensure smooth gameplay between the multiple backgrounds 
+**Challenge 2: Optimisation of backgrounds to ensure smooth gameplay between the multiple backgrounds**<br> 
 To create the different backgrounds, we used a ‘Background’ enum to define space-themed backgrounds: Space, Mars, Moon and Saturn. Each background has its own drawing method ‘drawBackground(PApplet app)’, that contains helper methods such as ‘drawCraters’, ‘drawMountains’ and ‘drawBoulders’, and utilises Processing’s drawing functions to render the background onto the canvas. Colours are set using the RGB colour values.
 
 The first issue we encountered was how the background reacted with the rest of the game code, such as the pipes and character. Throughout the coding process, there were times where we made changes to the background, only for it to affect other parts of the game, like distorting the pipes, or creating a lag in the character. After adjusting sizes and method calls within the code, this challenge was overcome. The changeBackground method in the Super_Spaceman class, holds the primary logic for changing the background, and uses ‘Math.random()’ to generate a number between 0.0 and 1.0. Each background is assigned a third of this range, and depending on what number is generated, determines the background based on the random number. This ensures the generated background is random. The method then calls the setup() method, to reset the game logic.
@@ -396,7 +372,7 @@ Another issue was the background’s interaction with the pipe logic, which was 
   <img src="readmeFiles/GIF/changeBackgrand3.gif" alt="dynamic map manipulation" style="width:30%">
 </figure>
 
-**Challenge 3:** Creating reliable collision logic that detects hazards and power up appropriately 
+**Challenge 3: Creating reliable collision logic that detects hazards and power up appropriately**<br> 
 Our first challenge was to tackle the random generation of these elements. We achieved this using methods that generate random numbers and are then used to generate the y-Coordinate for the TNT/ForceField. With each loop within the draw function, the x-position is decreased to move the elements across the screen. 
 
 The next issue we found was ensuring the correct response when the character interacted with the TNT or ForceField. We used collision logic to detect this. Upon collision with TNT, the collision returns true and the character dies. When the character collides with the forcefield, further collisions return false for a set time. This logic allows the correct game flow.
@@ -431,7 +407,7 @@ There were two stages of testing. The first occurred prior to our first sprint, 
 
 ### Heuristic Evaluation 
 
-Heuristic evaluation is a usability method used to review a game based on established usability principles. The evaluation method focuses on all aspects of our game (as shown in Figure X), whilst also focusing on specific features, to ensure it is engaging and accessible to all players (Paavilainen et al., 2018). 
+Heuristic evaluation is a usability method used to review a game based on established usability principles. The evaluation method focuses on all aspects of our game (as shown in Figure 20), whilst also focusing on specific features, to ensure it is engaging and accessible to all players (Paavilainen et al., 2018). 
 
 The evaluation identified severe issues with our character interface, particularly the need for excessive clicking to make the character jump higher. This caused frustrating gameplay (4), identifying the need to increase the height of the jump per click. Testing also illuminated issues relating to the Movements and Pipes interface. For example, a greater distance between pipes, and pipes not generated randomly. Although the issues individually seem minor, accumulated they are noticeably persistent (3), adversely affecting the gameplay experience. 
 
@@ -574,19 +550,19 @@ We used NASA Task Load Index (TLX), finding the RAW NASA TLX score to assess the
 **Figure 22 - NASA TLX - Testing Round 1**
 <img src="readmeFiles/nasa1.png">
 
-Shown in Figure X, the first NASA questionnaire indicated that our game was not demanding, with low scores on mental, physical and temporal subscales. Scores ranged from 5 to 20, with Participant 5 scoring as low as 0 for all demand subscales. These results point to a low workload, which is surprising given that many participants struggled to get far into the game, rarely advancing past the third pipe. Nevertheless, the data highlights an improvement area and we plan to increase the game’s demand, whilst maintaining system simplicity. 
+Shown in Figure 22, the first NASA questionnaire indicated that our game was not demanding, with low scores on mental, physical and temporal subscales. Scores ranged from 5 to 20, with Participant 5 scoring as low as 0 for all demand subscales. These results point to a low workload, which is surprising given that many participants struggled to get far into the game, rarely advancing past the third pipe. Nevertheless, the data highlights an improvement area and we plan to increase the game’s demand, whilst maintaining system simplicity. 
 
 One result in particular stands out. Participant 2 scored temporal demand high (75). The reason for this is unclear and compared with the rest of the data is an anomaly. The participant potentially misunderstood the scale, or there was a data collection error. This seems plausible considering the participant scored the mental and physical demand at 0 and 5.
 
 **Figure 23 - NASA TLX - Testing Round 2**
 <img src="readmeFiles/nasa2.png">
 
-As seen in Figure X, our second set of quantitative testing showed a significant improvement to our game demand. The improvement can primarily be seen in mental demand, with the highest score being 80 and the lowest now 45. These results corroborate that our new features: the TNT hazard and the increased speed, have optimised the game difficulty. Our average NASA TLX RAW Score (29.72), proves that our game achieves a “medium workload” (Rubio et al, 2004), meeting our requirement that the game should have a suitable balance between demand and playability.
+As seen in Figure 23, our second set of quantitative testing showed a significant improvement to our game demand. The improvement can primarily be seen in mental demand, with the highest score being 80 and the lowest now 45. These results corroborate that our new features: the TNT hazard and the increased speed, have optimised the game difficulty. Our average NASA TLX RAW Score (29.72), proves that our game achieves a “medium workload” (Rubio et al, 2004), meeting our requirement that the game should have a suitable balance between demand and playability.
 
 **Figure 25 - NASA TLX Comparison**
 <img src="readmeFiles/nasa_comparison.png">
 
-Comparing our results using the Wilcoxon Signed Rank Test further corroborates this. As shown in Figure X, using an alpha value of 0.05, our W test statistic was 1, meaning it was considerably below the needed 5 to be significantly different. The practical application of NASA TLX has been highly valuable in managing the demand and playability of Super Spaceman. It has given us a greater understanding of our game from the player’s perspective, helping us to assess what adjustments needed to be made. It was ultimately a highly effective way of measuring the subjective perceived workload (Rubio et al, 2004).
+Comparing our results using the Wilcoxon Signed Rank Test further corroborates this. As shown in Figure 24, using an alpha value of 0.05, our W test statistic was 1, meaning it was considerably below the needed 5 to be significantly different. The practical application of NASA TLX has been highly valuable in managing the demand and playability of Super Spaceman. It has given us a greater understanding of our game from the player’s perspective, helping us to assess what adjustments needed to be made. It was ultimately a highly effective way of measuring the subjective perceived workload (Rubio et al, 2004).
 
 **Figure 24 - Wilcoxon Results**
 <img src="readmeFiles/Wilcoxon.png">
