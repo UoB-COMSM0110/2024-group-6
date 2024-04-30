@@ -127,7 +127,7 @@ N: Removed From List
 
 
 
-### Figure 5 - SnakeWars Prototype
+**Figure 5 - SnakeWars Prototype**
 
 [![Snake Wars](./readmeFiles/Thumbnails/snakeWarsThumnail.png)](https://www.youtube.com/watch?v=iB4qEvqEI_E "Snake Wars")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
@@ -136,8 +136,7 @@ Snake is a game that each of our team members had enjoyed playing and we all agr
 
 Although both games hold potential, our ideation process showed that Flappy Bird, i.e. ‘Super Spaceman’ had a greater scope for features, creative opportunities and user appeal.
 
-### Figure 6 - Super Spaceman Prototype
-<!-- check to see if link works at a latter date https://img.youtube.com/vi/6UDCoNbmHIw/maxresdefault.jpg -->
+**Figure 6 - Super Spaceman Prototype**
 [![Super SpaceMan](./readmeFiles/Thumbnails/supperSpaceManThumnail.png)](https://www.youtube.com/watch?v=6UDCoNbmHIw "Super SpaceMan")
 *Right-click and select "Open link in new tab" to watch the video without leaving GitHub.*
 
