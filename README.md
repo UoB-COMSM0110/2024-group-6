@@ -140,11 +140,8 @@ Snake is a game that each of our team members had enjoyed playing and we all agr
 
 For Super Spaceman, we were able to think of multiple categories, including various different hazards and power ups (as demonstrated in the above prototype). When researching these features, we concluded that Super Spaceman would also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we felt more excited about creating detailed graphics for the interface for Super Spaceman. Our thoughts were validated in Monday’s lab, where our paper prototype for Super Spaceman received overwhelmingly positive feedback. There was a consensus that this was the more innovative concept and the most promising in terms of popularity. Creating the paper prototype played an important role in this decision. The tangible visualisation demonstrated the game’s potential and helped us to decide on our game features. Although both games hold potential, our ideation process showed that Flappy Bird, i.e. ‘Super Spaceman’ had a greater scope for features, creative opportunities and user appeal.
 
-**Use Case Diagram & Use Case Specification & User Stories**
-
+**Figure 7 - Use Case Diagram**<br>
 We then created a Use Case diagram and Specification. This demonstrated the logic and flow of our game and helped us identify the functional requirements of Super Spaceman, and what we would need to implement to achieve these requirements. 
-
-**Figure 7 - Use Case Diagram**
 <img src="./readmeFiles/usecasediagram.png">
 
 
@@ -275,8 +272,8 @@ As seen in Figure 9, we also identified our stakeholders and created user-storie
 
 
 
-## Requirements
-Using user stories and use-case diagrams helped our team identify our top-level user needs. This gave us a clear understanding of what is needed of our game. Whilst also highlighted some additional things to consider. 
+**Game Requirements**<br>
+Using User Stories, User Specification and Use Case Diagrams helped our team identify our top-level user needs. This gave us a clear understanding of what is needed of our game. Whilst also highlighted some additional things to consider. 
 
 <ul>
     <li>Our game should provide a fun and engaging experience to users, which will be measured against our Heuristic Evaluation, aiming to achieve a score below 2 for each Heuristic.</li>
