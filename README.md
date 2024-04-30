@@ -105,7 +105,7 @@ To begin our ideation process, our team played and discussed several favourite c
 
 
 
-**Figure 4 - Early Game Ideas**
+**Figure 4 - Early Game Ideas**<br>
 Key:
 1-9 : Top Options
 M: Maybe
@@ -140,15 +140,15 @@ Snake is a game that each of our team members had enjoyed playing and we all agr
 
 For Super Spaceman, we were able to think of multiple categories, including various different hazards and power ups (as demonstrated in the above prototype). When researching these features, we concluded that Super Spaceman would also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we felt more excited about creating detailed graphics for the interface for Super Spaceman. Our thoughts were validated in Monday’s lab, where our paper prototype for Super Spaceman received overwhelmingly positive feedback. There was a consensus that this was the more innovative concept and the most promising in terms of popularity. Creating the paper prototype played an important role in this decision. The tangible visualisation demonstrated the game’s potential and helped us to decide on our game features. Although both games hold potential, our ideation process showed that Flappy Bird, i.e. ‘Super Spaceman’ had a greater scope for features, creative opportunities and user appeal.
 
-# Use Case Diagram & User Specifications
+**Use Case Diagram & Use Case Specification & User Stories**
 
 We then created a Use Case diagram and Specification. This demonstrated the logic and flow of our game and helped us identify the functional requirements of Super Spaceman, and what we would need to implement to achieve these requirements. 
 
-**Figure 7 - Usecase Diagram**
+**Figure 7 - Use Case Diagram**
 <img src="./readmeFiles/usecasediagram.png">
 
 
-**Figure 8 - Usecase Specification - General Player**
+**Figure 8 - Use Case Specification - General Player**
 <table>
     <tbody>
         <tr>
@@ -212,10 +212,10 @@ We then created a Use Case diagram and Specification. This demonstrated the logi
     </tbody>
 </table>
 
+
+
+**Figure 9 - Onion Model** <br>
 As seen in Figure 9, we also identified our stakeholders and created user-stories using the Onion Model. This helped identify our stakeholders' relation to the game, as well as visualise their various layers of involvement. 
-
-
-**Figure 9 - Onion Model**
 <img src="readmeFiles/onion.jpg">
 
 **Figure 10 - Stake Holders Table**
