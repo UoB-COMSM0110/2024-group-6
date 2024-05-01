@@ -218,7 +218,7 @@ We then created a Use Case Diagram and Specification. This demonstrated the logi
 As seen in Figure 9, we also identified our stakeholders and created user-stories using the Onion Model. This helped identify our stakeholders' relation to the game, as well as visualise their various layers of involvement. 
 
 
-**Figure 9 - Onion Model**
+**Figure 9 - Onion Model** <br>
 <img src="readmeFiles/smallonion.png">
 
 **Figure 10 - Stake Holders Table**
