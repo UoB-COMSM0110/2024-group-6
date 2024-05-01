@@ -219,7 +219,7 @@ As seen in Figure 9, we also identified our stakeholders and created user-storie
 
 
 **Figure 9 - Onion Model**
-<img src="readmeFiles/onion.jpg">
+<img src="readmeFiles/smallonion.png">
 
 **Figure 10 - Stake Holders Table**
 
