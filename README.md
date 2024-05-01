@@ -609,6 +609,6 @@ There are certainly exciting directions to take Super Spaceman in. Looking forwa
 
 
 # Individual contribution
-"DO NOT WRITE ANYTHING HERE YET"
 
+<img src="readmeFiles/contributionTable.png">
 
