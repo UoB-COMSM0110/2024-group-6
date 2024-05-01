@@ -545,14 +545,14 @@ We used NASA Task Load Index (TLX), finding the RAW NASA TLX score to assess the
 
 
 **Figure 22 - NASA TLX - Testing Round 1**
-<img src="readmeFiles/nasa1.png">
+<img src="readmeFiles/NASATLX-table1.png">
 
 Shown in Figure 22, the first NASA questionnaire indicated that our game was not demanding, with low scores on mental, physical and temporal subscales. Scores ranged from 5 to 20, with Participant 5 scoring as low as 0 for all demand subscales. These results point to a low workload, which is surprising given that many participants struggled to get far into the game, rarely advancing past the third pipe. Nevertheless, the data highlights an improvement area and we plan to increase the game’s demand, whilst maintaining system simplicity. 
 
 One result in particular stands out. Participant 2 scored temporal demand high (75). The reason for this is unclear and compared with the rest of the data is an anomaly. The participant potentially misunderstood the scale, or there was a data collection error. This seems plausible considering the participant scored the mental and physical demand at 0 and 5.
 
 **Figure 23 - NASA TLX - Testing Round 2**
-<img src="readmeFiles/nasa2.png">
+<img src="readmeFiles/NASATLX-table2.png">
 
 As seen in Figure 23, our second set of quantitative testing showed a significant improvement to our game demand. The improvement can primarily be seen in mental demand, with the highest score being 80 and the lowest now 45. These results corroborate that our new features: the TNT hazard and the increased speed, have optimised the game difficulty. Our average NASA TLX RAW Score (29.72), proves that our game achieves a “medium workload” (Rubio et al, 2004), meeting our requirement that the game should have a suitable balance between demand and playability.
 
