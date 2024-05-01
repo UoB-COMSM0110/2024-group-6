@@ -64,7 +64,7 @@
 # Introduction
 
 
-Inspired by the addictive dynamics of the mobile app, Flappy Bird, “Super Spaceman” offers players a novel experience by incorporating space-themed features and enhanced control mechanics onto a desktop platform. Whilst designing our game, it was important that the game aligns closely with our initial requirements and engages the player with its features but also maintains a suitable balance between difficulty and accessibility.
+Inspired by the addictive dynamics of the mobile app, Flappy Bird, “Super Spaceman” offers players a novel experience by incorporating space-themed features and enhanced control mechanics onto a desktop platform. Whilst designing our game, it was important that the game aligns closely with our initial requirements and engages the player with its features, whilst also maintaining a suitable balance between difficulty and accessibility.
 
 As such, we have introduced three new features that make our game innovative and novel: 
 
@@ -143,15 +143,15 @@ Although both games hold potential, our ideation process showed that Flappy Bird
 
 For Super Spaceman, we were able to think of multiple categories, including various different hazards and power ups (as demonstrated in the above prototype). When researching these features, we concluded that Super Spaceman would also be more complex to implement, therefore providing us a greater chance to apply our knowledge and skills. Similarly, we felt more excited about creating detailed graphics for the interface for Super Spaceman. Our thoughts were validated in Monday’s lab, where our paper prototype for Super Spaceman received overwhelmingly positive feedback. There was a consensus that this was the more innovative concept and the most promising in terms of popularity. Creating the paper prototype played an important role in this decision. The tangible visualisation demonstrated the game’s potential and helped us to decide on our game features.
 
-# Use Case Diagram & User Specifications
+# Use Case Diagram & Use Case Specification
 
-We then created a Use Case diagram and Specification. This demonstrated the logic and flow of our game and helped us identify the functional requirements of Super Spaceman, and what we would need to implement to achieve these requirements. 
+We then created a Use Case Diagram and Specification. This demonstrated the logic and flow of our game and helped us identify the functional requirements of Super Spaceman, and what we would need to implement to achieve these requirements. 
 
-**Figure 7 - Usecase Diagram**
+**Figure 7 - Use Case Diagram**
 <img src="./readmeFiles/usecasediagram.png">
 
 
-**Figure 8 - Usecase Specification - General Player**
+**Figure 8 - Use Case Specification - General Player**
 <table>
     <tbody>
         <tr>
@@ -218,8 +218,8 @@ We then created a Use Case diagram and Specification. This demonstrated the logi
 As seen in Figure 9, we also identified our stakeholders and created user-stories using the Onion Model. This helped identify our stakeholders' relation to the game, as well as visualise their various layers of involvement. 
 
 
-**Figure 9 - Onion Model**
-<img src="readmeFiles/onion.jpg">
+**Figure 9 - Onion Model** <br>
+<img src="readmeFiles/smallonion.png">
 
 **Figure 10 - Stake Holders Table**
 
@@ -258,7 +258,7 @@ As seen in Figure 9, we also identified our stakeholders and created user-storie
     </tbody>
 </table>
 
-**Figure 11 - User-Stories**
+**Figure 11 - User Stories**
 >
 >"As a Player from General Public I want to play a game based on flappy birds with new innovative features so that it grabs my intrigue and attention."
 
@@ -278,7 +278,8 @@ As seen in Figure 9, we also identified our stakeholders and created user-storie
 
 
 
-## Requirements
+**Requirements Defined** 
+<br>
 Using user stories and use-case diagrams helped our team identify our top-level user needs. This gave us a clear understanding of what is needed of our game. Whilst also highlighted some additional things to consider. 
 
 <ul>
@@ -391,6 +392,7 @@ During the development process, it was important to understand whether SuperSpac
 
 There were two stages of testing. The first occurred prior to our first sprint, when few of our difficulty features had been implemented. We then repeated the testing, (after we had implemented our TNT and increased game speed feature) using the same 9 participants, after sprint 2, and compared the results. The results identified the final adjustments to be made in sprint 3. 
 
+**Gifs demonstrating our added difficulty features:**
 
 **Figure 18 - Demonstration of Speed Increase**
 <figure>
@@ -404,14 +406,11 @@ There were two stages of testing. The first occurred prior to our first sprint, 
 
 
 ## Qualitative Evaluation
-
-### Heuristic Evaluation 
+**Heuristic**
 
 Heuristic evaluation is a usability method used to review a game based on established usability principles. The evaluation method focuses on all aspects of our game (as shown in Figure 20), whilst also focusing on specific features, to ensure it is engaging and accessible to all players (Paavilainen et al., 2018). 
 
 The evaluation identified severe issues with our character interface, particularly the need for excessive clicking to make the character jump higher. This caused frustrating gameplay (4), identifying the need to increase the height of the jump per click. Testing also illuminated issues relating to the Movements and Pipes interface. For example, a greater distance between pipes, and pipes not generated randomly. Although the issues individually seem minor, accumulated they are noticeably persistent (3), adversely affecting the gameplay experience. 
-
-Based on the feedback, we adjusted the logic to increase the character’s jump height, as well as introducing the spacebar as an alternative control. Additionally, we refined our pipe logic, adding a method to randomly generate pipes, and decrease the spacing between them. These improvements were corroborated in our second heuristic evaluation, where the frequency of both of our previous scores reduced from 4 to 0. These improvements positively impacted the usability of our game.
 
 **Figure 20 - Heuristic Results - Testing Round 1**
 <table>
@@ -464,6 +463,10 @@ Based on the feedback, we adjusted the logic to increase the character’s jump 
     </tbody>
 </table>
 <br>
+
+Based on the feedback, we adjusted the logic to increase the character’s jump height, as well as introducing the spacebar as an alternative control. Additionally, we refined our pipe logic, adding a method to randomly generate pipes, and decrease the spacing between them. These improvements were corroborated in our second heuristic evaluation, where the frequency of both of our previous scores reduced from 4 to 0. These improvements positively impacted the usability of our game.
+
+
 
 
 
@@ -532,12 +535,6 @@ Based on the feedback, we adjusted the logic to increase the character’s jump 
 Our second testing illuminated new issues relating to Error Prevention and Aesthetic Design. Noticeably, an issue with the shield powerup, which disappeared too quickly, receiving a frequency score of 4. Similarly, the new transport pipes activated inconsistently, again, scoring 4. A more minor issue involved the background stars blinking excessively, potentially causing discomfort to some players. These findings have directed our priorities for the final sprint, in order to enhance the overall game experience.
 
 
-### Summary - Qualitative Evaluation
-
-
-The Heuristic Evaluation bought important issues about our game, to our attention. The issues primarily related to Consistency and Standards, but also the Aesthetic and Design of our game. The most severe issue related to our character interface. We found that the user needs to click many times to make the character jump higher, leading to a frustrating gameplay. This was a common issue, scoring 4/4 and led to a sum total of 4/4. We have decided to modify the character slightly, and increase the height of the jump per click. We have also decided to increase the gravity rate. This is because we found that the character fell too slowly, making it difficult to progress further through the game.
-
-We noted issues relating to the Movements and Pipes interfaces of our game. This included the distances between pipes being too large, the pipes not generating randomly and the character falling off the screen. Although the issues individually are relatively minor, accumulated together they are noticeably persistent and severe (3/4), and overall leads to a rather ‘sketchy’ gameplay. Therefore, we have decided to reset the judgements of collision, narrow the distance between pipes and ensure that the pipes pattern does not continuously repeat. This not only improves the Consistency and Standards usability, but also the Aesthetic and Minimalist Design usability.
 
 
 ## Quantitative Evaluation
@@ -548,24 +545,22 @@ We used NASA Task Load Index (TLX), finding the RAW NASA TLX score to assess the
 
 
 **Figure 22 - NASA TLX - Testing Round 1**
-<img src="readmeFiles/nasa1.png">
+<img src="readmeFiles/NASATLX-table1.png">
 
 Shown in Figure 22, the first NASA questionnaire indicated that our game was not demanding, with low scores on mental, physical and temporal subscales. Scores ranged from 5 to 20, with Participant 5 scoring as low as 0 for all demand subscales. These results point to a low workload, which is surprising given that many participants struggled to get far into the game, rarely advancing past the third pipe. Nevertheless, the data highlights an improvement area and we plan to increase the game’s demand, whilst maintaining system simplicity. 
 
 One result in particular stands out. Participant 2 scored temporal demand high (75). The reason for this is unclear and compared with the rest of the data is an anomaly. The participant potentially misunderstood the scale, or there was a data collection error. This seems plausible considering the participant scored the mental and physical demand at 0 and 5.
 
 **Figure 23 - NASA TLX - Testing Round 2**
-<img src="readmeFiles/nasa2.png">
+<img src="readmeFiles/NASATLX-table2.png">
 
 As seen in Figure 23, our second set of quantitative testing showed a significant improvement to our game demand. The improvement can primarily be seen in mental demand, with the highest score being 80 and the lowest now 45. These results corroborate that our new features: the TNT hazard and the increased speed, have optimised the game difficulty. Our average NASA TLX RAW Score (29.72), proves that our game achieves a “medium workload” (Rubio et al, 2004), meeting our requirement that the game should have a suitable balance between demand and playability.
 
-**Figure 25 - NASA TLX Comparison**
+**Figure 24 - NASA TLX Comparison**
 <img src="readmeFiles/nasa_comparison.png">
 
-Comparing our results using the Wilcoxon Signed Rank Test further corroborates this. As shown in Figure 24, using an alpha value of 0.05, our W test statistic was 1, meaning it was considerably below the needed 5 to be significantly different. The practical application of NASA TLX has been highly valuable in managing the demand and playability of Super Spaceman. It has given us a greater understanding of our game from the player’s perspective, helping us to assess what adjustments needed to be made. It was ultimately a highly effective way of measuring the subjective perceived workload (Rubio et al, 2004).
+Comparing our results using the Wilcoxon Signed Rank Test further corroborates this. Using an alpha value of 0.05, our W test statistic was 1, meaning it was considerably below the needed 5 to be significantly different. The practical application of NASA TLX has been highly valuable in managing the demand and playability of Super Spaceman. It has given us a greater understanding of our game from the player’s perspective, helping us to assess what adjustments needed to be made. It was ultimately a highly effective way of measuring the subjective perceived workload (Rubio et al, 2004).
 
-**Figure 24 - Wilcoxon Results**
-<img src="readmeFiles/Wilcoxon.png">
 
 
 
@@ -614,6 +609,6 @@ There are certainly exciting directions to take Super Spaceman in. Looking forwa
 
 
 # Individual contribution
-"DO NOT WRITE ANYTHING HERE YET"
 
+<img src="readmeFiles/contributionTable.png">
 
